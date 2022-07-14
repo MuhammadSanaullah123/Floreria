@@ -1,0 +1,67 @@
+.Hero {
+  min-height: 180px;
+  position: relative;
+  @media (min-width: 450px) {
+    min-height: 254px;
+  }
+  @media (min-width: 650px) {
+    min-height: 290px;
+  }
+  @media (min-width: 768px) {
+    min-height: 350px;
+  }
+  /*Things to complete*/
+  /* 1. Code for screens lesser then 450px */
+
+  @media (max-width: 840px) {
+    .heroModal {
+      display: none;
+    }
+  }
+  @media (min-width: 768px) {
+    min-height: 450px;
+  }
+  @media (min-width: 1024px) {
+    min-height: 550px;
+  }
+  .heroModal {
+    background-color: #dec177;
+    width: 320px;
+    height: 245px;
+    padding: 2rem 3rem;
+    position: absolute;
+    /* Code for screens lesser then 450px */
+
+    /* Code for Large Screens */
+    @media (min-width: 1024px) {
+      left: 100px;
+      height: 300px;
+      width: 400px;
+    }
+    h4 {
+      font-family: Dancing Script;
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-align: left;
+      @media (min-width: 1024px) {
+        font-size: 3rem;
+      }
+    }
+    h2 {
+      font-weight: 500;
+      font-size: 3rem;
+      text-align: left;
+      @media (min-width: 1024px) {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .allP {
+    display: block;
+  }
+  .big_img {
+    display: none;
+  }
+}

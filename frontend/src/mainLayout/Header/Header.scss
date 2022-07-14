@@ -1,0 +1,156 @@
+//Desktop
+@import "./../utillities_config";
+
+.Header {
+  font-family: Poppins;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin: 0 auto;
+  width: 90%;
+
+  .searchBar {
+    display: flex;
+    flex-direction: row;
+    width: 645px;
+    .css-10ce8mg {
+      width: 645px;
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (max-width: 1250px) {
+      width: 40%;
+      .css-10ce8mg {
+        width: 100%;
+      }
+    }
+  }
+  .menuMobile {
+    display: none;
+    @media (max-width: 768px) {
+      display: block !important;
+    }
+    .css-i4bv87-MuiSvgIcon-root {
+      @media (max-width: 768px) {
+        display: block !important;
+      }
+    }
+  }
+
+  .menu-desktop {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    span {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 1rem;
+      img {
+        width: 32px;
+        height: 23px;
+        align-self: center;
+      }
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #d96581;
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+      }
+      &:hover {
+        color: $secondaryColor;
+        fill: $secondaryColor;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .Mui-focused {
+    color: #9babbf !important;
+  }
+  margin-top: 20px;
+}
+.Drawer {
+  span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  a {
+    color: #d96581 !important;
+  }
+}
+.productCount {
+  margin: 0 !important;
+  position: relative;
+  top: -29px;
+  left: 151px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #d96581;
+  background-color: #d96581;
+  color: white;
+  font-size: 10px;
+  padding: 4px;
+}
+@media (min-width: 1050px) {
+  .css-9nfsxh-MuiInputBase-root .MuiInputBase-input {
+    width: 35ch !important;
+    padding-left: 10px !important;
+  }
+}
+
+@media (max-width: 900) {
+  .css-9nfsxh-MuiInputBase-root .MuiInputBase-input {
+    width: 20ch !important;
+  }
+}
+.DrawerElements {
+  a {
+    color: #d96581;
+    padding-left: 20px;
+  }
+  span {
+    display: flex;
+    align-items: center;
+  }
+}
+.Hlinks {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  a {
+    color: #444444;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    //font-size: 15px;
+  }
+}
+.hline {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(155, 171, 191, 0) 1.04%,
+    #9babbf 51.56%,
+    rgba(155, 171, 191, 0) 100%
+  );
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
+}

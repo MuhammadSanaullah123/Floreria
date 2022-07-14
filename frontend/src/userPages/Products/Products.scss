@@ -1,0 +1,483 @@
+@import "./../../mainLayout/utillities_config";
+
+.ProductContainer {
+  font-family: "Poppins";
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  padding-bottom: 200px;
+  flex-direction: column;
+  max-width: 1530px;
+  a {
+    text-decoration: none;
+    color: $primaryFontColor;
+    font-size: 0.7rem;
+  }
+  .topNavigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .productDetails {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 2fr;
+    .sliderProduct {
+      grid-column: 1/2;
+      padding: 0 0;
+      // width: 680px;
+      background-color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      height: 100%;
+      .swiper {
+        margin-left: auto;
+        margin-right: 0;
+      }
+      .product-image-slider {
+        .swiper-slider {
+          padding-top: 100%;
+          overflow: hidden;
+          position: relative;
+
+          img {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            // width:100%;
+          }
+        }
+        .swiper-button-prev {
+          left: -13px;
+          color: white;
+          height: 56px;
+          border-top-right-radius: 119%;
+          border-bottom-right-radius: 119%;
+          width: 52px;
+          background: #00000033;
+          &:after {
+            font-size: 32px;
+          }
+        }
+        .swiper-button-next {
+          right: -13px;
+          color: white;
+          height: 56px;
+          border-top-left-radius: 119%;
+          border-bottom-left-radius: 119%;
+          width: 52px;
+          background: #00000033;
+          &:after {
+            font-size: 32px;
+          }
+        }
+      }
+
+      .product-image-slider-thumbs {
+        .swiper-slide {
+          cursor: pointer;
+          width: 100px !important;
+          display: block !important;
+          height: 100px;
+          &-thumb-active {
+            border-color: $secondaryColor;
+          }
+        }
+
+        &-wrapper {
+          width: 100%;
+          padding-top: 100%;
+          overflow: hidden;
+          position: relative;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            // width:100%;
+          }
+        }
+      }
+    }
+    .productInformation {
+      grid-column: 2/5;
+      h6 {
+        font-size: 0.8rem;
+      }
+      p {
+        font-size: 0.6rem;
+        color: $primaryFontColor;
+      }
+      #productDescription1 {
+        margin-top: 0.8rem;
+        font-family: "Nunito";
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        div {
+          &:nth-child(1) {
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $secondaryColor;
+            border-radius: 5px;
+            h6 {
+              font-size: 0.8rem;
+              font-weight: bold;
+            }
+          }
+          &:nth-child(2) {
+            padding: 8px;
+          }
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            // border: 1px solid $primaryFontColor;
+            border-radius: 5px;
+          }
+        }
+        .Cards {
+          display: grid;
+          gap: 0.5rem;
+
+          grid-template-columns: repeat(3, 1fr);
+          button {
+            border-radius: 15px;
+            border: 2px solid #9babbf;
+            background: #ffffff;
+            color: #9babbf;
+          }
+          button:focus {
+            border: 3px solid #d96581;
+            h6 {
+              font-weight: 700;
+            }
+          }
+          button:hover {
+            border: 3px solid #d96581 !important;
+          }
+        }
+      }
+
+      #productDescription2 {
+        font-family: "Nunito";
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+        .Cards2 {
+          display: grid;
+          gap: 0.5rem;
+          grid-template-columns: repeat(3, 1fr);
+          button {
+            border: 2px solid #c4c4c4;
+            border-radius: 15px;
+
+            background: #ffffff;
+            // height: 120px;
+            padding: 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+          }
+        }
+      }
+
+      #productDescription3 {
+        margin-top: 0.8rem;
+        font-family: "Nunito";
+
+        margin-bottom: 0.8rem;
+        width: 100%;
+        .carousel {
+          button {
+            color: #d96581;
+            background-color: #ffffff;
+            border-color: #ffffff;
+            box-shadow: 0px 5px 20px rgba(155, 171, 191, 0.3);
+          }
+          h6 {
+            color: $primaryFontColor;
+          }
+        }
+      }
+      #productTotal {
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+        font-family: "Nunito";
+
+        width: "100%";
+        Button {
+          height: "50px";
+        }
+        p {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+          color: $primaryFontColor;
+          font-size: 0.8rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .productDetailTab {
+    width: 100%;
+    padding: 1.3rem 0.4rem;
+    font-family: "Nunito";
+    color: #9babbf;
+    button {
+      height: 0px;
+
+      text-transform: none;
+      background-color: transparent;
+      color: #9babbf;
+      color: $primaryFontColor;
+      border-radius: 0.2rem;
+      width: 60%;
+      font-size: 1rem;
+      &[aria-selected="true"] {
+        color: #d96581;
+        font-weight: bold;
+        border-bottom: 3px solid #d96581;
+      }
+    }
+    .MuiTabs-flexContainer {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+    .MuiTabs-indicator {
+      background-color: transparent;
+    }
+  }
+  .DetailList {
+    .MuiListItemIcon-root {
+      color: $secondaryColor;
+      font-weight: 700;
+    }
+  }
+  .productSlideHeading {
+    margin-top: 200px;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+
+      position: absolute;
+      left: 0;
+      top: 50%;
+      z-index: 1;
+    }
+    h4 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 500;
+      background-color: #fff;
+      z-index: 3;
+      width: auto;
+      position: relative;
+      display: inline-block;
+      padding: 0 20px 0 20px;
+      margin: 0;
+      color: #444444;
+      font-family: "Cormorant Upright";
+    }
+  }
+  .productSlide {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .css-4pdmu4-MuiBreadcrumbs-ol {
+    align-items: baseline;
+  }
+}
+
+.firstDiv {
+  border: 0 !important;
+  font-size: 13px !important;
+}
+.secondDiv {
+  border: 0 !important;
+  font-size: 13px !important;
+}
+.thirdDiv {
+  border: 0 !important;
+  font-size: 13px !important;
+  padding: 8px !important;
+}
+.firstDiv:hover,
+.secondDiv:hover,
+.thirdDiv:hover {
+  background: #d96581;
+  color: #ffffff;
+}
+.superdiv {
+  // border: 3px solid #72509d !important;
+  padding: 10px;
+}
+.normalbtn {
+  color: #818181;
+  font-weight: 500;
+  border: 1px solid #c4c4c4;
+}
+.selectbtn {
+  border: 3px solid #d96581 !important;
+}
+.normalh6 {
+  font-weight: 500 !important;
+  color: #818181 !important;
+}
+.selecth6 {
+  font-weight: 700 !important;
+  color: #d96581 !important;
+}
+.normalp {
+  font-weight: 500 !important;
+  color: #818181 !important;
+}
+.selectp {
+  font-weight: 700 !important;
+  color: #d96581 !important;
+}
+.timingselect {
+  background: #d96581;
+  color: #ffffff;
+}
+.timingnormal {
+  background: #ffffff;
+  color: #000000;
+}
+.calender {
+  align-items: normal !important;
+}
+.button3 {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  div {
+    border: 0 !important;
+  }
+}
+.css-195y93z-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: #d96581 !important;
+}
+.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root {
+  background-color: rgba(128, 128, 128, 0.093) !important;
+}
+.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: #d96581 !important;
+}
+//pen icon
+.css-dtbg0r .PrivateDatePickerToolbar-penIcon {
+  display: none;
+}
+//select date
+.css-1hbyad5-MuiTypography-root {
+  display: none;
+}
+.css-dtbg0r {
+  background-color: #d96581;
+  color: #ffffff;
+  height: 270px;
+}
+.css-dhopo2 {
+  min-height: 0px !important;
+  height: 200px !important;
+}
+
+.timediv {
+  background-color: #ffffff;
+  display: flex !important;
+  align-items: center !important;
+  //flex-direction: column !important;
+  .time {
+    //padding-bottom: 30px !important;
+
+    background-color: #d96581;
+    width: 160px;
+    height: 150px;
+    color: #ffffff;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+
+    p {
+      margin-bottom: 0;
+      align-self: start;
+    }
+
+    .confirmbtn {
+      font-size: 15px;
+      background: #ffffff;
+      color: #d96581;
+      padding: 8px;
+      border: 0;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  .result {
+    .superdiv {
+      display: flex;
+      align-items: center;
+      grid-gap: 0.5rem !important;
+      .firstDiv,
+      .secondDiv,
+      .thirdDiv {
+        padding: 10px !important;
+        border-radius: 5px !important;
+        border: 2px solid #d96581 !important;
+        font-size: 12.3px !important;
+      }
+    }
+  }
+}
+// .swiper-wrapper {
+//   display: block;
+// }
+.product-image-slider-thumbs {
+  .swiper-wrapper {
+    display: block;
+  }
+}
+.css-15x1sh8-MuiButtonBase-root-MuiCheckbox-root {
+  left: 8.5rem !important;
+  bottom: 13rem !important;
+  z-index: 10;
+}
+.css-15x1sh8-MuiButtonBase-root-MuiCheckbox-root .MuiSvgIcon-root {
+  font-size: 20px !important;
+}
+.css-i4bv87-MuiSvgIcon-root {
+  display: none !important;
+}
+.collectionArr {
+  display: grid;
+  margin-top: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+.lastslider {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+}

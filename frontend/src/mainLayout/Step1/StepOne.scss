@@ -1,0 +1,54 @@
+@import "./../utillities_config";
+
+
+.ContainerModal{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+
+    h4{
+        grid-column: 1/5;
+        margin:0;
+    }
+
+    .carousel{
+        grid-column: 1/5;
+        .rec-carousel{
+            width:700px;
+        }
+        .rec-swipable{
+            gap:0.2rem;
+        }
+    }
+    .midContainer{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap:1.5rem;
+        h6{
+            color:$secondaryColor;
+            font-weight: bold;
+        }
+        .CardBox{
+            border:1px solid $primaryFontColor;
+            border-radius: 4px;
+            padding:1rem 1rem;
+            margin-bottom: auto;
+        }
+    }
+    .lowerBox{
+        grid-column: 1/5;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    h6{
+        color:$secondaryColor;
+    }
+    }
+
+    .buttonViolet {
+        background-color: #72509d;
+        color: #fff;
+      }
+}

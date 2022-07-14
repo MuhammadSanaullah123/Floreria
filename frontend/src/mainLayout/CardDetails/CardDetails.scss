@@ -1,0 +1,159 @@
+@import "./../utillities_config";
+
+.Step4 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.5rem;
+  h6 {
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  .span-1 {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    margin: 1rem 0;
+    h3 {
+      margin-bottom: 0.5rem;
+      margin-left: 0;
+    }
+    a{
+        text-decoration: underline;
+    color: blue;
+    font-size: 0.8rem;
+    margin: 0 0.6rem;
+    }
+    p {
+      margin: 0;
+      font-size: 0.8rem;
+      color: $primaryFontColor;
+    }
+  }
+
+  .span-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    border: 1px solid $primaryFontColor;
+    border-radius: 4px;
+    padding: 1rem 1rem;
+    grid-column: 1/4;
+    h6{
+        grid-column: 1/3;
+    }
+    label {
+      color: $primaryFontColor;
+    }
+    .MuiTextField-root{
+        width:100%;
+    }
+  }
+
+  .span-3 {
+    border: 1px solid $primaryFontColor;
+    border-radius: 4px;
+    padding: 1rem 1rem;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    h6{
+        grid-column: 1/3;
+    }
+  }
+  .span-4 {
+    border: 1px solid $primaryFontColor;
+    border-radius: 4px;
+    padding: 1rem 1rem;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    span {
+      label {
+        display: block;
+      }
+    }
+    h6{
+        grid-column: 1/3;
+    }
+}
+    .span-5{
+        border: 1px solid $primaryFontColor;
+        border-radius: 4px;
+        padding: 1rem 1rem;
+        grid-column: 1/4;
+        display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    p{
+        grid-column:1/5;
+    }
+    .reviewProductCard {
+        grid-column: 1/5;
+      display: grid;
+      grid-template-columns: 0.1fr 1.8fr 0.1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+      img {
+        width: 180px;
+      }
+      p{
+        grid-column: 1/4;
+      }
+      div {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        h6 {
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
+        p {
+          font-size: 0.8rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+      strong {
+          padding-right:1rem;
+        align-self: center;
+      }
+      
+    }
+    .productPriceTotal {
+      background-color: #f4f4f4;
+      border-radius: 2px;
+      padding: 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      grid-column: 1/5;
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        p {
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    button{
+      grid-column: 1/5;
+    }
+  }
+  .buttonViolet {
+    background-color: #72509d;
+    color: #fff;
+    height:100%;
+  }
+  .radioSelection {
+    border: 1px solid $primaryFontColor;
+    padding: 0.8rem 0.5rem;
+    border-radius: 4px;
+    label {
+      margin: 0 0.4rem;
+    }
+  }
+}

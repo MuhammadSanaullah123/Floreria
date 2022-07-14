@@ -1,0 +1,60 @@
+@import "./../utillities_config";
+
+.productCard {
+  border-radius: 20px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f8f8f8;
+  .both {
+    .link {
+      @media (min-width: 1600px) {
+        height: 47px !important;
+      }
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    img {
+      border-radius: 20px !important;
+      width: 20px;
+      @media (min-width: 1600px) {
+        width: 25px !important;
+      }
+    }
+  }
+  .cardImage {
+    border-radius: 20px;
+    img {
+      border-radius: 20px 20px 0px 0px;
+
+      width: 330px !important;
+      height: 330px !important;
+    }
+  }
+  .cardTitle {
+    font-size: medium;
+    color: #000000 !important;
+    margin-top: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0 !important;
+  }
+
+  .cardPrice {
+    font-size: medium;
+    color: black;
+    font-weight: 600;
+  }
+  button {
+    //margin-bottom: 1rem;
+    width: 100%;
+    @media (min-width: 1024px) {
+      font-size: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 0.7rem;
+    }
+  }
+}

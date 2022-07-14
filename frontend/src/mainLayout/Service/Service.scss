@@ -1,0 +1,87 @@
+.Service {
+  background-color: #f8f8f8 !important;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 150px;
+  h1 {
+    font-family: "Cormorant Upright";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 73px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #444444;
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+    @media (min-width: 250px) {
+      font-size: 1.8rem;
+    }
+    @media (min-width: 450px) {
+      font-size: 1.8rem;
+    }
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 3rem;
+    }
+  }
+  .bottomp {
+    font-size: 10px;
+    line-height: 40px;
+    font-weight: 600;
+    text-align: center;
+
+    color: #000000;
+  }
+  .carosel {
+    @media (max-width: 600px) {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .right_arr {
+      @media (max-width: 600px) {
+        align-self: self-end !important;
+      }
+    }
+    .left_arr {
+      @media (max-width: 600px) {
+        align-self: self-start !important;
+      }
+    }
+  }
+  .react-multi-carousel-list {
+    width: 90%;
+    align-self: center;
+    //justify-content: center;
+    align-items: center;
+  }
+}
+
+.carousel-button-group {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-self: center;
+  position: relative;
+  bottom: 125px;
+  @media (max-width: 1220px) {
+    position: relative;
+    bottom: 170px;
+  }
+  @media (max-width: 1012px) {
+    bottom: 130px;
+  }
+  @media (max-width: 605px) {
+    bottom: 170px;
+  }
+  @media (max-width: 465px) {
+    bottom: 130px;
+  }
+}

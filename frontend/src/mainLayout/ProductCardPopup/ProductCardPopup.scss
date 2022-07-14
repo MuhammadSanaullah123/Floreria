@@ -1,0 +1,29 @@
+@import "./../utillities_config";
+
+.productCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .cardImage{
+        img{
+
+            width:100%;
+            height:auto;
+        }
+    }
+    .cardTitle{
+        font-size: medium;
+        color:$primaryFontColor;
+        margin-top: 0.8rem;
+    }
+
+    .cardPrice{
+        font-size: medium;
+        color:black;
+        font-weight: 600;
+    }
+    button{
+        margin-bottom: 1rem;
+    }
+
+}
