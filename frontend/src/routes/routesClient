@@ -1,39 +1,43 @@
-import { lazy } from 'react';
+import { lazy } from "react";
 
-const MyAccount = lazy(() => import("../userPages/MyAccount/MyAccount")) 
-const Categorys = lazy(() => import('../userPages/Category/Category'))
-const Cart = lazy(() => import('../userPages/Cart/Cart'))
-const ThankYou = lazy(() => import('../userPages/Thankyou/ThankYou'))
-const Signin = lazy(() => import('../userPages/Signin/Signin'))
-const Home = lazy(() => import("../userPages/Home/Home"))
-const Product = lazy(() => import('../userPages/Products/Products'))
+const MyAccount = lazy(() => import("../userPages/MyAccount/MyAccount"));
+const Referrals = lazy(() => import("../userPages/MyAccount/Referrals"));
+const Categorys = lazy(() => import("../userPages/Category/Category"));
+const Cart = lazy(() => import("../userPages/Cart/Cart"));
+const ThankYou = lazy(() => import("../userPages/Thankyou/ThankYou"));
+const Signin = lazy(() => import("../userPages/Signin/Signin"));
+const Home = lazy(() => import("../userPages/Home/Home"));
+const Product = lazy(() => import("../userPages/Products/Products"));
 
 const routesClient = [
-
-    //client side
- {
-    path: 'user/product',
+  //client side
+  {
+    path: "user/product",
     component: Product,
   },
   {
-    path: '/user/myaccount',
+    path: "/user/myaccount",
     component: MyAccount,
   },
   {
-    path: '/user/category',
+    path: "/user/myaccount/referrals",
+    component: Referrals,
+  },
+  {
+    path: "/user/category",
     component: Categorys,
   },
   {
-    path: '/user/cart',
+    path: "/user/cart",
     component: Cart,
   },
   {
-    path: '/user/thankyou',
+    path: "/user/thankyou",
     component: ThankYou,
   },
   {
-    path: '/user/signin',
+    path: "/user/signin",
     component: Signin,
-  },   
-]
-export default routesClient
+  },
+];
+export default routesClient;

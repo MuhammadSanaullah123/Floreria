@@ -17,43 +17,73 @@
 .leftdiv {
   grid-column: 1/2;
   grid-row: 1/3;
-
+  justify-content: space-around;
   background: #ffffff;
   box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: -webkit-center;
   text-align-last: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .leftdiv a {
-  width: 230px;
+  width: 15rem;
   padding: 10px;
   color: rgba(129, 129, 129, 1);
   text-decoration: none;
   font-family: "Poppins";
   padding-right: 143px;
   text-align-last: justify;
-  // position: relative;
-  // top: 20px;
-  display: block;
   border-radius: 6px;
 }
+#linktag {
+  text-decoration: double;
+  list-style-type: none;
+  font-family: "Poppins";
+  color: rgba(129, 129, 129, 1);
+  background-color: #ffffff;
+  width: 13rem;
+  border-radius: 10px;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
 
+  margin-top: 1rem;
+}
+#linktag:focus {
+  background: #d96581;
+
+  color: rgba(255, 255, 255, 1);
+}
+#linktag:active {
+  background: #d96581;
+  transition: 0.7s;
+  color: rgba(255, 255, 255, 1);
+}
 .leftdiv a:focus {
-  background: #72509d;
+  background: #d96581;
   color: rgba(255, 255, 255, 1);
   border-radius: 7px;
 }
 .leftdiv a:active {
-  background: #72509d;
+  background: #d96581;
   color: rgba(255, 255, 255, 1);
   border-radius: 7px;
+}
+.arrow {
+  display: none;
 }
 
 .line {
   width: 80%;
   margin-top: 3px;
   color: red;
+  border: 0.5px solid #e5e5e5a2;
+}
+.linedrawer {
+  width: 80%;
+  margin-top: 3px;
   border: 0.5px solid #e5e5e5a2;
 }
 .logdiv {
@@ -68,6 +98,21 @@
   height: 20px;
 }
 .logdiv h6 {
+  font-weight: 600;
+  margin-left: 10px;
+}
+.logdivdrawer {
+  background-color: "red";
+  width: 200px;
+  display: flex;
+  margin-top: 25px;
+  padding-bottom: 20px;
+}
+.logdivdrawer img {
+  width: 20px;
+  height: 20px;
+}
+.logdivdrawer h6 {
   font-weight: 600;
   margin-left: 10px;
 }
@@ -213,6 +258,8 @@
   background: #ffffff;
   border: 1px solid #d96581;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .tablediv h6 {
   font-family: "Nunito";
@@ -234,10 +281,8 @@
   border-radius: 5px;
 }
 .table1 {
-  position: relative;
-  top: 50px;
-  left: 20px;
-  width: 925px;
+  align-self: center;
+  width: 95%;
   overflow-x: auto;
 }
 .table1 tr th {
@@ -263,6 +308,425 @@
 }
 
 //<-------------------------------------------------------------------------------------------------------->
+
+@media screen and (max-width: 1300px) {
+  .socialcards {
+    height: 100%;
+    grid-row: 1/3 !important;
+  }
+  .s1 {
+    grid-row: 1/2;
+    grid-column: 1/3 !important;
+  }
+  .s2 {
+    grid-row: 1/2;
+    grid-column: 3/5 !important;
+  }
+  .s3 {
+    grid-row: 1/2;
+    grid-column: 5/7 !important;
+  }
+  .s4 {
+    grid-row: 2/3;
+    grid-column: 1/3 !important;
+  }
+  .s5 {
+    grid-row: 2/3;
+    grid-column: 3/5 !important;
+  }
+  .s6 {
+    grid-row: 2/3;
+    grid-column: 5/7 !important;
+  }
+  .buttondiv {
+    height: 100%;
+    margin-bottom: 5rem;
+    grid-row: 3/5;
+    grid-column: 1/5;
+  }
+
+  .para {
+    grid-row: 5/6 !important;
+    grid-column: 1/5 !important;
+  }
+  .firstLine {
+    grid-column: 1/5 !important;
+    grid-row: 6/7 !important;
+    margin-top: 20px;
+  }
+  .speakerdiv {
+    grid-row: 7/8 !important;
+    grid-column: 1/5 !important;
+    margin-top: 20px;
+  }
+  .tablediv {
+    grid-row: 8/9 !important;
+    grid-column: 1/5 !important;
+    justify-self: center;
+  }
+  .secondLine {
+    grid-row: 9/10 !important;
+    grid-column: 1/5 !important;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .leftdiv {
+    width: 70% !important;
+    justify-self: center !important;
+    .css-i4bv87-MuiSvgIcon-root {
+      display: block !important;
+    }
+  }
+  .socialcards {
+    //height: 100%;
+    grid-row: 1/4 !important;
+    row-gap: 1rem;
+    width: 80% !important;
+    justify-self: center;
+  }
+  .s1 {
+    grid-row: 1/2 !important;
+    grid-column: 1/4 !important;
+  }
+  .s2 {
+    grid-row: 1/2 !important;
+    grid-column: 4/7 !important;
+  }
+  .s3 {
+    grid-row: 2/3 !important;
+    grid-column: 1/4 !important;
+  }
+  .s4 {
+    grid-row: 2/3 !important;
+    grid-column: 4/7 !important;
+  }
+  .s5 {
+    grid-row: 3/4 !important;
+    grid-column: 1/4 !important;
+  }
+  .s6 {
+    grid-row: 3/4 !important;
+    grid-column: 4/7 !important;
+  }
+  .buttondiv {
+    grid-row: 4/6 !important;
+    grid-column: 1/5 !important;
+    width: 85% !important;
+    justify-self: center;
+    height: 100% !important;
+    grid-template-columns: none;
+  }
+  .bc1 {
+    grid-row: 1/2 !important;
+    grid-column: 1/3 !important;
+    height: 300px;
+  }
+  .bc2 {
+    grid-row: 1/2 !important;
+    grid-column: 3/5 !important;
+    height: 300px;
+  }
+  .bc3 {
+    grid-row: 2/3 !important;
+    grid-column: 1/3 !important;
+    height: 300px;
+  }
+
+  .para {
+    grid-row: 6/7 !important;
+    grid-column: 1/5 !important;
+    font-size: 80%;
+    width: 85% !important;
+    justify-self: center;
+  }
+  .firstLine {
+    grid-row: 7/8 !important;
+  }
+  .speakerdiv {
+    grid-row: 8/9 !important;
+    grid-column: 1/5 !important;
+  }
+  .tablediv {
+    grid-row: 9/10 !important;
+    grid-column: 1/5 !important;
+    width: 95% !important;
+    height: auto !important;
+  }
+  .secondLine {
+    grid-row: 10/11 !important;
+  }
+  .both {
+    display: flex !important;
+    flex-direction: column !important;
+    align-self: center;
+    width: 85% !important;
+  }
+  .speakerdiv2 {
+    width: 90% !important;
+    justify-content: flex-start;
+  }
+  .speakerdiv h6 {
+    margin-bottom: 0.4rem;
+  }
+  .arrow {
+    display: block;
+  }
+  .leftdiv a,
+  .line,
+  .logdiv {
+    display: none;
+  }
+  .leftdiv {
+    background-color: ffffff;
+    height: 100%;
+  }
+  .socialapp {
+    justify-content: center;
+    border-radius: 80px !important;
+    width: 90%;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .arrowpic {
+    font-size: 3rem !important;
+  }
+  .leftdiv {
+    width: 60%;
+  }
+  .buttondiv {
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .speakerdiv {
+    width: 90%;
+    justify-self: center;
+  }
+  .tablediv {
+    width: 90%;
+    height: auto !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .buttoncard {
+    .cardbutton {
+      width: 85% !important;
+    }
+  }
+  .tablediv {
+    overflow-x: auto;
+    .table1 {
+      align-self: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .table1 {
+    margin-left: 10%;
+  }
+
+  .arrowpic {
+    font-size: 3rem !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .socialapp {
+    div {
+      display: flex;
+      flex-direction: column;
+      height: 150px;
+      align-items: center;
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .speakerdiv {
+    margin-bottom: 46px;
+    height: 100%;
+  }
+
+  .arrowpic {
+    font-size: 3rem !important;
+  }
+
+  .socialcards {
+    //height: 100%;
+    grid-row: 1/7 !important;
+    row-gap: 1rem;
+    width: 80% !important;
+    justify-self: center;
+    margin-right: auto;
+  }
+  .s1 {
+    grid-row: 1/2 !important;
+    grid-column: 1/7 !important;
+  }
+  .s2 {
+    grid-row: 2/3 !important;
+    grid-column: 1/7 !important;
+  }
+  .s3 {
+    grid-row: 3/4 !important;
+    grid-column: 1/7 !important;
+  }
+  .s4 {
+    grid-row: 4/5 !important;
+    grid-column: 1/7 !important;
+  }
+  .s5 {
+    grid-row: 5/6 !important;
+    grid-column: 1/7 !important;
+  }
+  .s6 {
+    grid-row: 6/7 !important;
+    grid-column: 1/7 !important;
+  }
+  .buttondiv {
+    grid-row: 7/10 !important;
+    grid-column: 1/5 !important;
+    width: 85% !important;
+    justify-self: center;
+    height: 100% !important;
+    grid-template-columns: none;
+  }
+  .bc1 {
+    grid-row: 1/2 !important;
+    grid-column: 1/5 !important;
+    height: 300px;
+  }
+  .bc2 {
+    grid-row: 2/3 !important;
+    grid-column: 1/5 !important;
+    height: 300px;
+  }
+  .bc3 {
+    grid-row: 3/4 !important;
+    grid-column: 1/5 !important;
+    height: 300px;
+  }
+
+  .para {
+    grid-row: 10/11 !important;
+    grid-column: 1/5 !important;
+    font-size: 80%;
+    width: 85% !important;
+    justify-self: center;
+  }
+  .firstLine {
+    grid-row: 11/12 !important;
+  }
+  .speakerdiv {
+    grid-row: 12/13 !important;
+    grid-column: 1/5 !important;
+  }
+  .tablediv {
+    grid-row: 13/14 !important;
+    grid-column: 1/5 !important;
+    width: 95% !important;
+    height: auto !important;
+  }
+  .secondLine {
+    grid-row: 14/15 !important;
+  }
+  .both {
+    display: flex !important;
+    flex-direction: column !important;
+    align-self: center;
+    width: 85% !important;
+  }
+  .speakerdiv2 {
+    width: 90% !important;
+    justify-content: flex-start;
+  }
+  .speakerdiv h6 {
+    margin-bottom: 0.4rem;
+  }
+}
+@media screen and (max-width: 490px) {
+  .arrowpic {
+    font-size: 2.5rem !important;
+  }
+  .para {
+    margin-bottom: 5px;
+    height: 100%;
+  }
+  .enddiv {
+    margin-bottom: 20px;
+    height: 100%;
+  }
+  .footerWrapper {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .speakerdiv2 {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 80px;
+      height: 80px;
+      align-self: baseline;
+      margin-bottom: 10px;
+    }
+  }
+}
+/*
+@media screen and (max-width: 899px) {
+  .superdiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .leftdiv {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width: 253px;
+    height: 455px;
+    background: #ffffff;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: -webkit-center;
+    text-align-last: center;
+  }
+  .socialcards {
+    //display: grid;
+    //grid-template-columns: repeat(6, 1fr);
+    grid-column: 2/4;
+    grid-row: 1/2;
+    grid-column-gap: 0.5rem;
+  }
+  .buttondiv {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    // display: grid;
+    //grid-template-columns: repeat(4, 1fr);
+    //grid-column-gap: 0.5rem;
+  }
+  .para {
+    grid-column: 2/4;
+    grid-row: 3/4;
+    width: 970px;
+    height: 85px;
+    background: rgba(114, 80, 157, 0.2);
+
+    border-radius: 10px;
+  }
+  .speakerdiv {
+    grid-column: 2/4;
+    grid-row: 4/5;
+    background: #ffffff;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 970px;
+    height: 200px;
+  }
+}
+
+
+
+
 /*
 @media screen and (max-width: 899px) {
   .leftdiv {

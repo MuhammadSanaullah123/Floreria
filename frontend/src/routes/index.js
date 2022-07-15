@@ -1,5 +1,6 @@
 import { lazy } from "react";
 const MyAccount = lazy(() => import("../userPages/MyAccount/MyAccount"));
+const Referrals = lazy(() => import("../userPages/MyAccount/Referrals"));
 const Categorys = lazy(() => import("../userPages/Category/Category"));
 const Cart = lazy(() => import("../userPages/Cart/Cart"));
 const ThankYou = lazy(() => import("../userPages/Thankyou/ThankYou"));
@@ -94,6 +95,10 @@ const routes = [
   {
     path: "/user/myaccount",
     component: MyAccount,
+  },
+  {
+    path: "/user/myaccount/referrals",
+    component: Referrals,
   },
   {
     path: "/user/category",

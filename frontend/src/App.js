@@ -11,6 +11,7 @@ import Product from "./userPages/Products/Products";
 import Header from "./mainLayout/Header/Header";
 import Footer from "./mainLayout/Footer/Footer";
 import MyAccount from "./userPages/MyAccount/MyAccount";
+import Referrals from "./userPages/MyAccount/Referrals";
 import Categorys from "./userPages/Category/Category";
 import Cart from "./userPages/Cart/Cart";
 import ThankYou from "./userPages/Thankyou/ThankYou";
@@ -52,6 +53,7 @@ const App = () => {
           <Route path="/user/home" component={Home} />
           <Route path="/user/product" component={Product} />
           <Route path="/user/myaccount" component={MyAccount} />
+          <Route path="/user/myaccount/referrals" component={Referrals} />
           <Route path="/user/category" component={Categorys} />
           <Route path="/user/cart" component={Cart} />
           <Route path="/user/thankyou" component={ThankYou} />
