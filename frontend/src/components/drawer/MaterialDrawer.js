@@ -13,46 +13,54 @@ import DrawerButton from '../form/DrawerButton';
 import Uploader from '../image-uploader/Uploader';
 import ChildrenCategory from '../category/ChildrenCategory';
 import ParentCategory from '../category/ParentCategory';
-import useProductSubmit from '../../hooks/useProductSubmit';
+import useMaterialSubmit from '../../hooks/useMaterialSubmit';
 
-const ProductDrawer = ({ id }) => {
+const MaterialDrawer = ({ id }) => {
   const {
     register,
-    watch,
     handleSubmit,
     onSubmit,
     errors,
-    imageUrl,
-    setImageUrl,
-    tag,
-    setTag,
-  } = useProductSubmit(id);
-
+  } = useMaterialSubmit(id);
+  
   return (
     <>
       <div className="w-full relative p-6 border-b border-gray-100 bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300">
         {id ? (
           <Title
-            title="Update Product"
-            description="Updated your product and necessary information from here"
+            title="Update Material"
+            description="Updated your material and necessary information from here"
           />
         ) : (
           <Title
-            title="Add Product"
-            description="Add your product and necessary information from here"
+            title="Add Material"
+            description="Add your material and necessary information from here"
           />
         )}
       </div>
       <Scrollbars className="w-full md:w-7/12 lg:w-8/12 xl:w-8/12 relative dark:bg-gray-700 dark:text-gray-200">
         <form onSubmit={handleSubmit(onSubmit)} className="block">
           <div className="px-6 pt-8 flex-grow w-full h-full max-h-full pb-40 md:pb-32 lg:pb-32 xl:pb-32">
-            <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+            {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Product Image" />
               <div className="col-span-8 sm:col-span-4">
                 <Uploader imageUrl={imageUrl} setImageUrl={setImageUrl} />
               </div>
+            </div> */}
+            <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+              <LabelArea label="Material" />
+              <div className="col-span-8 sm:col-span-4">
+                <InputArea
+                  register={register}
+                  required="false"
+                  label="Material"
+                  name="material"
+                  type="text"
+                  placeholder="Material"
+                />
+                <Error errorName={errors.material} />
+              </div>
             </div>
-
             <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Material Name" />
               <div className="col-span-8 sm:col-span-4">
@@ -64,40 +72,67 @@ const ProductDrawer = ({ id }) => {
                   type="text"
                   placeholder="Material Name"
                 />
-                <Error errorName={errors.sku} />
+                <Error errorName={errors.materialName} />
               </div>
             </div>
 
             <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
-              <LabelArea label="Material Quantity" />
+              <LabelArea label="Material Type" />
               <div className="col-span-8 sm:col-span-4">
                 <InputArea
                   register={register}
-                  label="Material Quantity"
-                  name="materialQuantity"
-                  type="number"
-                  placeholder="Material Quantity"
+                  label="Material Type"
+                  name="materialType"
+                  type="text"
+                  placeholder="Material Type"
                 />
-                <Error errorName={errors.title} />
+                <Error errorName={errors.materialType} />
               </div>
             </div>
 
             <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
-              <LabelArea label="Name" />
+              <LabelArea label="Supplier" />
               <div className="col-span-8 sm:col-span-4">
                 <InputArea
                   register={register}
                   required="false"
-                  label="Name"
-                  name="name"
+                  label="Supplier"
+                  name="supplier"
                   type="text"
-                  placeholder="Name"
+                  placeholder="Supplier"
                 />
-                <Error errorName={errors.slug} />
+                <Error errorName={errors.supplier} />
               </div>
             </div>
-
             <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+              <LabelArea label="Producer" />
+              <div className="col-span-8 sm:col-span-4">
+                <InputArea
+                  register={register}
+                  required="false"
+                  label="Producer"
+                  name="producer"
+                  type="text"
+                  placeholder="Producer"
+                />
+                <Error errorName={errors.producer} />
+              </div>
+            </div>
+            <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+              <LabelArea label="Quantity" />
+              <div className="col-span-8 sm:col-span-4">
+                <InputArea
+                  register={register}
+                  required="false"
+                  label="Quantity"
+                  name="quantity"
+                  type="text"
+                  placeholder="Quantity"
+                />
+                <Error errorName={errors.quantity} />
+              </div>
+            </div>
+            {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Product Description" />
               <div className="col-span-8 sm:col-span-4">
                 <Textarea
@@ -116,9 +151,9 @@ const ProductDrawer = ({ id }) => {
                 />
                 <Error errorName={errors.description} />
               </div>
-            </div>
+            </div> */}
 
-            <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+            {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Parent Category" />
               <div className="col-span-8 sm:col-span-4">
                 <Select
@@ -135,9 +170,9 @@ const ProductDrawer = ({ id }) => {
                 </Select>
                 <Error errorName={errors.parent} />
               </div>
-            </div>
+            </div> */}
 
-            <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+            {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Child Category" />
               <div className="col-span-8 sm:col-span-4">
                 <Select
@@ -154,9 +189,9 @@ const ProductDrawer = ({ id }) => {
                 </Select>
                 <Error errorName={errors.children} />
               </div>
-            </div>
+            </div> */}
 
-            <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+            {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Product Type" />
               <div className="col-span-8 sm:col-span-4">
                 <SelectOption
@@ -166,7 +201,7 @@ const ProductDrawer = ({ id }) => {
                 />
                 <Error errorName={errors.type} />
               </div>
-            </div>
+            </div> */}
 
             {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Flash Sale" />
@@ -185,7 +220,7 @@ const ProductDrawer = ({ id }) => {
               </div>
             </div> */}
 
-            <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+            {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Unit (kg/pc/lb/ml/g...etc)" />
               <div className="col-span-8 sm:col-span-4">
                 <InputArea
@@ -197,9 +232,9 @@ const ProductDrawer = ({ id }) => {
                 />
                 <Error errorName={errors.unit} />
               </div>
-            </div>
+            </div> */}
 
-            <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+            {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Product Quantity" />
               <div className="col-span-8 sm:col-span-4">
                 <InputValue
@@ -213,9 +248,9 @@ const ProductDrawer = ({ id }) => {
                 />
                 <Error errorName={errors.quantity} />
               </div>
-            </div>
+            </div> */}
 
-            <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+            {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Product Price" />
               <div className="col-span-8 sm:col-span-4">
                 <InputValue
@@ -229,9 +264,9 @@ const ProductDrawer = ({ id }) => {
                 />
                 <Error errorName={errors.originalPrice} />
               </div>
-            </div>
+            </div> */}
 
-            <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+            {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Sale Price" />
               <div className="col-span-8 sm:col-span-4">
                 <InputValue
@@ -247,7 +282,7 @@ const ProductDrawer = ({ id }) => {
                 />
                 <Error errorName={errors.salePrice} />
               </div>
-            </div>
+            </div> */}
 
             {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Tax1" />
@@ -285,7 +320,7 @@ const ProductDrawer = ({ id }) => {
               </div>
             </div> */}
 
-            <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
+            {/* <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
               <LabelArea label="Product Tag" />
               <div className="col-span-8 sm:col-span-4">
                 <ReactTagInput
@@ -294,14 +329,14 @@ const ProductDrawer = ({ id }) => {
                   onChange={(newTags) => setTag(newTags)}
                 />
               </div>
-            </div>
+            </div> */}
           </div>
 
-          <DrawerButton id={id} title="Product" />
+          <DrawerButton id={id} title="Material" />
         </form>
       </Scrollbars>
     </>
   );
 };
 
-export default React.memo(ProductDrawer);
+export default React.memo(MaterialDrawer);

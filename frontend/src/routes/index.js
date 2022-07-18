@@ -10,7 +10,9 @@ const Product = lazy(() => import("../userPages/Products/Products"));
 // use lazy for better code splitting
 const Dashboard = lazy(() => import("../pages/Dashboard"));
 const Products = lazy(() => import("../pages/Products"));
+const Materials = lazy(() => import("../pages/Materials"));
 const ProductDetails = lazy(() => import("../pages/ProductDetails"));
+const MaterialDetails = lazy(() => import("../pages/MaterialDetails"));
 const Category = lazy(() => import("../pages/Category"));
 const Staff = lazy(() => import("../pages/Staff"));
 const Customers = lazy(() => import("../pages/Customers"));
@@ -37,6 +39,14 @@ const routes = [
   {
     path: "/dashboard",
     component: Dashboard,
+  },
+  {
+    path: "/materials",
+    component: Materials,
+  },
+  {
+    path: "/materials/:id",
+    component: MaterialDetails,
   },
   {
     path: "/products",

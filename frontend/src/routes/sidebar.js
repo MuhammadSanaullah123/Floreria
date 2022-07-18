@@ -22,6 +22,11 @@ const sidebar = [
     name: 'Dashboard', // name that appear in Sidebar
   },
   {
+    path: '/materials',
+    icon: FiCompass,
+    name: 'Materials',
+  },
+  {
     path: '/products',
     icon: FiShoppingBag,
     name: 'Products',

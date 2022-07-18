@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 
 const connectDB = require('../config/db');
+const materialRoutes = require('../routes/materialRoutes');
 const productRoutes = require('../routes/productRoutes');
 const userRoutes = require('../routes/userRoutes');
 const adminRoutes = require('../routes/adminRoutes');
@@ -28,6 +29,7 @@ app.get('/', (req, res) => {
 });
 
 //this for route will need for store front, also for admin dashboard
+app.use('/api/materials/', materialRoutes);
 app.use('/api/products/', productRoutes);
 app.use('/api/category/', categoryRoutes);
 app.use('/api/coupon/', couponRoutes);

@@ -6,56 +6,46 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: true
     },
-    vendor:{
-      type:String,
-      required:true
-    },
-    tags:{
-      type:String,
-      required:true
-    },
-    published:{
-      type:String,
-    },
-    
-    variantGrams:{
-      type:String,
-    },
-    Stock : {
-      type:String,
-    },
-    variantPrice: {
-      type: String,
-    },
-    isRequiredShipping:{
-      type:String,
-      required:true
-    },
-    variantTaxable:{
-      type:String,
-      required:true
-    },
-    productDetails: {
-      type: String,
-      required: true
-    },
     category:{
-      type: String,
-      required: true
-    },
-    
-    images: {
-      type: String,
-      required: true
-    },
-        
-    packagingSpecification: {
-      type: String,
-    },
-    
-    status:{
       type:String,
-    }
+      required:true
+    },
+    materialName:{
+      type:String,
+      required:true
+    },
+    materialQuantity:{
+      type:String,
+    },
+    productQuantity:{
+      type:String,
+    },
+    productPrice: {
+      type:String,
+    },
+    status: {
+      type: String,
+    },
+    discount:{
+      type:String,
+      required:true
+    },
+    description:{
+      type: String,
+      required: true
+    },
+    image: {
+      type: String,
+      required: true
+    },
+    specification: {
+      type: Array,
+      required: true
+    },
+    quantity:{
+      type:String,
+    },
+    
   },
 
   // {

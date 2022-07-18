@@ -20,17 +20,18 @@ import useFilter from '../hooks/useFilter';
 // import productData from '../utils/products';
 import NotFound from '../components/table/NotFound';
 import Loading from '../components/preloader/Loading';
-import ProductServices from '../services/ProductServices';
+import MaterialServices from '../services/MaterialServices';
 import PageTitle from '../components/Typography/PageTitle';
 import { SidebarContext } from '../context/SidebarContext';
-import ProductTable from '../components/product/ProductTable';
+import MaterialTable from '../components/material/MaterialTable';
 import SelectCategory from '../components/form/SelectCategory';
 import MainDrawer from '../components/drawer/MainDrawer';
-import ProductDrawer from '../components/drawer/ProductDrawer';
+import MaterialDrawer from '../components/drawer/MaterialDrawer';
+import CouponDrawer from '../components/drawer/CouponDrawer';
 
-const Products = () => {
+const Materials = () => {
   const { toggleDrawer } = useContext(SidebarContext);
-  const { data, loading } = useAsync(ProductServices.getAllProducts);
+  const { data, loading } = useAsync(MaterialServices.getAllMaterials);
 
   const {
     searchRef,
@@ -59,9 +60,9 @@ const Products = () => {
   return (
     
     <>
-      <PageTitle>Products</PageTitle>
+      <PageTitle>Raw Materials</PageTitle>
       <MainDrawer>
-        <ProductDrawer />
+        <CouponDrawer />
       </MainDrawer>
 
       <Card className="min-w-0 shadow-xs overflow-hidden bg-white dark:bg-gray-800 mb-5">
@@ -103,7 +104,7 @@ const Products = () => {
                 <span className="mr-3">
                   <FiPlus />
                 </span>
-                Add Product
+                Add Material
               </Button>
             </div>
           </form>
@@ -114,12 +115,7 @@ const Products = () => {
         <CardBody>
           <div className="grid gap-4 md:grid-cols-3 xl:grid-cols-3">
             <div className="col-span-2">
-              <CSVReader
-                onDrop={handleOnDrop}
-                addRemoveButton
-                config={{
-                  header: true,
-                }}
+              <CSVReader onDrop={handleOnDrop} addRemoveButton config={{ header: true }}
                 style={{
                   dropArea: {
                     borderColor: 'green',
@@ -193,35 +189,34 @@ const Products = () => {
             <TableHeader>
               <tr>
                 <TableCell>ID</TableCell>
-                <TableCell>Material Name(s)</TableCell>
-                <TableCell>Material Quantity</TableCell>
-                <TableCell>Name</TableCell>
-                <TableCell>Category</TableCell>
+                <TableCell>Material</TableCell>
+                <TableCell>Material Name</TableCell>
+                <TableCell>Material Type</TableCell>
+                <TableCell>Supplier</TableCell>
+                <TableCell>Producer</TableCell>
                 <TableCell>Quantity</TableCell>
-                <TableCell>Price</TableCell>
                 <TableCell>Status</TableCell>
-                <TableCell>Discount</TableCell>
                 <TableCell>Details</TableCell>
                 <TableCell className="text-center">Published</TableCell>
                 <TableCell className="text-right">Actions</TableCell>
               </tr>
             </TableHeader>
-            <ProductTable products={dataTable} />
+            <MaterialTable materials={dataTable} />
           </Table>
           <TableFooter>
             <Pagination
               totalResults={totalResults}
               resultsPerPage={resultsPerPage}
               onChange={handleChangePage}
-              label="Product Page Navigation"
+              label="Material Page Navigation"
             />
           </TableFooter>
         </TableContainer>
       ) : (
-        <NotFound title="Product" />
+        <NotFound title="Material" />
       )}
     </>
   );
 };
 
-export default Products;
+export default Materials;

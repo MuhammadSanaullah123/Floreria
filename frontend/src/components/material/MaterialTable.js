@@ -12,59 +12,59 @@ import { FiEye } from 'react-icons/fi';
 import Tooltip from '../tooltip/Tooltip';
 import MainModal from '../modal/MainModal';
 import MainDrawer from '../drawer/MainDrawer';
-import ProductDrawer from '../drawer/ProductDrawer';
+import MaterialDrawer from '../drawer/MaterialDrawer';
 import ShowHideButton from '../table/ShowHideButton';
 import EditDeleteButton from '../table/EditDeleteButton';
 import useToggleDrawer from '../../hooks/useToggleDrawer';
 
-const ProductTable = ({ products }) => {
+const MaterialTable = ({ materials }) => {
   const { serviceId, handleModalOpen, handleUpdate } = useToggleDrawer();
 
   return (
     <>
       <MainModal id={serviceId} />
       <MainDrawer>
-        <ProductDrawer id={serviceId} />
+        <MaterialDrawer id={serviceId} />
       </MainDrawer>
       <TableBody>
-        {products?.map((product, i) => (
+        {materials?.map((materials, i) => (
           <TableRow key={i + 1}>
             <TableCell>
               <span className="text-xs uppercase font-semibold">
                 {' '}
-                {product._id.substring(18, 26)}
+                {materials._id.substring(18, 26)}
               </span>
             </TableCell>
             <TableCell>
-              <span className="text-sm">{product.materialName}</span>
+              <span className="text-sm">{materials.material}</span>
             </TableCell>
             <TableCell>
-              <span className="text-sm">{product.materialQuantity}</span>
+              <span className="text-sm">{materials.materialName}</span>
             </TableCell>
             <TableCell>
               <div className="flex items-center">
-                <Avatar
+                {/* <Avatar
                   className="hidden p-1 mr-2 md:block bg-gray-50 shadow-none"
-                  src={product.image}
-                  alt={product.title}
-                />
+                  src={materials.image}
+                  alt={materials.title}
+                /> */}
                 <div>
-                  <h2 className="text-sm font-medium">{product.productName}</h2>
+                  <h2 className="text-sm font-medium">{materials.materialType}</h2>
                 </div>
               </div>
             </TableCell>
             <TableCell>
-              <span className="text-sm">{product.category}</span>
+              <span className="text-sm">{materials.supplier}</span>
             </TableCell>
             <TableCell>
-              <span className="text-sm">{product.quantity}</span>
+              <span className="text-sm">{materials.producer}</span>
             </TableCell>
             <TableCell>
-              <span className="text-sm font-semibold">${product.productPrice}</span>
+              <span className="text-sm font-sm">{materials.quantity}</span>
             </TableCell>
 
             <TableCell>
-              {product.quantity > 0 ? (
+              {materials.quantity > 0 ? (
                 <Badge type="success">Selling</Badge>
               ) : (
                 <Badge type="danger">Sold Out</Badge>
@@ -72,15 +72,8 @@ const ProductTable = ({ products }) => {
             </TableCell>
 
             <TableCell>
-              <span className="text-sm font-semibold">
-                {/* {product.discount !== 0 && (
-                  <span>{product.discount.toFixed(0)}% Off</span>
-                )} */}
-              </span>
-            </TableCell>
-            <TableCell>
               <Link
-                to={`/product/${product._id}`}
+                to={`/materials/${materials._id}`}
                 className="flex justify-center text-center text-gray-400 hover:text-green-600"
               >
                 <Tooltip
@@ -92,11 +85,11 @@ const ProductTable = ({ products }) => {
               </Link>
             </TableCell>
             <TableCell>
-              <ShowHideButton id={product._id} status={product.status} />
+              <ShowHideButton id={materials._id} status={materials.status} />
             </TableCell>
             <TableCell>
               <EditDeleteButton
-                id={product._id}
+                id={materials._id}
                 handleUpdate={handleUpdate}
                 handleModalOpen={handleModalOpen}
               />
@@ -108,4 +101,4 @@ const ProductTable = ({ products }) => {
   );
 };
 
-export default React.memo(ProductTable);
+export default React.memo(MaterialTable);
