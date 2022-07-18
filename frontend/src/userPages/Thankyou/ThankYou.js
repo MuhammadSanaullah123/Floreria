@@ -6,8 +6,9 @@ import Ellipse192 from "./../../assets/Ellipse192.png";
 import map from "./../../assets/map.png";
 import f1 from "./../../assets/f1.svg";
 import f2 from "./../../assets/f2.svg";
-import f3 from "./../../assets/f3.svg";
 import f4 from "./../../assets/f4.png";
+import f3 from "./../../assets/f3.svg";
+
 import copy from "./../../assets/copy.png";
 import thankmessenger from "./../../assets/thankmessenger.png";
 import thanksms from "./../../assets/thanksms.png";

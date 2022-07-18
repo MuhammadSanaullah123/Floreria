@@ -26,7 +26,8 @@ import f2 from "./../../assets/f2.svg";
 import f3 from "./../../assets/f3.svg";
 import f4 from "./../../assets/f4.png";
 import questionmark from "./../../assets/questionmark.png";
-
+import cross from "./../../assets/cross.svg";
+import addAdd from "./../../assets/addAdd.svg";
 import btncal from "./../../assets/btncal.png";
 import truck from "./../../assets/truck.png";
 import home from "./../../assets/home.png";
@@ -86,7 +87,9 @@ const Step2 = ({ handleNext }) => {
   const [address2, setaddress] = useState([]);
   const [googleaddress, setgoogleAddress] = useState(null);
   const [booldata, setboolData] = useState();
+  const [show, setShow] = useState(false);
   const [newAddress, setNewAddress] = useState([]);
+  const [absentName, setAbsentName] = useState([]);
   const [personName, setPersonName] = useState([]);
   const [personalInformation, setPersonalInformation] = useState({
     name: "",
@@ -96,13 +99,14 @@ const Step2 = ({ handleNext }) => {
     recipientname: "",
     phone: "",
     address: "",
-    calle: "",
-    number: "",
+    //calle: "",
+    //number: "",
     colonia: "",
-    postalcode: "",
+    //postalcode: "",
     state: "",
     ciudad: "",
     addresstype: personName,
+    absent: absentName,
     reference: "",
   });
 
@@ -219,11 +223,12 @@ const Step2 = ({ handleNext }) => {
   };
   const handleStore = () => {
     var temp = newAddress;
+    inputvalues.address = googleaddress.label;
     temp.push(inputvalues);
     setNewAddress(temp);
     setboolData(true);
     setDisable(false);
-
+    setShow(true);
     handleClose2(true);
     console.log("newAddress:--------->");
     console.log(newAddress);
@@ -242,8 +247,9 @@ ${newAddress[index].calle} ${","}  ${newAddress[index].number}
 ${newAddress[index].state} ${","}  ${newAddress[index].ciudad}
 ${newAddress[index].reference}`
     );
-    handleClose1();
   };
+  console.log("Address stored:");
+  console.log(address2);
 
   const handleChange = (event) => {
     const {
@@ -251,7 +257,12 @@ ${newAddress[index].reference}`
     } = event;
     setPersonName(typeof value === "string" ? value.split(",") : value);
   };
-
+  const handleChange2 = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setAbsentName(typeof value === "string" ? value.split(",") : value);
+  };
   const handlecheckbox1 = (event) => {
     setChecked1(event.target.checked);
   };
@@ -275,7 +286,6 @@ ${newAddress[index].reference}`
     borderRadius: 1,
     p: 4,
   };
-
   const style2 = {
     position: "absolute",
     top: "50%",
@@ -284,8 +294,11 @@ ${newAddress[index].reference}`
     width: 850,
     height: 720,
     bgcolor: "background.paper",
-    borderRadius: 1,
+    borderRadius: "30px",
     p: 4,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
   };
   const style3 = {
     position: "absolute",
@@ -299,19 +312,22 @@ ${newAddress[index].reference}`
     padding: "15px",
   };
   const names = [
-    "Residencia",
+    "Casa",
+    "Departamento",
     "Hotel",
     "Restaurante",
     "Capilla Funeral",
-    "Oficinas",
+    "Oficina",
     "Hospital",
-    "Escuela o Universidad",
-    "Teatro",
-    "Plaza Commercial",
-    "Otro",
+    "Colegio",
+    "Universidad",
     "Banco",
-    "Departamento",
-    "Campo de Golf",
+    "Otro",
+  ];
+  const absent_options = [
+    "Dejarlo con vecino",
+    "Dejar en conserjería",
+    "Llevárselo para programar reenvío (costo adicional)",
   ];
 
   const [valueTab, setValueTab] = React.useState(0);
@@ -618,397 +634,334 @@ ${newAddress[index].reference}`
                       ¿Donde enviamos este pedido?
                     </p>
                   </div>
-                  <div style={{ display: "flex", marginBottom: "80px" }}>
-                    <TextareaAutosize
-                      className="textarea"
-                      maxRows={5}
-                      aria-label="maximum height"
-                      placeholder=""
+                  <div
+                    style={{
+                      marginLeft: "20px",
+                      display: "flex",
+                      width: "100%",
+                    }}
+                  >
+                    <div
+                      style={{
+                        marginRight: "20px",
+                        background: "#FFFFFF",
+
+                        borderRadius: "10px",
+                        display: `${show ? "flex" : "none"}`,
+                      }}
+                    >
+                      {booldata
+                        ? newAddress.map((addresses, index) => {
+                            return (
+                              <div
+                                className={`${index}`}
+                                key={index}
+                                disabled={disable}
+                                variant="contained"
+                                style={{
+                                  color: "#000",
+                                  background: "#FFFFFF",
+                                  borderRadius: "10px",
+                                  width: "200px",
+                                  height: "150px",
+                                  textTransform: "inherit",
+                                  padding: "10px",
+                                  textAlignLast: "start",
+                                  marginRight: "10px",
+                                  fontFamily: "Roboto",
+                                  fontWeight: "400",
+                                  fontSize: "16px",
+                                  padding: "1rem",
+                                }}
+                                onClick={() => handleaddressButton(index)}
+                              >
+                                <div key={index}>
+                                  {`${addresses.recipientname}`}
+                                  <br /> {`${addresses.address}`}
+                                  <br /> <br />
+                                  {`${addresses.phone}`} <br />
+                                </div>
+                              </div>
+                            );
+                          })
+                        : ""}
+                    </div>
+                    <Button
+                      className="addbtn"
+                      variant="contained"
+                      onClick={handleOpen2}
                       style={{
                         width: "200px",
                         height: "150px",
-                        background: "#FFFFFF",
+                        background: "#D96581",
                         borderRadius: "10px",
-                        fontSize: "16px",
-                        color: "#444444",
-                        fontFamily: "Roboto",
+                        fontFamily: "Nunito",
                         fontWeight: "400",
-                        display: `${selected2 ? "block" : "none"}`,
+                        fontSize: "16px",
+                        textTransform: "none",
+                        display: "flex",
+                        flexDirection: "column",
                       }}
-                      value={textarea3}
-                      onChange={(e) => settextArea3(e.target.value)}
-                    />
+                    >
+                      <img style={{ marginBottom: "10px" }} src={addAdd} />
+                      Nueva Dirección
+                    </Button>
+                    <Modal
+                      open={openmodel2}
+                      // onClose={handleClose2}
+                      aria-labelledby="modal-modal-title"
+                      aria-describedby="modal-modal-description"
+                    >
+                      <Box className="box2" sx={style2}>
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                          }}
+                        >
+                          <p
+                            style={{
+                              color: "#D96581",
+                              fontWeight: "700",
+                              fontFamily: "Nunito",
+                              fontSize: "30px",
+                              marginBottom: "0",
+                            }}
+                          >
+                            Dirección de envío
+                          </p>
+                          <img onClick={handleClose2} src={cross} />
+                        </div>
 
-                    <div style={{ marginLeft: "20px" }}>
-                      <Button
-                        className="addbtn"
-                        variant="contained"
-                        onClick={handleOpen1}
-                        style={{
-                          width: "200px",
-                          height: "150px",
-                          background: "#D96581",
-                          borderRadius: "10px",
-                          fontSize: "12px",
-
-                          textTransform: "none",
-                        }}
-                      >
-                        Nueva dirección
-                      </Button>
-                      <Modal
-                        open={openmodel1}
-                        //onClose={handleClose1}
-                        aria-labelledby="modal-modal-title"
-                        aria-describedby="modal-modal-description"
-                      >
-                        <Box sx={style1}>
+                        <div className="superdiv">
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                            }}
+                          >
+                            <TextField
+                              value={inputvalues.recipientname}
+                              name="recipientname"
+                              // key={index}
+                              onChange={handleInputChange}
+                              variant="outlined"
+                              label="Nombre de quien recibe el pedido"
+                              size="small"
+                              style={{ width: "45%", height: "50px" }}
+                            />
+                            <TextField
+                              value={inputvalues.phone}
+                              name="phone"
+                              // key={index}
+                              onChange={handleInputChange}
+                              variant="outlined"
+                              label="Teléfono de quien recibe el pedido (opcional)"
+                              size="small"
+                              style={{ width: "45%", height: "50px" }}
+                            />
+                            <a
+                              style={{ color: "#7A838D" }}
+                              title="Info: solo llamaremos en caso de no encontrar a la persona"
+                            >
+                              <img src={questionmark} height="13px" />
+                            </a>
+                          </div>
                           <div>
-                            <p>Select the address</p>
-                            <hr />
-                            <div>
-                              {booldata
-                                ? newAddress.map((addresses, index) => {
-                                    return (
-                                      <Grid container>
-                                        <Grid item xs={4}>
-                                          <Button
-                                            className={`${index}`}
-                                            key={index}
-                                            disabled={disable}
-                                            variant="contained"
-                                            style={{
-                                              backgroundColor: "#FFF",
-                                              color: "#000",
-                                              border: "1px solid #000",
-                                              width: "100%",
-                                              margin: "0.8rem 0",
-                                              textTransform: "inherit",
-                                              padding: "10px",
-                                              textAlignLast: "start",
-                                            }}
-                                            onClick={() =>
-                                              handleaddressButton(index)
-                                            }
-                                          >
-                                            <div key={index}>
-                                              {`${addresses.recipientname}`}
-                                              <br />
-                                              {`${addresses.phone}`} <br />
-                                              {`${addresses.address}`}
-                                              <br />
-                                              {`${addresses.calle}`}{" "}
-                                              {`${addresses.number}`}
-                                              <br />
-                                              {`${addresses.state}`}{" "}
-                                              {`${addresses.ciudad}`}
-                                              <br />
-                                              {`${addresses.reference}`}
-                                            </div>
-                                          </Button>
-                                        </Grid>
-                                      </Grid>
-                                    );
-                                  })
-                                : "No tienes direcciones para esta ciudad, por favor, agrega una"}
+                            <GooglePlacesAutocomplete
+                              selectProps={{
+                                googleaddress,
+                                onChange: setgoogleAddress,
+                                styles: {
+                                  menu: (provided, state) => ({
+                                    ...provided,
+                                    color: state.selectProps.menuColor,
+                                    zIndex: "5",
+                                  }),
+                                },
+                              }}
+                              name="address"
+                              // onChange={handleInputChange}
+                              placeholder="Dirección (calle y número):"
+                              apiKey="AIzaSyBK93ph5WIzMDsp4EJ6vKBsLGaJFoHGxcs"
+                            />
+                          </div>
+                          {/*         <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <TextField
+                      value={inputvalues.calle}
+                      name="calle"
+                      // key={index}
+                      onChange={handleInputChange}
+                      variant="outlined"
+                      label="Calle *"
+                      size="small"
+                      style={{ width: "75%" }}
+                    />
+                    <TextField
+                      value={inputvalues.number}
+                      name="number"
+                      // key={index}
+                      onChange={handleInputChange}
+                      variant="outlined"
+                      label="Número *"
+                      size="small"
+                      style={{ width: "20%" }}
+                    />
+                  </div> */}
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                            }}
+                          >
+                            <TextField
+                              value={inputvalues.colonia}
+                              name="colonia"
+                              // key={index}
+                              onChange={handleInputChange}
+                              variant="outlined"
+                              label="Departamento, casa, oficina, capilla, etc. (opcional)"
+                              size="small"
+                              style={{ width: "100%" }}
+                            />
+                            {/*  <TextField
+                      value={inputvalues.postalcode}
+                      name="postalcode"
+                      // key={index}
+                      onChange={handleInputChange}
+                      variant="outlined"
+                      label="Código Postal *"
+                      size="small"
+                      style={{ width: "30%" }}
+                    /> */}
+                          </div>
+                          <div className="formsdiv">
+                            <TextField
+                              value={inputvalues.state}
+                              name="state"
+                              // key={index}
+                              onChange={handleInputChange}
+                              variant="outlined"
+                              label="Comuna"
+                              size="small"
+                              style={{ width: "48%" }}
+                            />
+                            <TextField
+                              value={inputvalues.ciudad}
+                              name="ciudad"
+                              // key={index}
+                              onChange={handleInputChange}
+                              variant="outlined"
+                              label="Ciudad"
+                              size="small"
+                              style={{ width: "48%" }}
+                            />
+                          </div>
+                          <div>
+                            <FormControl
+                              style={{
+                                width: "100%",
+                                background: "#F8F8F8",
+                                borderRadius: "10px",
+                              }}
+                              size="small"
+                            >
+                              <InputLabel id="demo-simple-select-label">
+                                Tipo de residencia
+                              </InputLabel>
+                              <Select
+                                name="addresstype"
+                                value={personName}
+                                labelId="demo-simple-select-label"
+                                multiple
+                                id="demo-simple-select"
+                                label="places"
+                                onChange={handleChange}
+                              >
+                                {names.map((name) => (
+                                  <MenuItem key={name} value={name}>
+                                    {name}
+                                  </MenuItem>
+                                ))}
+                              </Select>
+                            </FormControl>
+                          </div>
+                          <div>
+                            <TextareaAutosize
+                              name="reference"
+                              value={inputvalues.reference}
+                              maxRows={5}
+                              aria-label="maximum height"
+                              placeholder="Referencias sobre la entrega de tu pedido (opcional)"
+                              style={{
+                                width: "100%",
+                                height: "110px",
+                                background: "#F8F8F8",
+                                borderRadius: "10px",
+                                padding: "1rem",
+                              }}
+                              onChange={handleInputChange}
+                            />
+                            <FormControl
+                              style={{
+                                width: "100%",
+                                background: "#F8F8F8",
+                                borderRadius: "10px",
+                              }}
+                              size="small"
+                            >
+                              <InputLabel id="demo-simple-select-label">
+                                ¿Que hacemos si no está la persona que debe
+                                recibir el pedido?
+                              </InputLabel>
+                              <Select
+                                name="absent"
+                                value={absentName}
+                                labelId="demo-simple-select-label"
+                                multiple
+                                id="demo-simple-select"
+                                label="absentperson"
+                                onChange={handleChange2}
+                              >
+                                {absent_options.map((names) => (
+                                  <MenuItem key={names} value={names}>
+                                    {names}
+                                  </MenuItem>
+                                ))}
+                              </Select>
+                            </FormControl>
 
-                              {/* <TextField
-                                  value={inputField.value}
-                                  name="text"
-                                  key={index}
-                                  onChange={(event) =>
-                                    handleChangeinput(index, event)
-                                  }
-                                  variant="outlined"
-                                  label="Número *"
-                                  size="small"
-                                  style={{ width: "20%" }}
-                                /> */}
-                            </div>
-                            <hr />
                             <div
                               style={{
                                 display: "flex",
-                                justifyContent: "space-between",
+                                justifyContent: "end",
                               }}
                             >
                               <Button
+                                style={{
+                                  width: "280px",
+                                  height: "50px",
+                                  background: "#D96581",
+                                  borderRadius: "10px",
+                                }}
                                 variant="contained"
                                 className="newaddress"
-                                onClick={handleOpen2}
+                                onClick={handleStore}
                               >
-                                + Nueva Dirección
-                              </Button>
-                              <Modal
-                                open={openmodel2}
-                                // onClose={handleClose2}
-                                aria-labelledby="modal-modal-title"
-                                aria-describedby="modal-modal-description"
-                              >
-                                <Box className="box2" sx={style2}>
-                                  <p
-                                    style={{
-                                      color: "#D96581",
-                                      fontWeight: "700",
-                                      fontFamily: "Nunito",
-                                      fontStyle: "normal",
-                                    }}
-                                  >
-                                    Dirección de envío
-                                  </p>
-
-                                  <div className="superdiv">
-                                    <div
-                                      style={{
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                      }}
-                                    >
-                                      <TextField
-                                        value={inputvalues.recipientname}
-                                        name="recipientname"
-                                        // key={index}
-                                        onChange={handleInputChange}
-                                        variant="outlined"
-                                        label="Nombre"
-                                        size="small"
-                                        style={{ width: "75%" }}
-                                      />
-                                      <TextField
-                                        value={inputvalues.phone}
-                                        name="phone"
-                                        // key={index}
-                                        onChange={handleInputChange}
-                                        variant="outlined"
-                                        label="teléfono"
-                                        size="small"
-                                        style={{ width: "20%" }}
-                                      />
-                                    </div>
-                                    <div>
-                                      {/* <TextField
-                              value={inputvalues.address}
-                              name="address"
-                              onChange={handleInputChange}
-                              variant="outlined"
-                              label="Buscar dirección:"
-                              size="small"
-                              style={{ width: '100%' }}
-                            /> */}
-                                      <GooglePlacesAutocomplete
-                                        selectProps={{
-                                          googleaddress,
-                                          onChange: setgoogleAddress,
-                                        }}
-                                        name="address"
-                                        // onChange={handleInputChange}
-                                        label="Buscar dirección:"
-                                        apiKey="AIzaSyBK93ph5WIzMDsp4EJ6vKBsLGaJFoHGxcs"
-                                      />
-                                    </div>
-                                    <div
-                                      style={{
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                      }}
-                                    >
-                                      <TextField
-                                        value={inputvalues.calle}
-                                        name="calle"
-                                        // key={index}
-                                        onChange={handleInputChange}
-                                        variant="outlined"
-                                        label="Calle *"
-                                        size="small"
-                                        style={{ width: "75%" }}
-                                      />
-                                      <TextField
-                                        value={inputvalues.number}
-                                        name="number"
-                                        // key={index}
-                                        onChange={handleInputChange}
-                                        variant="outlined"
-                                        label="Número *"
-                                        size="small"
-                                        style={{ width: "20%" }}
-                                      />
-                                    </div>
-                                    <div
-                                      style={{
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                      }}
-                                    >
-                                      <TextField
-                                        value={inputvalues.colonia}
-                                        name="colonia"
-                                        // key={index}
-                                        onChange={handleInputChange}
-                                        variant="outlined"
-                                        label="Colonia *"
-                                        size="small"
-                                        style={{ width: "65%" }}
-                                      />
-                                      <TextField
-                                        value={inputvalues.postalcode}
-                                        name="postalcode"
-                                        // key={index}
-                                        onChange={handleInputChange}
-                                        variant="outlined"
-                                        label="Código Postal *"
-                                        size="small"
-                                        style={{ width: "30%" }}
-                                      />
-                                    </div>
-                                    <div className="formsdiv">
-                                      <FormControl
-                                        className="firstform"
-                                        size="small"
-                                      >
-                                        <InputLabel id="demo-simple-select-label">
-                                          Estado *
-                                        </InputLabel>
-                                        <Select
-                                          name="state"
-                                          labelId="demo-simple-select-label"
-                                          id="demo-simple-select"
-                                          value={inputvalues.state}
-                                          label="statte"
-                                          onChange={handleInputChange}
-                                        >
-                                          <MenuItem value={"Estada de Mexico"}>
-                                            Estado de Mexico
-                                          </MenuItem>
-                                        </Select>
-                                      </FormControl>
-                                      <FormControl
-                                        className="secondform"
-                                        size="small"
-                                      >
-                                        <InputLabel id="demo-simple-select-label">
-                                          Ciudad *
-                                        </InputLabel>
-                                        <Select
-                                          name="ciudad"
-                                          value={inputvalues.ciudad}
-                                          labelId="demo-simple-select-label"
-                                          id="demo-simple-select"
-                                          label="city"
-                                          onChange={handleInputChange}
-                                        >
-                                          <MenuItem
-                                            value={"Atizapan de Zaragoza"}
-                                          >
-                                            Atizapan de Zaragoza
-                                          </MenuItem>
-                                        </Select>
-                                      </FormControl>
-                                      <FormControl
-                                        className="thirdform"
-                                        size="small"
-                                      >
-                                        <InputLabel id="demo-simple-select-label">
-                                          Tipo de domicilio *
-                                        </InputLabel>
-                                        <Select
-                                          name="addresstype"
-                                          value={personName}
-                                          labelId="demo-simple-select-label"
-                                          multiple
-                                          id="demo-simple-select"
-                                          label="places"
-                                          onChange={handleChange}
-                                        >
-                                          {names.map((name) => (
-                                            <MenuItem key={name} value={name}>
-                                              {name}
-                                            </MenuItem>
-                                          ))}
-                                        </Select>
-                                      </FormControl>
-                                    </div>
-                                    <div>
-                                      <p
-                                        style={{
-                                          fontSize: "15px",
-                                          fontWeight: "600",
-                                        }}
-                                      >
-                                        Referencias :
-                                      </p>
-                                      <p
-                                        style={{
-                                          fontSize: "13px",
-                                          color: "#6c757d",
-                                          lineHeight: "0",
-                                        }}
-                                      >
-                                        Favor de incluir el nombre del hotel y
-                                        número de habitación.
-                                      </p>
-                                      <TextareaAutosize
-                                        name="reference"
-                                        value={inputvalues.reference}
-                                        maxRows={5}
-                                        aria-label="maximum height"
-                                        placeholder=""
-                                        style={{
-                                          width: "100%",
-                                          height: 100,
-                                          borderRadius: 2,
-                                        }}
-                                        onChange={handleInputChange}
-                                      />
-                                      <p
-                                        style={{
-                                          color: "#e14747",
-                                          fontSize: "15px",
-                                          fontStyle: "italic",
-                                        }}
-                                      >
-                                        Si la información es incorrecta, no
-                                        podemos garantizar la entrega.
-                                      </p>
-                                      <hr />
-                                      <div
-                                        style={{
-                                          display: "flex",
-                                          justifyContent: "space-between",
-                                        }}
-                                      >
-                                        <Button
-                                          variant="contained"
-                                          className="secondclose"
-                                          onClick={handleClose2}
-                                        >
-                                          Cerrar
-                                        </Button>
-                                        <Button
-                                          variant="contained"
-                                          className="newaddress"
-                                          onClick={handleStore}
-                                        >
-                                          Siguiente
-                                        </Button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </Box>
-                              </Modal>
-
-                              <Button
-                                variant="contained"
-                                className="firstclose"
-                                onClick={handleClose1}
-                              >
-                                Cerrar
+                                Guardar
                               </Button>
                             </div>
                           </div>
-                        </Box>
-                      </Modal>
+                        </div>
+                      </Box>
+                    </Modal>
 
-                      {/* <TextField
+                    {/* <TextField
                 value={address}
                 name="address"
                 //key={index}
@@ -1021,7 +974,7 @@ ${newAddress[index].reference}`
                   display: `${booldata ? "block" : "none"}`,
                 }}
               /> */}
-                      {/* <div
+                    {/* <div
               style={{
                 display: `${booldata ? 'block' : 'none'}`,
                 border: '1px solid #C4C4C4',
@@ -1041,7 +994,6 @@ ${newAddress[index].reference}`
               <br />
               {`${address.reference}`}
             </div> */}
-                    </div>
                   </div>
                 </div>
               </TabPanel>

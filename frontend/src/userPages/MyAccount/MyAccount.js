@@ -4,6 +4,7 @@ import "./MyAccount.scss";
 import { Button, Grid, listClasses, ListItem } from "@mui/material";
 import { Link } from "react-router-dom";
 import navhome1 from "./../../assets/navhome1.svg";
+import navhome2 from "./../../assets/navhome2.svg";
 import navbell1 from "./../../assets/navbell1.svg";
 import navmap1 from "./../../assets/navmap1.svg";
 import navbag1 from "./../../assets/navbag1.svg";
@@ -98,18 +99,59 @@ const MyAccount = () => {
     <div style={{ margin: "0 auto", width: "90%" }}>
       <div className="superdiv">
         <div className="leftdiv">
-          <Link to="cart" style={{ display: "flex", marginTop: "15px" }}>
-            <img style={{ marginRight: "10px" }} src={navhome1} />
+          <div>
+            <div
+              style={{
+                width: "80px",
+                height: "80px",
+                borderRadius: "43px",
+                background: "#D96581",
+                display: "flex",
+                fontFamily: "Nunito",
+                fontWeight: "700",
+                fontSize: "30px",
+                alignItems: "center",
+                justifyContent: "center",
+                textTransform: "capitalize",
+                color: "#FFFFFF",
+                marginTop: "10px",
+              }}
+            >
+              M
+            </div>
+            <p
+              style={{
+                fontFamily: "Nunito",
+                fontWeight: "700",
+                fontSize: "20px",
+                textAlign: "center",
+                textTransform: "capitalize",
+                color: "#444444",
+              }}
+            >
+              Milovan
+            </p>
+          </div>
+          <Link
+            to="myaccount"
+            style={{
+              display: "flex",
+              marginTop: "15px",
+              background: "#D96581",
+              color: "#FFFFFF",
+            }}
+          >
+            <img style={{ marginRight: "10px" }} src={navhome2} />
             Inicio
           </Link>
-          <Link style={{ display: "flex" }}>
+          <Link to="myaccount/reminders" style={{ display: "flex" }}>
             <img style={{ marginRight: "10px" }} src={navbell1} /> Recordatorios
           </Link>
-          <Link style={{ display: "flex" }}>
+          <Link to="myaccount/deliveryaddress" style={{ display: "flex" }}>
             <img style={{ marginRight: "10px" }} src={navmap1} />
             Direcciones
           </Link>
-          <Link style={{ display: "flex" }}>
+          <Link to="myaccount/myorders" style={{ display: "flex" }}>
             <img style={{ marginRight: "10px" }} src={navbag1} />
             Pedidos
           </Link>
@@ -120,14 +162,6 @@ const MyAccount = () => {
           <Link to="myaccount/referrals" style={{ display: "flex" }}>
             <img style={{ marginRight: "10px" }} src={navshare1} />
             Referidos
-          </Link>
-
-          <div className="line"></div>
-          <Link>
-            <div className="logdiv">
-              <img src={logout} />
-              <h6>Log Out</h6>
-            </div>
           </Link>
 
           <div className="arrow">
