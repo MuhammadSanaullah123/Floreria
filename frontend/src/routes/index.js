@@ -1,6 +1,13 @@
 import { lazy } from "react";
 const MyAccount = lazy(() => import("../userPages/MyAccount/MyAccount"));
 const Referrals = lazy(() => import("../userPages/MyAccount/Referrals"));
+const MyOrders = lazy(() => import("../userPages/MyAccount/MyOrders"));
+
+const DeliveryAddress = lazy(() =>
+  import("../userPages/MyAccount/DeliveryAddress")
+);
+const Reminders = lazy(() => import("../userPages/MyAccount/Reminders"));
+
 const Categorys = lazy(() => import("../userPages/Category/Category"));
 const Cart = lazy(() => import("../userPages/Cart/Cart"));
 const ThankYou = lazy(() => import("../userPages/Thankyou/ThankYou"));
@@ -99,6 +106,18 @@ const routes = [
   {
     path: "/user/myaccount/referrals",
     component: Referrals,
+  },
+  {
+    path: "/user/myaccount/myorders",
+    component: MyOrders,
+  },
+  {
+    path: "/user/myaccount/deliveryaddress",
+    component: DeliveryAddress,
+  },
+  {
+    path: "/user/myaccount/reminders",
+    component: Reminders,
   },
   {
     path: "/user/category",

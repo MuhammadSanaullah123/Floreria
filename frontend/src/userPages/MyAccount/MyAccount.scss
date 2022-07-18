@@ -13,6 +13,300 @@
     flex-direction: column;
     justify-content: center;
   }
+  .rightdiv {
+    grid-column: 2/5;
+    grid-row: 1/3;
+  }
+}
+.myorderdiv {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  .twodiv {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: 2/6;
+    grid-row: 1/3;
+    column-gap: 3rem;
+    .leftDiv {
+      grid-column: 1/3;
+      grid-row: 1/3;
+      height: 537px;
+      background: #ffffff;
+      box-shadow: 0px 5px 20px rgba(155, 171, 191, 0.3);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .allP {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+      }
+    }
+    .rightDiv {
+      grid-column: 3/5;
+      grid-row: 1/3;
+      height: 537px;
+      background: #ffffff;
+      box-shadow: 0px 5px 20px rgba(155, 171, 191, 0.3);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .allP {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+      }
+    }
+  }
+}
+.reminderdiv {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  grid-column: 2/6;
+  grid-row: 1/3;
+  .leftDiv {
+    grid-column: 2/4;
+    grid-row: 1/3;
+    .event_des {
+      width: 90%;
+      height: 100px;
+      background: #ffffff;
+      box-shadow: 0px 4px 16px rgba(155, 171, 191, 0.2);
+      border-radius: 10px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+
+      h6 {
+        margin: 0;
+        font-family: "Nunito";
+        font-weight: 700;
+        font-size: 20px;
+        color: #444444;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .css-mvmu1r {
+      margin: 20px 0 !important;
+    }
+    .css-epd502 {
+      margin: 0 !important;
+      width: 90% !important;
+      max-height: none !important;
+    }
+    .css-169iwlq-MuiCalendarPicker-root {
+      width: auto !important;
+      max-height: none !important;
+      margin: 0 !important;
+    }
+    .css-1n2mv2k {
+      display: flex;
+      justify-content: space-around !important;
+    }
+    .css-mvmu1r {
+      display: flex;
+      justify-content: space-around !important;
+    }
+    .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root {
+      background-color: #ffffff !important;
+      font-size: 16px;
+    }
+    .css-1tbq6mc-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+      display: none !important;
+    }
+    .css-i4bv87-MuiSvgIcon-root {
+      display: block !important;
+      color: #d96581 !important;
+    }
+    .css-195y93z-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected) {
+      border: 1px solid #d96581;
+      color: #d96581 !important;
+    }
+    .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+      color: #ffffff;
+      background: #d96581 !important;
+    }
+    .css-hlj6pa-MuiDialogActions-root {
+      display: none !important;
+    }
+    .css-7kykdr-MuiButtonBase-root-MuiIconButton-root {
+      display: none !important;
+    }
+    .css-1v994a0 {
+      // font-family: "Nunito";
+      font-weight: 700;
+      font-size: 30px;
+      color: #d96581;
+    }
+    .css-1ae9t7h-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button {
+      width: 40px;
+      height: 40px;
+      background: rgba(217, 101, 129, 0.1);
+      border-radius: 10px;
+    }
+    .css-jro82b-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button {
+      width: 40px;
+      height: 40px;
+      background: rgba(217, 101, 129, 0.1);
+      border-radius: 10px;
+    }
+    .css-1w13o7u-MuiTypography-root {
+      font-size: 16px;
+      font-weight: 700;
+      color: #444444;
+    }
+    .css-9reuh9-MuiPickersArrowSwitcher-root {
+      margin-left: 30px;
+    }
+    .css-l0iinn {
+      margin-right: 0;
+    }
+  }
+  .rightDiv {
+    grid-column: 4/5;
+    grid-row: 1/3;
+    height: 537px;
+    background: #f8f8f8;
+    border-radius: 20px;
+    padding: 1rem;
+    width: 300px;
+    h6 {
+      font-family: "Nunito";
+      font-weight: 700;
+      font-size: 20px;
+      color: #d96581;
+    }
+    p {
+      font-family: "Nunito";
+      font-weight: 700;
+      font-size: 12px;
+      color: #444444;
+      margin-bottom: 0;
+    }
+    form {
+      label {
+        font-family: "Nunito";
+        font-weight: 700;
+        font-size: 12px;
+        color: #444444;
+      }
+      input {
+        border-radius: 10px;
+        background: #ffffff;
+        height: 44px;
+        font-size: 16px;
+        border: 1px solid #ffffff;
+        width: 100%;
+        color: #9babbf;
+      }
+      textarea {
+        color: #9babbf;
+        padding-left: 10px;
+        padding-top: 5px;
+        height: 104px;
+        background: #ffffff;
+        border-radius: 10px;
+      }
+      select {
+        height: 44px;
+        width: 100%;
+        border-radius: 10px;
+        color: #9babbf;
+        -webkit-appearance: none;
+        background-image: url("./../../assets/dropdownarrow.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-x: 90%;
+      }
+    }
+  }
+  @media screen and (max-width: 1150px) {
+    .event_des {
+      height: 130px !important;
+    }
+    .ver_line {
+      height: 130px !important;
+      width: 10px !important;
+    }
+  }
+  @media screen and (max-width: 860px) {
+    .leftDiv {
+      grid-column: 2/5 !important;
+      grid-row: 1/3 !important;
+    }
+    .rightDiv {
+      grid-column: 2/5 !important;
+      grid-row: 3/5 !important;
+      width: auto !important;
+    }
+    .ver_line {
+      width: 6px !important;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .event_des {
+      height: fit-content !important;
+      flex-direction: column !important;
+      align-items: baseline !important;
+      div {
+        margin-left: 0 !important;
+      }
+    }
+    .ver_line {
+      display: none;
+    }
+    .paragh {
+      margin-top: 20px !important;
+    }
+    .css-1v994a0 {
+      font-size: 25px !important;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .calDiv {
+      overflow-x: auto;
+    }
+  }
+}
+.deliveryaddressdiv {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  grid-column: 2/6;
+  grid-row: 1/3;
+  .addDiv {
+    grid-column: 2/5;
+    grid-row: 1/3;
+    margin-bottom: 0 !important;
+  }
+}
+.css-yk16xz-control {
+  background-color: #f8f8f8 !important;
+  border-radius: 10px !important;
+  border: none !important;
+}
+.css-1pysi21-MuiFormLabel-root-MuiInputLabel-root {
+  color: #9babbf !important;
+}
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #9babbf !important;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 10px !important;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  background-color: #f8f8f8;
 }
 .leftdiv {
   grid-column: 1/2;
@@ -26,17 +320,18 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 615px;
 }
 
 .leftdiv a {
   width: 15rem;
   padding: 10px;
-  color: rgba(129, 129, 129, 1);
+  color: #9babbf;
   text-decoration: none;
   font-family: "Poppins";
   padding-right: 143px;
   text-align-last: justify;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 #linktag {
   text-decoration: double;
@@ -373,8 +668,15 @@
   .leftdiv {
     width: 70% !important;
     justify-self: center !important;
+    height: 80px !important;
     .css-i4bv87-MuiSvgIcon-root {
       display: block !important;
+    }
+    a {
+      display: none !important;
+    }
+    .name {
+      display: none !important;
     }
   }
   .socialcards {
@@ -507,6 +809,11 @@
     width: 90%;
     height: auto !important;
   }
+  .rightdiv {
+    .wid {
+      width: 100% !important;
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   .buttoncard {
@@ -518,6 +825,23 @@
     overflow-x: auto;
     .table1 {
       align-self: auto;
+    }
+  }
+  .rightdiv {
+    .email {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .myorderdiv {
+    .leftDiv {
+      grid-column: 1/5 !important;
+      grid-row: 1/3 !important;
+    }
+    .rightDiv {
+      grid-column: 1/5 !important;
+      grid-row: 3/5 !important;
+      margin-top: 50px !important;
     }
   }
 }
@@ -538,6 +862,21 @@
       flex-direction: column;
       height: 150px;
       align-items: center;
+    }
+  }
+  .rightdiv {
+    .wid {
+      display: flex;
+      flex-direction: column;
+    }
+    .ref_s1 {
+      width: 80% !important;
+    }
+    .ref_s2 {
+      width: 80% !important;
+    }
+    .ref_s3 {
+      width: 41% !important;
     }
   }
 }
@@ -658,6 +997,9 @@
   }
   .footerWrapper {
     margin-top: 40px;
+  }
+  .myorderdiv {
+    gap: 0 !important;
   }
 }
 @media screen and (max-width: 450px) {

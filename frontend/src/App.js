@@ -12,6 +12,10 @@ import Header from "./mainLayout/Header/Header";
 import Footer from "./mainLayout/Footer/Footer";
 import MyAccount from "./userPages/MyAccount/MyAccount";
 import Referrals from "./userPages/MyAccount/Referrals";
+import MyOrders from "./userPages/MyAccount/MyOrders";
+import DeliveryAddress from "./userPages/MyAccount/DeliveryAddress";
+import Reminders from "./userPages/MyAccount/Reminders";
+
 import Categorys from "./userPages/Category/Category";
 import Cart from "./userPages/Cart/Cart";
 import ThankYou from "./userPages/Thankyou/ThankYou";
@@ -54,6 +58,13 @@ const App = () => {
           <Route path="/user/product" component={Product} />
           <Route path="/user/myaccount" component={MyAccount} />
           <Route path="/user/myaccount/referrals" component={Referrals} />
+          <Route path="/user/myaccount/myorders" component={MyOrders} />
+          <Route
+            path="/user/myaccount/deliveryaddress"
+            component={DeliveryAddress}
+          />
+          <Route path="/user/myaccount/reminders" component={Reminders} />
+
           <Route path="/user/category" component={Categorys} />
           <Route path="/user/cart" component={Cart} />
           <Route path="/user/thankyou" component={ThankYou} />
