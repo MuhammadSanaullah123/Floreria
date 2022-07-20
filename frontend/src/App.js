@@ -21,12 +21,14 @@ import Cart from "./userPages/Cart/Cart";
 import ThankYou from "./userPages/Thankyou/ThankYou";
 import Signin from "./userPages/Signin/Signin";
 import Home from "./userPages/Home/Home";
+import Login from "./userPages/Login/Login";
+
 import { ToastContainer } from "./utils/toast";
 import AccessibleNavigationAnnouncer from "./components/AccessibleNavigationAnnouncer";
 import PrivateRoute from "./components/login/PrivateRoute";
 
 const Layout = lazy(() => import("./layout/Layout"));
-const Login = lazy(() => import("./pages/Login"));
+//const Login = lazy(() => import("./pages/Login"));
 const SignUp = lazy(() => import("./pages/SignUp"));
 const ForgetPassword = lazy(() => import("./pages/ForgotPassword"));
 const ResetPassword = lazy(() => import("./pages/ResetPassword"));
@@ -42,7 +44,7 @@ const App = () => {
         <AccessibleNavigationAnnouncer />
         <Switch>
           {/* Admin side */}
-          <Route path="/login" component={Login} />
+          {/* <Route path="/login" component={Login} /> */}
           <Route path="/signup" component={SignUp} />
           <Route path="/forgot-password" component={ForgetPassword} />
           <Route path="/reset-password/:token" component={ResetPassword} />
@@ -54,9 +56,10 @@ const App = () => {
           <Redirect exact from="/" to="/login" />
 
           {/* client side */}
+          <Route path="/user/login" component={Login} />
           <Route path="/user/home" component={Home} />
           <Route path="/user/product" component={Product} />
-          <Route path="/user/myaccount" component={MyAccount} />
+          <Route path="/user/myaccount/home" component={MyAccount} />
           <Route path="/user/myaccount/referrals" component={Referrals} />
           <Route path="/user/myaccount/myorders" component={MyOrders} />
           <Route

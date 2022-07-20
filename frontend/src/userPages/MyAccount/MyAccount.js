@@ -12,16 +12,22 @@ import navgift1 from "./../../assets/navgift1.svg";
 import navshare1 from "./../../assets/navshare1.svg";
 
 import card from "./../../assets/card.png";
+import card2 from "./../../assets/card2.svg";
 import logout from "./../../assets/logout.png";
 import speaker from "./../../assets/speaker.png";
+import speaker_on from "./../../assets/speaker_on.svg";
 import speaker2 from "./../../assets/speaker2.png";
 
 import cardfb from "./../../assets/cardfb.png";
+import cardfb2 from "./../../assets/cardfb2.svg";
 import instagram from "./../../assets/instagram.png";
+import instagram2 from "./../../assets/instagram2.svg";
 import mail from "./../../assets/mail.png";
+import mail_on from "./../../assets/mail_on.svg";
 import mail2 from "./../../assets/mail2.png";
 
 import star from "./../../assets/star.png";
+import star2 from "./../../assets/star2.svg";
 import twitter from "./../../assets/twitter.png";
 import whatsapp from "./../../assets/whatsapp.png";
 import facebook from "./../../assets/facebook.png";
@@ -35,71 +41,57 @@ import { Box } from "@mui/material";
 import { display } from "@mui/system";
 import { Twitter } from "@mui/icons-material";
 const MyAccount = () => {
+  const [firstcard, setFirstCard] = useState(false);
+  const [secondcard, setSecondCard] = useState(false);
+  const [thirdcard, setThirdCard] = useState(false);
+  const [fourthcard, setFourthCard] = useState(false);
+  const [fifthcard, setFifthCard] = useState(false);
+  const [sixthcard, setSixthCard] = useState(false);
+
   const [state, setState] = useState(false);
+
+  const firstselect = () => {
+    setFirstCard(!firstcard);
+  };
+  const secondselect = () => {
+    setSecondCard(!secondcard);
+  };
+  const thirdselect = () => {
+    setThirdCard(!thirdcard);
+  };
+  const fourthselect = () => {
+    setFourthCard(!fourthcard);
+  };
+  const fifthselect = () => {
+    setFifthCard(!fifthcard);
+  };
+  const sixthselect = () => {
+    setSixthCard(!sixthcard);
+  };
 
   const toggleDrawer = (open) => (event) => {
     setState(open);
   };
 
   const list = () => (
-    <Box sx={{ width: "250px" }} onClick={toggleDrawer(false)}>
+    <Box sx={{ width: "250px", height: "100%" }} onClick={toggleDrawer(false)}>
       <div
         style={{
           width: "80%",
-          height: "80%",
+          height: "60%",
           marginLeft: "20px",
         }}
       >
-        <List classname="list">
-          <ListItem button id="linktag" href="#home">
-            Inicio
-          </ListItem>
-
-          <ListItem button id="linktag" href="#news">
-            Pedidos
-          </ListItem>
-
-          <ListItem button id="linktag" href="#contact">
-            Direcciones
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Recordatorios
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Puntos
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Referidos
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Suscripciones
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Soporte
-          </ListItem>
-          <ListItem>
-            <div className="linedrawer"></div>
-          </ListItem>
-          <ListItem>
-            <div className="logdivdrawer">
-              <img src={logout} />
-              <h6>Log Out</h6>
-            </div>
-          </ListItem>
-        </List>
-      </div>
-    </Box>
-  );
-  return (
-    <div style={{ margin: "0 auto", width: "90%" }}>
-      <div className="superdiv">
-        <div className="leftdiv">
-          <div>
+        <List
+          style={{
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-around",
+          }}
+          classname="list"
+        >
+          <div className="accountPic">
             <div
               style={{
                 width: "80px",
@@ -127,40 +119,255 @@ const MyAccount = () => {
                 textAlign: "center",
                 textTransform: "capitalize",
                 color: "#444444",
+                margin: "0",
+                marginTop: "15px",
+              }}
+            >
+              Milovan
+            </p>
+          </div>
+
+          <Link
+            to="myaccount/home"
+            style={{
+              display: "flex",
+
+              background: "#D96581",
+              color: "#FFFFFF",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navhome2}
+            />
+            Inicio
+          </Link>
+
+          <Link
+            to="reminders"
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbell1}
+            />{" "}
+            Recordatorios
+          </Link>
+
+          <Link
+            to="deliveryaddress"
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navmap1}
+            />
+            Direcciones
+          </Link>
+
+          <Link
+            to="myorders"
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbag1}
+            />
+            Pedidos
+          </Link>
+
+          <Link
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navgift1}
+            />
+            VIP
+          </Link>
+
+          <Link
+            to="referrals"
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navshare1}
+            />
+            Referidos
+          </Link>
+        </List>
+      </div>
+    </Box>
+  );
+  return (
+    <div style={{ margin: "0 auto", width: "90%" }}>
+      <div className="superdiv">
+        <div style={{ width: "300px" }} className="leftdiv">
+          <div className="accountPic">
+            <div
+              style={{
+                width: "80px",
+                height: "80px",
+                borderRadius: "43px",
+                background: "#D96581",
+                display: "flex",
+                fontFamily: "Nunito",
+                fontWeight: "700",
+                fontSize: "30px",
+                alignItems: "center",
+                justifyContent: "center",
+                textTransform: "capitalize",
+                color: "#FFFFFF",
+                marginTop: "10px",
+              }}
+            >
+              M
+            </div>
+            <p
+              style={{
+                fontFamily: "Nunito",
+                fontWeight: "700",
+                fontSize: "20px",
+                textAlign: "center",
+                textTransform: "capitalize",
+                color: "#444444",
+                margin: "0",
+                marginTop: "15px",
               }}
             >
               Milovan
             </p>
           </div>
           <Link
-            to="myaccount"
+            to="myaccount/home"
             style={{
               display: "flex",
-              marginTop: "15px",
+
               background: "#D96581",
               color: "#FFFFFF",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
             }}
           >
-            <img style={{ marginRight: "10px" }} src={navhome2} />
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navhome2}
+            />
             Inicio
           </Link>
-          <Link to="myaccount/reminders" style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navbell1} /> Recordatorios
+          <Link
+            to="reminders"
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbell1}
+            />{" "}
+            Recordatorios
           </Link>
-          <Link to="myaccount/deliveryaddress" style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navmap1} />
+          <Link
+            to="deliveryaddress"
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navmap1}
+            />
             Direcciones
           </Link>
-          <Link to="myaccount/myorders" style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navbag1} />
+          <Link
+            to="myorders"
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbag1}
+            />
             Pedidos
           </Link>
-          <Link style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navgift1} />
+          <Link
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navgift1}
+            />
             VIP
           </Link>
-          <Link to="myaccount/referrals" style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navshare1} />
+          <Link
+            to="referrals"
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navshare1}
+            />
             Referidos
           </Link>
 
@@ -178,58 +385,91 @@ const MyAccount = () => {
           </div>
         </div>
         <div className="socialcards">
-          <div style={{ gridColumn: "1/2" }} className="carddiv s1">
-            <div className="picback">
+          <div
+            style={{ gridColumn: "1/2" }}
+            className={`s1 ${firstcard ? "carddiv2" : "carddiv"}`}
+            onClick={firstselect}
+          >
+            <div className={`${firstcard ? "picback2" : "picback"}`}>
               {" "}
               <img
-                style={{ width: "36px", height: "27px", marginTop: "10px" }}
-                src={card}
+                style={{ width: "36px", height: "27px" }}
+                src={`${firstcard ? card2 : card}`}
               />
             </div>
 
-            <p>
+            <p style={{ fontSize: "16px" }}>
               1 Punto por <strong>$1</strong>
             </p>
           </div>
-          <div style={{ gridColumn: "2/3" }} className="carddiv s2">
-            <div className="picback">
-              <img src={speaker} className="cardpic" />
+          <div
+            style={{ gridColumn: "2/3" }}
+            className={`s2 ${secondcard ? "carddiv2" : "carddiv"}`}
+            onClick={secondselect}
+          >
+            <div className={`${secondcard ? "picback2" : "picback"}`}>
+              <img
+                src={`${secondcard ? speaker_on : speaker}`}
+                className="cardpic"
+              />
             </div>
 
-            <p>
+            <p style={{ fontSize: "16px" }}>
               <strong>200.000 </strong>Puntos
             </p>
           </div>
-          <div style={{ gridColumn: "3/4" }} className="carddiv s3">
-            <div className="picback">
-              <img src={cardfb} className="cardpic" />
+          <div
+            style={{ gridColumn: "3/4" }}
+            className={`s2 ${thirdcard ? "carddiv2" : "carddiv"}`}
+            onClick={thirdselect}
+          >
+            <div className={`${thirdcard ? "picback2" : "picback"}`}>
+              <img
+                src={`${thirdcard ? cardfb2 : cardfb}`}
+                className="cardpic"
+              />
             </div>
-            <p>
+            <p style={{ fontSize: "16px" }}>
               <strong>5000 </strong>Puntos
             </p>
           </div>
 
-          <div style={{ gridColumn: "4/5" }} className="carddiv s4">
-            <div className="picback">
-              <img src={instagram} className="cardpic" />
+          <div
+            style={{ gridColumn: "4/5" }}
+            className={`s4 ${fourthcard ? "carddiv2" : "carddiv"}`}
+            onClick={fourthselect}
+          >
+            <div className={`${fourthcard ? "picback2" : "picback"}`}>
+              <img
+                src={`${fourthcard ? instagram2 : instagram}`}
+                className="cardpic"
+              />
             </div>
-            <p>
+            <p style={{ fontSize: "16px" }}>
               <strong>10.000 </strong>Puntos
             </p>
           </div>
-          <div style={{ gridColumn: "5/6" }} className="carddiv s5">
-            <div className="picback">
-              <img src={mail} className="cardpic" />
+          <div
+            style={{ gridColumn: "5/6" }}
+            className={`s5 ${fifthcard ? "carddiv2" : "carddiv"}`}
+            onClick={fifthselect}
+          >
+            <div className={`${fifthcard ? "picback2" : "picback"}`}>
+              <img src={`${fifthcard ? mail_on : mail}`} className="cardpic" />
             </div>
-            <p>
+            <p style={{ fontSize: "16px" }}>
               <strong>25.000 </strong>Puntos
             </p>
           </div>
-          <div style={{ gridColumn: "6/7" }} className="carddiv s6">
-            <div className="picback">
-              <img src={star} className="cardpic" />
+          <div
+            style={{ gridColumn: "6/7" }}
+            className={`s6 ${sixthcard ? "carddiv2" : "carddiv"}`}
+            onClick={sixthselect}
+          >
+            <div className={`${sixthcard ? "picback2" : "picback"}`}>
+              <img src={`${sixthcard ? star2 : star}`} className="cardpic" />
             </div>
-            <p>
+            <p style={{ fontSize: "16px" }}>
               <strong>20.000 </strong>Puntos
             </p>
           </div>

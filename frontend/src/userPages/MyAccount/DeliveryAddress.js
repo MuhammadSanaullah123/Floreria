@@ -98,6 +98,9 @@ const DeliveryAddress = () => {
     "Llevárselo para programar reenvío (costo adicional)",
   ];
   const [googleaddress, setgoogleAddress] = useState(null);
+  const [style_index, setIndex] = useState("");
+  const [style_index2, setIndex2] = useState("");
+
   const [selected2, setSelected2] = useState(false);
   const [textarea3, settextArea3] = useState("");
   const [openmodel1, setopenModel1] = useState(false);
@@ -115,6 +118,7 @@ const DeliveryAddress = () => {
   const handleaddressButton = (index) => {
     setaddress(newAddress[index]);
     setSelected2(true);
+    setIndex(index);
     //settextArea3(newAddress[index].recipientname);
 
     settextArea3(
@@ -126,8 +130,6 @@ ${newAddress[index].state} ${","}  ${newAddress[index].ciudad}
 ${newAddress[index].reference}`
     );
   };
-  console.log("Stored address:");
-  console.log(address2);
 
   const handleInputChange = (e) => {
     const Value = e.target.value;
@@ -162,6 +164,9 @@ ${newAddress[index].reference}`
     console.log(newAddress);
   };
   //end
+  const handleRemove = (index_r) => {
+    setIndex2(index_r);
+  };
   const [state, setState] = useState(false);
 
   const toggleDrawer = (open) => (event) => {
@@ -169,69 +174,28 @@ ${newAddress[index].reference}`
   };
 
   const list = () => (
-    <Box sx={{ width: "250px" }} onClick={toggleDrawer(false)}>
+    <Box sx={{ width: "250px", height: "100%" }} onClick={toggleDrawer(false)}>
       <div
         style={{
           width: "80%",
-          height: "80%",
+          height: "60%",
           marginLeft: "20px",
         }}
       >
-        <List classname="list">
-          <ListItem button id="linktag" href="#home">
-            Inicio
-          </ListItem>
-
-          <ListItem button id="linktag" href="#news">
-            Pedidos
-          </ListItem>
-
-          <ListItem button id="linktag" href="#contact">
-            Direcciones
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Recordatorios
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Puntos
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Referidos
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Suscripciones
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Soporte
-          </ListItem>
-          <ListItem>
-            <div className="linedrawer"></div>
-          </ListItem>
-          <ListItem>
-            <div className="logdivdrawer">
-              <img src={logout} />
-              <h6>Log Out</h6>
-            </div>
-          </ListItem>
-        </List>
-      </div>
-    </Box>
-  );
-
-  return (
-    <div style={{ margin: "0 auto", width: "90%", marginBottom: "100px" }}>
-      <div style={{ marginTop: "50px" }} className="deliveryaddressdiv">
-        <div style={{ height: "537px", width: "300px" }} className="leftdiv">
-          <div className="name">
+        <List
+          style={{
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-around",
+          }}
+          classname="list"
+        >
+          <div className="accountPic">
             <div
               style={{
-                width: "60px",
-                height: "60px",
+                width: "80px",
+                height: "80px",
                 borderRadius: "43px",
                 background: "#D96581",
                 display: "flex",
@@ -255,34 +219,254 @@ ${newAddress[index].reference}`
                 textAlign: "center",
                 textTransform: "capitalize",
                 color: "#444444",
+                margin: "0",
+                marginTop: "15px",
               }}
             >
               Milovan
             </p>
           </div>
-          <Link to=" " style={{ display: "flex", marginTop: "15px" }}>
-            <img style={{ marginRight: "10px" }} src={navhome1} />
+
+          <Link
+            to="home"
+            style={{
+              display: "flex",
+
+              color: "#FFFFFF",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navhome1}
+            />
             Inicio
           </Link>
-          <Link to="reminders" style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navbell1} /> Recordatorios
-          </Link>
+
           <Link
-            style={{ display: "flex", background: "#D96581", color: "#FFFFFF" }}
+            to="reminders"
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
           >
-            <img style={{ marginRight: "10px" }} src={navmap2} />
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbell1}
+            />{" "}
+            Recordatorios
+          </Link>
+
+          <Link
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              background: "#D96581",
+              alignItems: "center",
+              color: "#ffffff",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navmap2}
+            />
             Direcciones
           </Link>
-          <Link to="myorders" style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navbag1} />
+
+          <Link
+            to="myorders"
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbag1}
+            />
             Pedidos
           </Link>
-          <Link style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navgift1} />
+
+          <Link
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navgift1}
+            />
             VIP
           </Link>
-          <Link to="referrals" style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navshare1} />
+
+          <Link
+            to="referrals"
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navshare1}
+            />
+            Referidos
+          </Link>
+        </List>
+      </div>
+    </Box>
+  );
+
+  return (
+    <div style={{ margin: "0 auto", width: "90%", marginBottom: "100px" }}>
+      <div style={{ marginTop: "50px" }} className="deliveryaddressdiv">
+        <div style={{ height: "537px", width: "300px" }} className="leftdiv">
+          <div className="name">
+            <div
+              style={{
+                width: "80px",
+                height: "80px",
+                borderRadius: "43px",
+                background: "#D96581",
+                display: "flex",
+                fontFamily: "Nunito",
+                fontWeight: "700",
+                fontSize: "30px",
+                alignItems: "center",
+                justifyContent: "center",
+                textTransform: "capitalize",
+                color: "#FFFFFF",
+                marginTop: "10px",
+              }}
+            >
+              M
+            </div>
+            <p
+              style={{
+                fontFamily: "Nunito",
+                fontWeight: "700",
+                fontSize: "20px",
+                textAlign: "center",
+                textTransform: "capitalize",
+                color: "#444444",
+                margin: "0",
+                marginTop: "15px",
+              }}
+            >
+              Milovan
+            </p>
+          </div>
+          <Link
+            to="home"
+            style={{
+              display: "flex",
+
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navhome1}
+            />
+            Inicio
+          </Link>
+          <Link
+            to="reminders"
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbell1}
+            />{" "}
+            Recordatorios
+          </Link>
+          <Link
+            style={{
+              display: "flex",
+              background: "#D96581",
+              color: "#FFFFFF",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navmap2}
+            />
+            Direcciones
+          </Link>
+          <Link
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbag1}
+            />
+            Pedidos
+          </Link>
+          <Link
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navgift1}
+            />
+            VIP
+          </Link>
+          <Link
+            to="referrals"
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navshare1}
+            />
             Referidos
           </Link>
 
@@ -324,7 +508,7 @@ ${newAddress[index].reference}`
           /> */}
 
           <div style={{ marginLeft: "20px", display: "flex", width: "100%" }}>
-            <div style={{ marginRight: "20px" }}>
+            <div style={{ marginRight: "20px", display: "flex" }}>
               {booldata
                 ? newAddress.map((addresses, index) => {
                     return (
@@ -334,6 +518,7 @@ ${newAddress[index].reference}`
                         disabled={disable}
                         variant="contained"
                         style={{
+                          //display: `${style_index2 === index ? "none" : ""}`,
                           color: "#444444",
                           background: "#F8F8F8",
                           borderRadius: "10px",
@@ -343,6 +528,9 @@ ${newAddress[index].reference}`
                           padding: "10px",
                           textAlignLast: "start",
                           marginRight: "10px",
+                          border: `${
+                            style_index === index ? "1px solid #D96581" : " "
+                          }`,
                         }}
                         onClick={() => handleaddressButton(index)}
                       >
@@ -359,9 +547,11 @@ ${newAddress[index].reference}`
                               fontSize: "14px",
                               height: "40px",
                               background: `${
-                                selected2 ? "#FFFFFF" : "#D96581"
+                                style_index === index ? "#ffffff" : "#D96581"
                               }`,
-                              color: `${selected2 ? "#D96581" : "#FFFFFF"}`,
+                              color: `${
+                                style_index === index ? "#D96581" : "#ffffff"
+                              }`,
                               borderRadius: "10px",
                               alignItems: "center",
                               justifyContent: "center",
@@ -382,6 +572,7 @@ ${newAddress[index].reference}`
                                 justifyContent: "center",
                                 marginRight: "10px",
                               }}
+                              onClick={() => handleRemove(index)}
                             >
                               <img src={addCross} />
                             </div>

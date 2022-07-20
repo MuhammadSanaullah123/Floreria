@@ -77,6 +77,8 @@ const Step2 = ({ handleNext }) => {
 
   // Modal State and methods
   const [redirect, setRedirect] = useState("");
+  const [style_index, setIndex] = useState("");
+
   const [open, setOpen] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [radioValue, setRadioValue] = useState("");
@@ -237,6 +239,8 @@ const Step2 = ({ handleNext }) => {
   const handleaddressButton = (index) => {
     setaddress(newAddress[index]);
     setSelected2(true);
+    setIndex(index);
+
     //settextArea3(newAddress[index].recipientname);
 
     settextArea3(
@@ -659,11 +663,10 @@ ${newAddress[index].reference}`
                                 disabled={disable}
                                 variant="contained"
                                 style={{
-                                  color: "#000",
                                   background: "#FFFFFF",
                                   borderRadius: "10px",
                                   width: "200px",
-                                  height: "150px",
+
                                   textTransform: "inherit",
                                   padding: "10px",
                                   textAlignLast: "start",
@@ -672,6 +675,16 @@ ${newAddress[index].reference}`
                                   fontWeight: "400",
                                   fontSize: "16px",
                                   padding: "1rem",
+                                  border: `${
+                                    style_index === index
+                                      ? "1px solid #D96581"
+                                      : " "
+                                  }`,
+                                  color: `${
+                                    style_index === index
+                                      ? "#D96581"
+                                      : "#9BABBF"
+                                  }`,
                                 }}
                                 onClick={() => handleaddressButton(index)}
                               >

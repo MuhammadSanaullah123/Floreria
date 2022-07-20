@@ -16,7 +16,6 @@ import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import IconButton from "@mui/material/IconButton";
 import { selectableProductImages } from "./../../assets/selectableProductImages/index";
@@ -28,7 +27,7 @@ import f3 from "./../../assets/f3.svg";
 import delivery from "./../../assets/delivery.svg";
 import b_arrow from "./../../assets/breadcrumb_arrow.png";
 import cal from "./../../assets/cal.png";
-
+import cross from "./../../assets/cross.svg";
 import Button from "@mui/material/Button";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -240,12 +239,19 @@ const Products = () => {
   const [firsttiming, setfirstTiming] = React.useState(false);
   const [secondtiming, setsecondTiming] = React.useState(false);
   const [thirdtiming, setthirdTiming] = React.useState(false);
+  const [fourthtiming, setfourthTiming] = React.useState(false);
+  const [fifthtiming, setfifthTiming] = React.useState(false);
+  const [sixthtiming, setsixthTiming] = React.useState(false);
+  const [seventhtiming, setseventhTiming] = React.useState(false);
 
   const firstTime = () => {
     setfirstTiming(!firsttiming);
     setsecondTiming(false);
     setthirdTiming(false);
-
+    setfourthTiming(false);
+    setfifthTiming(false);
+    setsixthTiming(false);
+    setseventhTiming(false);
     if (firsttiming) {
       setTime("");
       settimeBool(false);
@@ -263,7 +269,10 @@ const Products = () => {
     setsecondTiming(!secondtiming);
     setfirstTiming(false);
     setthirdTiming(false);
-
+    setfourthTiming(false);
+    setfifthTiming(false);
+    setsixthTiming(false);
+    setseventhTiming(false);
     if (secondtiming) {
       setTime("");
       settimeBool(false);
@@ -279,7 +288,10 @@ const Products = () => {
     setthirdTiming(!thirdtiming);
     setsecondTiming(false);
     setfirstTiming(false);
-
+    setfourthTiming(false);
+    setfifthTiming(false);
+    setsixthTiming(false);
+    setseventhTiming(false);
     if (thirdtiming) {
       setTime("");
       settimeBool(false);
@@ -291,9 +303,85 @@ const Products = () => {
       settimeDisplay(true);
     }
   };
+  const fourthTime = () => {
+    setfourthTiming(!fourthtiming);
+    setsecondTiming(false);
+    setfirstTiming(false);
+    setthirdTiming(false);
+    setfifthTiming(false);
+    setsixthTiming(false);
+    setseventhTiming(false);
 
+    if (fourthtiming) {
+      setTime("");
+      settimeBool(false);
+      settimeDisplay(false);
+    } else {
+      setTime("12:00 PM - 01:00 PM");
+      setcaldateBool(false);
+      settimeBool(true);
+      settimeDisplay(true);
+    }
+  };
+  const fifthTime = () => {
+    setfifthTiming(!fifthtiming);
+    setsecondTiming(false);
+    setfirstTiming(false);
+    setthirdTiming(false);
+    setfourthTiming(false);
+    setsixthTiming(false);
+    setseventhTiming(false);
+    if (fifthtiming) {
+      setTime("");
+      settimeBool(false);
+      settimeDisplay(false);
+    } else {
+      setTime("01:00 PM - 02:00 PM");
+      setcaldateBool(false);
+      settimeBool(true);
+      settimeDisplay(true);
+    }
+  };
+  const sixthTime = () => {
+    setsixthTiming(!sixthtiming);
+    setsecondTiming(false);
+    setfirstTiming(false);
+    setthirdTiming(false);
+    setfourthTiming(false);
+    setfifthTiming(false);
+    setseventhTiming(false);
+    if (sixthtiming) {
+      setTime("");
+      settimeBool(false);
+      settimeDisplay(false);
+    } else {
+      setTime("02:00 PM - 03:00 PM");
+      setcaldateBool(false);
+      settimeBool(true);
+      settimeDisplay(true);
+    }
+  };
+  const seventhTime = () => {
+    setseventhTiming(!seventhtiming);
+    setsecondTiming(false);
+    setfirstTiming(false);
+    setthirdTiming(false);
+    setfourthTiming(false);
+    setfifthTiming(false);
+    setsixthTiming(false);
+    if (seventhtiming) {
+      setTime("");
+      settimeBool(false);
+      settimeDisplay(false);
+    } else {
+      setTime("03:00 PM - 04:00 PM");
+      setcaldateBool(false);
+      settimeBool(true);
+      settimeDisplay(true);
+    }
+  };
   const Results = () => (
-    <div className="superdiv">
+    <div style={{ marginBottom: "15px" }} className="superdiv">
       <div
         className={`firstDiv ${firsttiming ? "timingselect" : "timingnormal"}`}
         onClick={firstTime}
@@ -316,6 +404,42 @@ const Products = () => {
       </div>
     </div>
   );
+  const Results2 = () => (
+    <div style={{ marginBottom: "15px" }} className="superdiv">
+      <div
+        className={`fourthDiv ${
+          fourthtiming ? "timingselect" : "timingnormal"
+        }`}
+        style={{ width: "160px", height: "50px" }}
+        onClick={fourthTime}
+      >
+        12:00 PM - 01:00 PM
+      </div>
+      <div
+        className={`fifthDiv ${fifthtiming ? "timingselect" : "timingnormal"}`}
+        style={{ width: "160px", height: "50px" }}
+        onClick={fifthTime}
+      >
+        01:00 PM - 02:00 PM
+      </div>
+      <div
+        className={`sixthDiv ${sixthtiming ? "timingselect" : "timingnormal"}`}
+        style={{ width: "160px", height: "50px" }}
+        onClick={sixthTime}
+      >
+        02:00 PM - 03:00 PM
+      </div>
+      <div
+        className={`seventhDiv ${
+          seventhtiming ? "timingselect" : "timingnormal"
+        }`}
+        style={{ width: "160px", height: "50px" }}
+        onClick={seventhTime}
+      >
+        03:00 PM - 04:00 PM
+      </div>
+    </div>
+  );
 
   const [timedisplay, settimeDisplay] = useState(false);
 
@@ -333,13 +457,14 @@ const Products = () => {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: 700,
     bgcolor: "background.paper",
     border: "2px solid #D96581",
-    borderRadius: 5,
     boxShadow: 24,
     p: 4,
-    background: "#D96581",
+    width: "1400px",
+    height: "830px",
+    background: " #FFFFFF",
+    borderRadius: "30px",
   };
 
   const [caldatebool, setcaldateBool] = useState();
@@ -347,6 +472,17 @@ const Products = () => {
 
   let calDate = calvalue.getDate(); //taking date and month from calender values
   let calMonth = months[calvalue.getMonth()];
+
+  //taking weekday name in spanish
+  let weekday = [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado",
+  ][new Date().getDay() + 2];
 
   const setConfirm = () => {
     setopenMod(false);
@@ -368,15 +504,41 @@ const Products = () => {
       productAttributes.date = calDate;
       productAttributes.month = calMonth;
     }
-    if (showResults1 && firsttiming | secondtiming | thirdtiming) {
+    if (
+      showResults1 &&
+      firsttiming |
+        secondtiming |
+        thirdtiming |
+        fourthtiming |
+        fifthtiming |
+        sixthtiming |
+        seventhtiming
+    ) {
       productAttributes.date = date;
       productAttributes.month = month;
     }
-    if (showResults2 && firsttiming | secondtiming | thirdtiming) {
+    if (
+      showResults2 &&
+      firsttiming |
+        secondtiming |
+        thirdtiming |
+        fourthtiming |
+        fifthtiming |
+        sixthtiming |
+        seventhtiming
+    ) {
       productAttributes.date = nextdate;
       productAttributes.month = month;
     }
-    if (firsttiming | secondtiming | thirdtiming) {
+    if (
+      firsttiming |
+      secondtiming |
+      thirdtiming |
+      fourthtiming |
+      fifthtiming |
+      sixthtiming |
+      seventhtiming
+    ) {
       productAttributes.time = time;
     }
     console.log(tempArr);
@@ -540,7 +702,16 @@ const Products = () => {
                 </button>
               ) : (
                 <button className="button1" onClick={onClick1}>
-                  <h6>Hoy</h6>
+                  <h6
+                    style={{
+                      fontFamily: "Nunito",
+                      fontWeight: "400",
+                      fontSize: "18px",
+                      color: "#9BABBF",
+                    }}
+                  >
+                    Hoy
+                  </h6>
                   {date} {month}
                 </button>
               )}
@@ -563,46 +734,95 @@ const Products = () => {
                 </button>
               ) : (
                 <button className="button2" onClick={onClick2}>
-                  <h6>Manana</h6>
+                  <h6
+                    style={{
+                      fontFamily: "Nunito",
+                      fontWeight: "400",
+                      fontSize: "18px",
+                      color: "#9BABBF",
+                    }}
+                  >
+                    Manana
+                  </h6>
                   {nextdate} {month}
                 </button>
               )}
               <button className="button3" onClick={handleOpen}>
                 <div>
-                  <IconButton
-                    style={{ border: "0" }}
-                    aria-label="Calendar Icon button"
-                  >
-                    <DateRangeIcon size="small" />
-                  </IconButton>
-                  <img style={{ width: "15px" }} src={cal} />
+                  <img style={{ width: "25px" }} src={cal} />
                   <p
                     style={{
-                      fontSize: "15px",
+                      fontFamily: "Nunito",
+                      fontWeight: "400",
+                      fontSize: "18px",
                       paddingTop: "10px",
                       fontFamily: "Nunito",
-                      color: "#444444",
+                      color: "#9BABBF",
                     }}
                   >
                     Mas fechas
                   </p>
-                  <div style={{ fontSize: "15px", color: "#818181" }}>
+                  <div
+                    style={{
+                      fontFamily: "Nunito",
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      color: "#9BABBF",
+                      display: `${caldatebool ? "flex" : "none"}`,
+                    }}
+                  >
                     {caldatebool ? `${calDate}` : ""}{" "}
                     {caldatebool ? `${calMonth}` : ""}{" "}
-                    {showResults1 && firsttiming | secondtiming | thirdtiming
+                    {showResults1 &&
+                    firsttiming |
+                      secondtiming |
+                      thirdtiming |
+                      fourthtiming |
+                      fifthtiming |
+                      sixthtiming |
+                      seventhtiming
                       ? date
                       : ""}{" "}
-                    {showResults1 && firsttiming | secondtiming | thirdtiming
+                    {showResults1 &&
+                    firsttiming |
+                      secondtiming |
+                      thirdtiming |
+                      fourthtiming |
+                      fifthtiming |
+                      sixthtiming |
+                      seventhtiming
                       ? month
                       : ""}
-                    {showResults2 && firsttiming | secondtiming | thirdtiming
+                    {showResults2 &&
+                    firsttiming |
+                      secondtiming |
+                      thirdtiming |
+                      fourthtiming |
+                      fifthtiming |
+                      sixthtiming |
+                      seventhtiming
                       ? nextdate
                       : ""}{" "}
-                    {showResults2 && firsttiming | secondtiming | thirdtiming
+                    {showResults2 &&
+                    firsttiming |
+                      secondtiming |
+                      thirdtiming |
+                      fourthtiming |
+                      fifthtiming |
+                      sixthtiming |
+                      seventhtiming
                       ? month
                       : ""}
                     <br />
-                    {firsttiming | secondtiming | thirdtiming ? time : ""}
+                    {firsttiming |
+                    secondtiming |
+                    thirdtiming |
+                    fourthtiming |
+                    fifthtiming |
+                    sixthtiming |
+                    seventhtiming
+                      ? time
+                      : ""}
                     <br />
                   </div>
                 </div>
@@ -622,64 +842,243 @@ const Products = () => {
               </button>
               <Modal
                 open={openmod}
-                onClose={handleClear}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
               >
                 <Box sx={style}>
                   <div className="both">
-                    <LocalizationProvider dateAdapter={AdapterDateFns}>
-                      <StaticDatePicker
-                        orientation="landscape"
-                        openTo="day"
-                        value={calvalue}
-                        shouldDisableDate={isWeekend}
-                        onChange={(options) => {
-                          setcalValue(options);
+                    <div
+                      style={{
+                        width: "65%",
+                      }}
+                      className="leftSide"
+                    >
+                      <LocalizationProvider dateAdapter={AdapterDateFns}>
+                        <StaticDatePicker
+                          orientation="landscape"
+                          openTo="day"
+                          value={calvalue}
+                          onChange={(options) => {
+                            setcalValue(options);
+                          }}
+                          renderInput={(params) => <TextField {...params} />}
+                        />
+                      </LocalizationProvider>
+                      <div
+                        style={{
+                          marginBottom: "30px",
+                          width: "100%",
+                          height: "2px",
+                          background:
+                            "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
                         }}
-                        renderInput={(params) => <TextField {...params} />}
+                      ></div>
+                      <div className="timediv">
+                        <div style={{ width: "100%" }}>
+                          <p
+                            style={{
+                              fontFamily: "Nunito",
+                              fontWeight: "700",
+                              fontSize: "18px",
+                              color: "#D96581",
+                              marginBottom: "5px",
+                            }}
+                          >
+                            Selecciona el horario de entrega
+                          </p>
+                          <p
+                            style={{
+                              fontFamily: "Nunito",
+                              fontWeight: "400",
+                              fontSize: "16px",
+                              color: "#9BABBF",
+                            }}
+                          >
+                            Se hara un cargo de envío por $4.990
+                          </p>
+                          <div className="result">
+                            <Results />
+                          </div>
+                          <div
+                            style={{
+                              marginBottom: "30px",
+                              width: "100%",
+                              height: "2px",
+                              background:
+                                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
+                            }}
+                          ></div>
+                          <p
+                            style={{
+                              fontFamily: "Nunito",
+                              fontWeight: "700",
+                              fontSize: "18px",
+                              color: "#D96581",
+                              marginBottom: "5px",
+                            }}
+                          >
+                            Horario especial
+                          </p>
+                          <p
+                            style={{
+                              fontFamily: "Nunito",
+                              fontWeight: "400",
+                              fontSize: "16px",
+                              color: "#9BABBF",
+                            }}
+                          >
+                            Se hara un cargo adicional de envío por $3.990
+                          </p>
+                          <div className="result">
+                            <Results2 />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="rightSide">
+                      <img
+                        onClick={handleClear}
+                        style={{
+                          position: "relative",
+                          left: "26rem",
+                          bottom: "5rem",
+                        }}
+                        src={cross}
                       />
 
-                      <div className="timediv">
-                        <div className="time">
-                          <p
-                            style={{
-                              marginLeft: "10px",
-                              borderBottom: "1px solid #D96581",
-                              fontSize: "13px",
-                              display: `${timebool ? "block" : "none"}`,
-                            }}
-                          >
-                            En el horario :
-                          </p>
-                          <p
-                            style={{
-                              display: `${timebool ? "none" : "block"}`,
-                            }}
-                          >
-                            Sin tiempo seleccionado
-                          </p>
-                          {time}
+                      <div style={{ height: "100%" }} className="time">
+                        <p
+                          style={{
+                            fontFamily: "Nunito",
+                            fontWeight: "700",
+                            fontSize: "30px",
+                            textAlign: "center",
+                            color: "#D96581",
+                            textDecoration: "underline",
+                            marginTop: "50px",
+                            display: `${timebool ? "none" : "block"}`,
+                          }}
+                        >
+                          Sin tiempo seleccionado
+                        </p>
+                        <div
+                          style={{
+                            display: `${timebool ? "flex" : "none"}`,
+                            flexDirection: "column",
+                            alignItems: "center",
+                            height: "100%",
+                            justifyContent: "space-around",
+                          }}
+                        >
+                          <div>
+                            <p
+                              style={{
+                                fontFamily: "Nunito",
+                                fontWeight: "700",
+                                fontSize: "18px",
+                                textAlign: "center",
+                                color: "#9BABBF",
+                              }}
+                            >
+                              Su pedido se entregará el día
+                            </p>
+                            <div
+                              style={{
+                                width: "320px",
+                                height: "140px",
+                                background: "rgba(217, 101, 129, 0.1)",
+                                borderRadius: "20px",
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                                justifyContent: "center",
+                              }}
+                            >
+                              <p
+                                style={{
+                                  fontFamily: "Nunito",
+                                  fontWeight: "700",
+                                  fontSize: "30px",
+                                  color: "#D96581",
+                                  margin: "0",
+                                }}
+                              >
+                                {weekday} {calDate}
+                              </p>
+                              <p
+                                style={{
+                                  fontFamily: "Nunito",
+                                  fontWeight: "400",
+                                  fontSize: "20px",
+                                  color: "#D96581",
+                                  margin: "0",
+                                }}
+                              >
+                                {calMonth}
+                                {new Date().getFullYear()}
+                              </p>
+                            </div>
+                          </div>
+
+                          <div>
+                            <p
+                              style={{
+                                fontFamily: "Nunito",
+                                fontWeight: "700",
+                                fontSize: "18px",
+                                textAlign: "center",
+                                color: "#9BABBF",
+                              }}
+                            >
+                              En el horario :
+                            </p>
+                            <div
+                              style={{
+                                width: "320px",
+                                height: "80px",
+                                background: "rgba(217, 101, 129, 0.1)",
+                                borderRadius: "20px",
+                                fontFamily: "Nunito",
+                                fontWeight: "700",
+                                fontSize: "20px",
+                                color: "#D96581",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                              }}
+                            >
+                              {time}
+                            </div>
+                          </div>
+
                           <button
                             style={{
+                              width: "280px",
+                              height: "50px",
+                              background: "#D96581",
+                              borderRadius: "10px",
+                              color: "#ffffff",
                               display: `${timebool ? "block" : "none"}`,
                             }}
                             className="confirmbtn"
                             onClick={setConfirm}
                           >
-                            CONFIRMAR
+                            Confirmar
                           </button>
-                        </div>
-                        <div>
-                          <p style={{ textAlign: "-webkit-center" }}>
-                            Selecciona el horario de entrega
+                          <p
+                            style={{
+                              fontFamily: "Nunito",
+                              fontWeight: "400",
+                              fontSize: "12px",
+                              textAlign: "center",
+                              color: "#9BABBF",
+                            }}
+                          >
+                            Todos nuestros precios están en CLP
                           </p>
-                          <div className="result">
-                            <Results />
-                          </div>
                         </div>
                       </div>
-                    </LocalizationProvider>
+                    </div>
                   </div>
                 </Box>
               </Modal>
