@@ -53,7 +53,7 @@ const App = () => {
             {" "}
             <Route path="/" component={Layout} />
           </PrivateRoute>
-          <Redirect exact from="/" to="/login" />
+          <Redirect exact from="/" to="/user/home" />
 
           {/* client side */}
           <Route path="/user/login" component={Login} />
