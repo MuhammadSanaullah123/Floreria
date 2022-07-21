@@ -79,6 +79,19 @@
     color: #9babbf !important;
   }
   margin-top: 20px;
+  @media (max-width: 520px) {
+    .rewards {
+      display: none;
+    }
+    .searchBar {
+      width: 60% !important;
+    }
+  }
+}
+.form-check-input:checked {
+  background-color: #d96581 !important;
+  border-color: #d96581 !important;
+  border-radius: 6px;
 }
 .Drawer {
   span {

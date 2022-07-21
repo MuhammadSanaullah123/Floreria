@@ -4,6 +4,13 @@ import "./Header.scss";
 import { ReactComponent as ReactLogo } from "./../../assets/logo.svg";
 import diamond from "./../../assets/diamond.svg";
 import searchbar from "./../../assets/searchbar.svg";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import cross from "./../../assets/cross.svg";
+import f2 from "./../../assets/f2.svg";
+import special1 from "./../../assets/special1.png";
+import special2 from "./../../assets/special2.png";
+import special3 from "./../../assets/special3.png";
 
 import { styled } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
@@ -74,10 +81,48 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const Header = () => {
+  const [checked1, setChecked1] = useState(false);
+  const [checked2, setChecked2] = useState(false);
+  const [checked3, setChecked3] = useState(false);
+
   const [menu, setMenu] = useState();
   const [state, setState] = useState(false);
   const toggleDrawer = (open) => (event) => {
     setState(open);
+  };
+  const [openmodelBox, setopenModelBox] = useState(false);
+  const handleCloseBox = () => {
+    setopenModelBox(false);
+  };
+  const handleOpenBox = () => {
+    setopenModelBox(true);
+  };
+  const handlecheckbox1 = (event) => {
+    setChecked1(event.target.checked);
+  };
+  const handlecheckbox2 = (event) => {
+    setChecked2(event.target.checked);
+  };
+  const handlecheckbox3 = (event) => {
+    setChecked3(event.target.checked);
+  };
+  const style = {
+    position: "absolute",
+
+    transform: "translate(-50%, -50%)",
+
+    bgcolor: "background.paper",
+    borderRadius: "30px",
+    p: 4,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+
+    width: "420px",
+    height: "700px",
+    left: "82%",
+    top: "50%",
+    background: "#FFFFFF",
   };
 
   //redux
@@ -87,7 +132,7 @@ const Header = () => {
     productCount = store.orders.productsDetails.length;
   }
   return (
-    <div>
+    <div className="mainHeader">
       <div className="Header">
         <div className="logo">
           <ReactLogo />
@@ -104,7 +149,7 @@ const Header = () => {
             </Button>
           </Search>
         </div>
-        <div>
+        <div className="rewards">
           <Button
             style={{
               border: "1px solid #D96581",
@@ -130,9 +175,9 @@ const Header = () => {
           </Button>
         </div>
         <div className="menu-desktop">
-          <span className="productCount">
+          {/* <span className="productCount">
             <p>{productCount}</p>
-          </span>
+          </span> */}
           <span style={{ justifyContent: "flex-end", marginBottom: "0" }}>
             <img
               src={require("./../../assets/delivery.svg").default}
@@ -142,24 +187,426 @@ const Header = () => {
               Seguimiento
             </Link>
           </span>
-          <span style={{ justifyContent: "flex-end", marginBottom: "0" }}>
+          <span
+            onClick={handleOpenBox}
+            style={{ justifyContent: "flex-end", marginBottom: "0" }}
+          >
             <img
               src={require("./../../assets/cart.svg").default}
               alt="Cart"
               style={{ width: "22px", height: "24.73px" }}
             />
-
-            <Link style={{ marginBottom: "0" }} to="/user/cart">
-              Carrito
-            </Link>
+            <Link style={{ marginBottom: "0" }}>Carrito</Link>
           </span>
+          <Modal
+            open={openmodelBox}
+            //close={handleCloseBox}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box className="cart_box" sx={style}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: "Nunito",
+                    fontWeight: "700",
+                    fontSize: "18px",
+                    color: "#D96581",
+                    marginBottom: "0",
+                  }}
+                >
+                  Esto llevas hasta ahora...
+                </p>
+                <img src={cross} onClick={handleCloseBox} />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <img style={{ width: "70px", borderRadius: "10px" }} src={f2} />
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontFamily: "Nunito",
+                        fontWeight: "700",
+                        fontSize: "16px",
+                        color: "#444444",
+                        marginBottom: "0",
+                      }}
+                    >
+                      Vino Rosa
+                    </p>
+                    <p
+                      style={{
+                        //fontFamily: "Nunito",
+                        fontWeight: "600",
+                        fontSize: "16px",
+                        color: "#444444",
+                        marginBottom: "0",
+                      }}
+                    >
+                      $19.990
+                    </p>
+                  </div>
+
+                  <p
+                    style={{
+                      fontFamily: "Nunito",
+                      fontWeight: "400",
+                      fontSize: "14px",
+                      color: "#9BABBF",
+                      marginBottom: "0",
+                    }}
+                  >
+                    Ramo del día
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "Nunito",
+                      fontWeight: "400",
+                      fontSize: "14px",
+                      color: "#9BABBF",
+                      display: "flex",
+                      marginBottom: "0",
+                    }}
+                  >
+                    Cart ID
+                    <p
+                      style={{
+                        fontFamily: "Nunito",
+                        fontWeight: "400",
+                        fontSize: "14px",
+                        color: "#444444",
+                        marginBottom: "0",
+                      }}
+                    >
+                      2839291284
+                    </p>
+                  </p>
+                </div>
+              </div>
+              <div
+                style={{
+                  width: "100%",
+                  height: "2px",
+                  background:
+                    "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
+                }}
+              ></div>
+              <p
+                style={{
+                  fontFamily: "Nunito",
+                  fontWeight: "700",
+                  fontSize: "18px",
+                  color: "#444444",
+                  marginBottom: "0",
+                }}
+              >
+                Hazlo más especial...
+              </p>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  style={{ width: "70px", borderRadius: "10px" }}
+                  src={special1}
+                />
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                    height: "100%",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontFamily: "Nunito",
+                        fontWeight: "700",
+                        fontSize: "16px",
+                        color: "#444444",
+                        marginBottom: "0",
+                      }}
+                    >
+                      Festival Maylar Balloons
+                    </p>
+                    <p
+                      style={{
+                        //fontFamily: "Nunito",
+                        fontWeight: "600",
+                        fontSize: "16px",
+                        color: "#444444",
+                        marginBottom: "0",
+                      }}
+                    >
+                      $4.990
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <a
+                      style={{
+                        fontFamily: "Nunito",
+                        fontWeight: "700",
+                        fontSize: "16px",
+                        color: "#D96581",
+                        marginBottom: "0",
+                        marginLeft: "5px",
+                      }}
+                    >
+                      Ver detalles
+                    </a>
+                    <input
+                      checked={checked1}
+                      onChange={handlecheckbox1}
+                      style={{
+                        width: "24px",
+                        height: "24px",
+                        borderRadius: "6px",
+                        fontSize: "16px",
+                      }}
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  style={{ width: "70px", borderRadius: "10px" }}
+                  src={special2}
+                />
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                    height: "100%",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontFamily: "Nunito",
+                        fontWeight: "700",
+                        fontSize: "16px",
+                        color: "#444444",
+                        marginBottom: "0",
+                      }}
+                    >
+                      Customized Greeting Card
+                    </p>
+                    <p
+                      style={{
+                        //fontFamily: "Nunito",
+                        fontWeight: "600",
+                        fontSize: "16px",
+                        color: "#444444",
+                        marginBottom: "0",
+                      }}
+                    >
+                      $2.390
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <a
+                      style={{
+                        fontFamily: "Nunito",
+                        fontWeight: "700",
+                        fontSize: "16px",
+                        color: "#D96581",
+                        marginBottom: "0",
+                        marginLeft: "5px",
+                      }}
+                    >
+                      Ver detalles
+                    </a>
+                    <input
+                      checked={checked2}
+                      onChange={handlecheckbox2}
+                      style={{
+                        width: "24px",
+                        height: "24px",
+                        borderRadius: "6px",
+                        fontSize: "16px",
+                      }}
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  style={{ width: "70px", borderRadius: "10px" }}
+                  src={special3}
+                />
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                    height: "100%",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontFamily: "Nunito",
+                        fontWeight: "700",
+                        fontSize: "16px",
+                        color: "#444444",
+                        marginBottom: "0",
+                      }}
+                    >
+                      Adorable Plush Teddy Bear
+                    </p>
+                    <p
+                      style={{
+                        //fontFamily: "Nunito",
+                        fontWeight: "600",
+                        fontSize: "16px",
+                        color: "#444444",
+                        marginBottom: "0",
+                      }}
+                    >
+                      $19.990
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <a
+                      style={{
+                        fontFamily: "Nunito",
+                        fontWeight: "700",
+                        fontSize: "16px",
+                        color: "#D96581",
+                        marginBottom: "0",
+                        marginLeft: "5px",
+                      }}
+                    >
+                      Ver detalles
+                    </a>
+                    <input
+                      checked={checked3}
+                      onChange={handlecheckbox3}
+                      style={{
+                        width: "24px",
+                        height: "24px",
+                        borderRadius: "6px",
+                        fontSize: "16px",
+                      }}
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  width: "100%",
+                  height: "2px",
+                  background:
+                    "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
+                }}
+              ></div>
+              <Link
+                to="/user/cart"
+                onClick={handleCloseBox}
+                style={{
+                  width: "280px",
+                  height: "50px",
+                  background: "#D96581",
+                  borderRadius: "10px",
+                  color: "#ffffff",
+                  margin: "0 auto",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                Ir al Carrito
+              </Link>
+            </Box>
+          </Modal>
           <span style={{ justifyContent: "flex-end", marginBottom: "0" }}>
             <img
               src={require("./../../assets/user.svg").default}
               alt="User"
               style={{ width: "22px", height: "24px" }}
             />
-            <Link style={{ marginBottom: "0" }} to="/user/myaccount">
+            <Link style={{ marginBottom: "0" }} to="/user/myaccount/home">
               Milovan
             </Link>
           </span>
@@ -210,7 +657,7 @@ const Header = () => {
                 alt="User"
                 style={{ width: "22px", height: "24px" }}
               />
-              <Link to="/myaccount">Milovan</Link>
+              <Link to="/myaccount/home">Milovan</Link>
             </span>
           </div>
         </Drawer>

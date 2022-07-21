@@ -13,6 +13,8 @@ const Cart = lazy(() => import("../userPages/Cart/Cart"));
 const ThankYou = lazy(() => import("../userPages/Thankyou/ThankYou"));
 const Signin = lazy(() => import("../userPages/Signin/Signin"));
 const Home = lazy(() => import("../userPages/Home/Home"));
+const Login = lazy(() => import("../userPages/Login/Login"));
+
 const Product = lazy(() => import("../userPages/Products/Products"));
 // use lazy for better code splitting
 const Dashboard = lazy(() => import("../pages/Dashboard"));
@@ -102,6 +104,10 @@ const routes = [
   },
   //client side
   {
+    path: "/user/login",
+    component: Login,
+  },
+  {
     path: "/user/home",
     component: Home,
   },
@@ -110,7 +116,7 @@ const routes = [
     component: Product,
   },
   {
-    path: "/user/myaccount",
+    path: "/user/myaccount/home",
     component: MyAccount,
   },
   {

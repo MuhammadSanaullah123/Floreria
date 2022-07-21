@@ -45,69 +45,28 @@ const Reminders = () => {
 
   const [calDate, setCalDate] = React.useState(new Date());
   const list = () => (
-    <Box sx={{ width: "250px" }} onClick={toggleDrawer(false)}>
+    <Box sx={{ width: "250px", height: "100%" }} onClick={toggleDrawer(false)}>
       <div
         style={{
           width: "80%",
-          height: "80%",
+          height: "60%",
           marginLeft: "20px",
         }}
       >
-        <List classname="list">
-          <ListItem button id="linktag" href="#home">
-            Inicio
-          </ListItem>
-
-          <ListItem button id="linktag" href="#news">
-            Pedidos
-          </ListItem>
-
-          <ListItem button id="linktag" href="#contact">
-            Direcciones
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Recordatorios
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Puntos
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Referidos
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Suscripciones
-          </ListItem>
-
-          <ListItem button id="linktag" href="#about">
-            Soporte
-          </ListItem>
-          <ListItem>
-            <div className="linedrawer"></div>
-          </ListItem>
-          <ListItem>
-            <div className="logdivdrawer">
-              <img src={logout} />
-              <h6>Log Out</h6>
-            </div>
-          </ListItem>
-        </List>
-      </div>
-    </Box>
-  );
-
-  return (
-    <div style={{ margin: "0 auto", width: "90%", marginBottom: "100px" }}>
-      <div style={{ marginTop: "50px" }} className="reminderdiv">
-        <div style={{ height: "537px", width: "300px" }} className="leftdiv">
-          <div className="name">
+        <List
+          style={{
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-around",
+          }}
+          classname="list"
+        >
+          <div className="accountPic">
             <div
               style={{
-                width: "60px",
-                height: "60px",
+                width: "80px",
+                height: "80px",
                 borderRadius: "43px",
                 background: "#D96581",
                 display: "flex",
@@ -131,34 +90,254 @@ const Reminders = () => {
                 textAlign: "center",
                 textTransform: "capitalize",
                 color: "#444444",
+                margin: "0",
+                marginTop: "15px",
               }}
             >
               Milovan
             </p>
           </div>
-          <Link to=" " style={{ display: "flex", marginTop: "15px" }}>
-            <img style={{ marginRight: "10px" }} src={navhome1} />
+
+          <Link
+            to="home"
+            style={{
+              display: "flex",
+              color: "#FFFFFF",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navhome1}
+            />
+            Inicio
+          </Link>
+
+          <Link
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              background: "#D96581",
+              color: "#ffffff",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbell2}
+            />{" "}
+            Recordatorios
+          </Link>
+
+          <Link
+            to="deliveryaddress"
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navmap1}
+            />
+            Direcciones
+          </Link>
+
+          <Link
+            to="myorders"
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbag1}
+            />
+            Pedidos
+          </Link>
+
+          <Link
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navgift1}
+            />
+            VIP
+          </Link>
+
+          <Link
+            to="referrals"
+            style={{
+              display: "flex",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              alignItems: "center",
+              color: "#9BABBF",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navshare1}
+            />
+            Referidos
+          </Link>
+        </List>
+      </div>
+    </Box>
+  );
+
+  return (
+    <div style={{ margin: "0 auto", width: "90%", marginBottom: "100px" }}>
+      <div style={{ marginTop: "50px" }} className="reminderdiv">
+        <div style={{ height: "537px", width: "300px" }} className="leftdiv">
+          <div className="name">
+            <div
+              style={{
+                width: "80px",
+                height: "80px",
+                borderRadius: "43px",
+                background: "#D96581",
+                display: "flex",
+                fontFamily: "Nunito",
+                fontWeight: "700",
+                fontSize: "30px",
+                alignItems: "center",
+                justifyContent: "center",
+                textTransform: "capitalize",
+                color: "#FFFFFF",
+                marginTop: "10px",
+              }}
+            >
+              M
+            </div>
+            <p
+              style={{
+                fontFamily: "Nunito",
+                fontWeight: "700",
+                fontSize: "20px",
+                textAlign: "center",
+                textTransform: "capitalize",
+                color: "#444444",
+                margin: "0",
+                marginTop: "15px",
+              }}
+            >
+              Milovan
+            </p>
+          </div>
+          <Link
+            to="home"
+            style={{
+              display: "flex",
+
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navhome1}
+            />
             Inicio
           </Link>
           <Link
-            style={{ display: "flex", background: "#D96581", color: "#FFFFFF" }}
+            style={{
+              display: "flex",
+              background: "#D96581",
+              color: "#FFFFFF",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
           >
-            <img style={{ marginRight: "10px" }} src={navbell2} /> Recordatorios
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbell2}
+            />{" "}
+            Recordatorios
           </Link>
-          <Link to="deliveryaddress" style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navmap1} />
+          <Link
+            to="deliveryaddress"
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navmap1}
+            />
             Direcciones
           </Link>
-          <Link to="myorders" style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navbag1} />
+          <Link
+            to="myorders"
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navbag1}
+            />
             Pedidos
           </Link>
-          <Link style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navgift1} />
+          <Link
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navgift1}
+            />
             VIP
           </Link>
-          <Link to="referrals" style={{ display: "flex" }}>
-            <img style={{ marginRight: "10px" }} src={navshare1} />
+          <Link
+            to="referrals"
+            style={{
+              display: "flex",
+              width: "260px",
+              height: "60px",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ marginRight: "14px", marginLeft: "10px" }}
+              src={navshare1}
+            />
             Referidos
           </Link>
 

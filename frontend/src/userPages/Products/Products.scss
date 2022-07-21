@@ -117,28 +117,28 @@
         margin-bottom: 0.8rem;
         div {
           &:nth-child(1) {
-            padding: 8px;
+            padding: 10px;
+            padding-right: 30px;
+            padding-left: 30px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border: 1px solid $secondaryColor;
-            border-radius: 5px;
+            font-size: 13px;
+            border-radius: 10px;
             h6 {
               font-size: 0.8rem;
               font-weight: bold;
             }
           }
-          &:nth-child(2) {
-            padding: 8px;
-          }
+
           div {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             // border: 1px solid $primaryFontColor;
-            border-radius: 5px;
+            border-radius: 10px;
           }
         }
         .Cards {
@@ -304,20 +304,106 @@
     align-items: baseline;
   }
 }
+//---------------------------------calender--------------------------------------->
+.both {
+  .rightSide {
+    width: 400px;
+    height: 600px;
+    left: 1010px;
+    top: 150px;
+    background: #ffffff;
+    box-shadow: 0px 5px 20px rgba(155, 171, 191, 0.3);
+    border-radius: 20px;
+    align-self: center;
+    margin-left: 20px;
+  }
+  display: flex;
+  .timediv {
+    margin-left: 40px;
+  }
+  .css-1dozdou {
+    margin-bottom: 30px !important;
+  }
+  .css-mvmu1r {
+    margin: 10px 0 !important;
+  }
+  .css-epd502 {
+    margin: 0 !important;
+    width: 100% !important;
+    max-height: none !important;
+  }
+  .css-169iwlq-MuiCalendarPicker-root {
+    width: auto !important;
+    max-height: none !important;
+    margin: 0 !important;
+  }
+  .css-1n2mv2k {
+    display: flex;
+    justify-content: space-around !important;
+  }
+  .css-mvmu1r {
+    display: flex;
+    justify-content: space-around !important;
+  }
+  .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root {
+    background-color: #ffffff !important;
+    font-size: 16px;
+  }
+  .css-1tbq6mc-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+    display: none !important;
+  }
+  .css-i4bv87-MuiSvgIcon-root {
+    display: block !important;
+    color: #d96581 !important;
+  }
+  .css-195y93z-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected) {
+    border: 1px solid #d96581;
+    color: #d96581 !important;
+  }
+  .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+    color: #ffffff;
+    background: #d96581 !important;
+  }
+  .css-hlj6pa-MuiDialogActions-root {
+    display: none !important;
+  }
+  .css-7kykdr-MuiButtonBase-root-MuiIconButton-root {
+    display: none !important;
+  }
+  .css-1v994a0 {
+    // font-family: "Nunito";
+    font-weight: 700;
+    font-size: 30px;
+    color: #d96581;
+  }
+  .css-1ae9t7h-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button {
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    background: rgba(217, 101, 129, 0.1);
+    border-radius: 10px;
+  }
+  .css-jro82b-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button {
+    width: 40px;
+    height: 40px;
+    background: rgba(217, 101, 129, 0.1);
+    border-radius: 10px;
+  }
+  .css-1w13o7u-MuiTypography-root {
+    font-size: 16px;
+    font-weight: 700;
+    color: #444444;
+  }
+  .css-9reuh9-MuiPickersArrowSwitcher-root {
+    margin-left: 30px;
+  }
+  .css-l0iinn {
+    margin-right: 0;
+  }
+}
 
-.firstDiv {
-  border: 0 !important;
-  font-size: 13px !important;
-}
-.secondDiv {
-  border: 0 !important;
-  font-size: 13px !important;
-}
-.thirdDiv {
-  border: 0 !important;
-  font-size: 13px !important;
-  padding: 8px !important;
-}
+//-----------------------------------end--------------------------------------->
+
 .firstDiv:hover,
 .secondDiv:hover,
 .thirdDiv:hover {
@@ -353,8 +439,16 @@
   color: #d96581 !important;
 }
 .timingselect {
+  border: 1px solid #d96581 !important;
+  color: #d96581 !important;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500 !important;
+  width: 208px;
+  height: 50px;
   background: #d96581;
-  color: #ffffff;
+  border-radius: 10px;
+  color: #ffffff !important;
 }
 .timingnormal {
   background: #ffffff;
@@ -437,14 +531,29 @@
     .superdiv {
       display: flex;
       align-items: center;
-      grid-gap: 0.5rem !important;
+      gap: 0 !important;
+      justify-content: space-around;
       .firstDiv,
       .secondDiv,
-      .thirdDiv {
-        padding: 10px !important;
-        border-radius: 5px !important;
-        border: 2px solid #d96581 !important;
-        font-size: 12.3px !important;
+      .thirdDiv,
+      .fourthDiv,
+      .fifthDiv,
+      .sixthDiv,
+      .seventhDiv {
+        width: 220px;
+        height: 50px;
+        background: #ffffff;
+        border: none;
+        border-radius: 10px;
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #818181 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
@@ -465,9 +574,9 @@
 .css-15x1sh8-MuiButtonBase-root-MuiCheckbox-root .MuiSvgIcon-root {
   font-size: 20px !important;
 }
-.css-i4bv87-MuiSvgIcon-root {
+/* .css-i4bv87-MuiSvgIcon-root {
   display: none !important;
-}
+} */
 .collectionArr {
   display: grid;
   margin-top: 1rem;
