@@ -53,7 +53,7 @@ const App = () => {
             {" "}
             <Route path="/" component={Layout} />
           </PrivateRoute>
-          <Redirect exact from="/" to="/user/home" />
+          
 
           {/* client side */}
           <Route path="/user/login" component={Login} />
@@ -72,6 +72,7 @@ const App = () => {
           <Route path="/user/cart" component={Cart} />
           <Route path="/user/thankyou" component={ThankYou} />
           <Route path="/user/signin" component={Signin} />
+          <Redirect exact from="/" to="/user/home" />
         </Switch>
         {params[3] == "user" ? <Footer /> : null}
       </Router>

@@ -286,7 +286,7 @@ const Header = () => {
                 className="rounded-full dark:bg-gray-500 bg-green-500 text-white h-8 w-8 font-medium mx-auto focus:outline-none"
                 onClick={handleProfileOpen}
               >
-                {adminInfo.image ? (
+                {/* {adminInfo.image ? (
                   <Avatar
                     className="align-middle"
                     src={`${adminInfo.image}`}
@@ -294,7 +294,7 @@ const Header = () => {
                   />
                 ) : (
                   <span>{adminInfo.email[0].toUpperCase()}</span>
-                )}
+                )} */}
               </button>
               {profileOpen && (
                 <ul className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none">
