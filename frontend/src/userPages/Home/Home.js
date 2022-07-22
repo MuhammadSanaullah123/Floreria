@@ -123,10 +123,10 @@ const Home = () => {
           <Grid
             container
             rowSpacing={3}
-            columnSpacing={{ xs: 1, sm: 2, md: 1 }}
+            columnSpacing={{ xs: 1, sm: 2, md: 0 }}
             className="modalContainer"
           >
-            <Grid item xs={12} sm={12} md={2}>
+            <Grid item xs={12} sm={12} md={4} lg={2}>
               <Typography
                 variant="h6"
                 style={{
@@ -139,7 +139,7 @@ const Home = () => {
                 BUSCA TU REGALO
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={4} md={2}>
+            <Grid item xs={12} sm={4} md={4} lg={2}>
               <p style={{ color: "#C8CED4" }}>¿Donde envías?</p>
 
               <input
@@ -150,7 +150,7 @@ const Home = () => {
                 style={{ borderRadius: "10px", height: "40px", width: "200px" }}
               />
             </Grid>
-            <Grid item xs={12} sm={4} md={2}>
+            <Grid item xs={12} sm={4} md={4} lg={2}>
               <p style={{ color: "#C8CED4" }}>Ocasión</p>
               <button
                 style={{
@@ -170,7 +170,7 @@ const Home = () => {
                 />
               </button>
             </Grid>
-            <Grid item xs={12} sm={4} md={2}>
+            <Grid item xs={12} sm={4} md={4} lg={2}>
               <p style={{ color: "#C8CED4" }}>¿Cuando debe llegar?</p>
               <button
                 style={{
@@ -188,7 +188,7 @@ const Home = () => {
                 <img style={{ width: "20px" }} src={calender} />
               </button>
             </Grid>
-            <Grid item xs={12} sm={12} md={2}>
+            <Grid item xs={12} sm={12} md={4} lg={2}>
               <p style={{ color: "#C8CED4", visibility: "hidden" }}>HIDDEN</p>
 
               <Button

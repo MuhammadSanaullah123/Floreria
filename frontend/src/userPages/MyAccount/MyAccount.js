@@ -420,7 +420,7 @@ const MyAccount = () => {
           </div>
           <div
             style={{ gridColumn: "3/4" }}
-            className={`s2 ${thirdcard ? "carddiv2" : "carddiv"}`}
+            className={`s3 ${thirdcard ? "carddiv2" : "carddiv"}`}
             onClick={thirdselect}
           >
             <div className={`${thirdcard ? "picback2" : "picback"}`}>

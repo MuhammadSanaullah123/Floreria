@@ -65,6 +65,15 @@
           width: 190px !important;
         }
       }
+      @media (max-width: 490px) {
+        width: 320px !important;
+        .upperfirstF {
+          display: block !important;
+        }
+        .firstF {
+          width: 100% !important;
+        }
+      }
       .FieldUpperText {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -138,9 +147,18 @@
       margin-top: 30px;
       @media (max-width: 900px) {
         width: 600px;
+        .onlyP {
+          width: auto !important;
+        }
       }
       @media (max-width: 700px) {
         width: 400px;
+        .onlyP {
+          width: auto !important;
+        }
+      }
+      @media (max-width: 490px) {
+        width: 320px !important;
         .onlyP {
           width: auto !important;
         }
@@ -182,6 +200,9 @@
             @media (max-width: 700px) {
               width: 150px;
             }
+            @media (max-width: 490px) {
+              width: 100px;
+            }
           }
           @media (max-width: 900px) {
             width: 210px;
@@ -189,6 +210,10 @@
           }
           @media (max-width: 700px) {
             width: 150px;
+            font-size: 0.8rem;
+          }
+          @media (max-width: 700px) {
+            width: 100px;
             font-size: 0.8rem;
           }
         }
@@ -243,17 +268,47 @@
       @media (max-width: 700px) {
         .resp {
           width: 400px;
+          .truck {
+            left: 80px !important;
+            top: 77px !important;
+            width: 22px;
+          }
+          .home {
+            left: 225px !important;
+            //width: 22px;
+          }
         }
       }
+
       @media (max-width: 700px) {
         .addbtn {
           width: 100px !important;
           height: 80px !important;
+          p {
+            display: none;
+          }
+          img {
+            margin-bottom: 0 !important;
+          }
         }
         .textarea {
           width: 200px !important;
           height: 150px !important;
         }
+      }
+      @media (max-width: 490px) {
+        .resp {
+          width: 320px;
+          .truck {
+            display: none !important;
+          }
+          .home {
+            display: none !important;
+          }
+        }
+      }
+      .address {
+        margin-bottom: 30px !important;
       }
     }
 
@@ -265,12 +320,15 @@
       grid-row-start: 19;
       grid-row-end: 32;
       width: 800px;
-      margin-bottom: 100px;
+
       @media (max-width: 900px) {
         width: 600px;
       }
       @media (max-width: 700px) {
         width: 400px;
+      }
+      @media (max-width: 490px) {
+        width: 320px;
       }
       .reviewProductCard {
         display: grid;
@@ -340,7 +398,78 @@
           width: 400px !important;
         }
       }
+      @media (max-width: 490px) {
+        .firstForm {
+          width: 320px;
+        }
+        textarea {
+          width: 320px !important;
+        }
+        .secondForm {
+          width: 320px !important;
+        }
+      }
     }
+    .span-45 {
+      display: flex;
+      flex-direction: column;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 32;
+      grid-row-end: 42;
+      margin-bottom: 100px;
+      margin-top: 80px;
+      .tripleDiv {
+        display: flex;
+        align-items: center;
+        width: 799px;
+        height: 48px;
+        background: #ffffff;
+        box-shadow: 0px 3px 12px rgba(155, 171, 191, 0.3);
+        border-radius: 10px;
+      }
+      .lastCheckboxDiv {
+        margin-top: 80px;
+        p {
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          color: #444444;
+        }
+      }
+      @media (max-width: 900px) {
+        .tripleDiv {
+          width: 600px !important;
+        }
+        .subDiv {
+          width: 45% !important;
+        }
+      }
+      @media (max-width: 700px) {
+        .tripleDiv {
+          width: 400px !important;
+        }
+        .subDiv {
+          width: 70% !important;
+        }
+      }
+      @media (max-width: 490px) {
+        .tripleDiv {
+          width: 320px !important;
+        }
+        .subDiv {
+          width: 85% !important;
+        }
+        .lastCheckboxDiv {
+          width: 450px !important;
+          position: relative;
+
+          right: 50px;
+        }
+      }
+    }
+
     .span-5 {
       background-color: red;
       grid-column-start: 3;
@@ -359,6 +488,11 @@
       @media (max-width: 550px) {
         width: 430px;
       }
+      @media (max-width: 490px) {
+        width: 430px !important;
+        position: relative;
+        right: 50px;
+      }
       @media (max-width: 500px) {
         width: 380px;
         .bigbtn {
@@ -375,16 +509,16 @@
       @media (max-width: 1400px) {
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 32;
-        grid-row-end: 42;
+        grid-row-start: 42;
+        grid-row-end: 52;
         margin-bottom: 50px;
       }
     }
     .span-6 {
       grid-column-start: 1;
       grid-column-end: 4;
-      grid-row-start: 42;
-      grid-row-end: 44;
+      grid-row-start: 52;
+      grid-row-end: 54;
       margin-bottom: 50px;
       display: flex;
       flex-direction: column;
@@ -396,12 +530,15 @@
       }
       @media (max-width: 550px) {
         Button {
-          width: 300px !important;
+          width: 320px !important;
           font-size: 1rem !important;
         }
       }
       @media (max-width: 900px) {
         width: 90%;
+      }
+      @media (max-width: 490px) {
+        width: 80% !important;
       }
 
       @media (max-width: 800px) {
@@ -568,5 +705,21 @@
     background-color: #d96581;
     color: #fff;
     width: 100% !important;
+  }
+}
+.topdiv {
+  .gm-ui-hover-effect {
+    display: none !important;
+  }
+  button {
+    display: none;
+  }
+  .gmnoprint {
+    display: none !important;
+  }
+}
+@media (max-width: 900px) {
+  .css-1g5rj51 {
+    width: 90% !important;
   }
 }

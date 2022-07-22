@@ -26,10 +26,15 @@
       width: 95%;
     }
     @media (min-width: 900px) {
-      justify-content: space-around;
+      justify-content: end;
       top: -100px;
     }
     @media (min-width: 1024px) {
+      //justify-content: space-evenly;
+      align-items: center;
+      width: 90%;
+    }
+    @media (min-width: 1200px) {
       justify-content: space-evenly;
       align-items: center;
       width: 90%;

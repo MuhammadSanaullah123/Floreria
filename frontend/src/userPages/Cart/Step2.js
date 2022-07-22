@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-
+//import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+import { geocodeByAddress, getLatLng } from "react-google-places-autocomplete";
 // scss
 import "./Cart.scss";
 
 // component
 import StepOne from "./../../mainLayout/Step1/StepOne";
+import MapContainer from "./MapContainer";
 
 // mui
 import Button from "@mui/material/Button";
@@ -25,6 +27,9 @@ import f1 from "./../../assets/f1.svg";
 import f2 from "./../../assets/f2.svg";
 import f3 from "./../../assets/f3.svg";
 import f4 from "./../../assets/f4.png";
+import m1 from "./../../assets/m1.png";
+import m2 from "./../../assets/m2.png";
+import m3 from "./../../assets/m3.png";
 import questionmark from "./../../assets/questionmark.png";
 import cross from "./../../assets/cross.svg";
 import addAdd from "./../../assets/addAdd.svg";
@@ -76,6 +81,10 @@ const Step2 = ({ handleNext }) => {
   console.log("redux", products);
 
   // Modal State and methods
+  const [quantity1, setQuantity1] = useState(1);
+  const [quantity2, setQuantity2] = useState(1);
+  const [quantity3, setQuantity3] = useState(1);
+
   const [redirect, setRedirect] = useState("");
   const [style_index, setIndex] = useState("");
 
@@ -85,6 +94,7 @@ const Step2 = ({ handleNext }) => {
   const [openmodel1, setopenModel1] = useState(false);
   const [openmodel2, setopenModel2] = useState(false);
   const [openmodel3, setopenmodel3] = useState(false);
+  const [openmodelmap, setopenmodelmap] = useState(false);
   const [disable, setDisable] = useState(true);
   const [address2, setaddress] = useState([]);
   const [googleaddress, setgoogleAddress] = useState(null);
@@ -111,6 +121,22 @@ const Step2 = ({ handleNext }) => {
     absent: absentName,
     reference: "",
   });
+  useEffect(() => {
+    if (quantity1 < 1) {
+      setQuantity1(1);
+    }
+    if (quantity2 < 1) {
+      setQuantity2(1);
+    }
+    if (quantity3 < 1) {
+      setQuantity3(1);
+    }
+  });
+  const [checkedm1, setCheckedm1] = useState(false);
+  const [checkedm2, setCheckedm2] = useState(false);
+  const [checkedm3, setCheckedm3] = useState(false);
+  const [checkedterms, setCheckedterms] = useState(false);
+  const [checkedannual, setCheckedannual] = useState(false);
 
   const [checked1, setChecked1] = useState(false);
   const [checked2, setChecked2] = useState(false);
@@ -162,7 +188,8 @@ const Step2 = ({ handleNext }) => {
     console.log(postBodyTrx);
     console.log(redirect);
   };
-  useEffect(() => {
+
+  /*   useEffect(() => {
     if (googleaddress != null) {
       const addressVerification = googleaddress.label;
       const numberVerification = googleaddress.value.terms[0].value;
@@ -177,7 +204,7 @@ const Step2 = ({ handleNext }) => {
         colonia: coloniaVerification,
       }));
     }
-  }, [googleaddress]);
+  }, [googleaddress]); */
 
   const handleClickShowPassword = () => setShowPassword(!showPassword);
   const handleMouseDownPassword = () => setShowPassword(!showPassword);
@@ -187,6 +214,8 @@ const Step2 = ({ handleNext }) => {
   const handleClose2 = () => setopenModel2(false);
   const handleOpen3 = () => setopenmodel3(true);
   const handleClose3 = () => setopenmodel3(false);
+  const handleOpenMap = () => setopenmodelmap(true);
+  const handleCloseMap = () => setopenmodelmap(false);
 
   const PlaceOrderApi = async () => {
     console.log("working...");
@@ -223,7 +252,24 @@ const Step2 = ({ handleNext }) => {
       [e.target.name]: val,
     });
   };
+
+  const [latitude, setlatitude] = useState("");
+  const [longitude, setlongitude] = useState("");
+  const [addressname, setaddressname] = useState("");
+
   const handleStore = () => {
+    inputvalues.address = googleaddress.label;
+
+    handleClose2(true);
+    handleOpenMap(true);
+
+    setaddressname(googleaddress.label);
+    geocodeByAddress(googleaddress.label)
+      .then((results) => getLatLng(results[0]))
+      .then(({ lat, lng }) => (setlatitude(lat), setlongitude(lng)));
+  };
+
+  const handleStore2 = () => {
     var temp = newAddress;
     inputvalues.address = googleaddress.label;
     temp.push(inputvalues);
@@ -231,11 +277,11 @@ const Step2 = ({ handleNext }) => {
     setboolData(true);
     setDisable(false);
     setShow(true);
-    handleClose2(true);
+    handleCloseMap(true);
+
     console.log("newAddress:--------->");
     console.log(newAddress);
   };
-
   const handleaddressButton = (index) => {
     setaddress(newAddress[index]);
     setSelected2(true);
@@ -273,11 +319,20 @@ ${newAddress[index].reference}`
   const handlecheckbox2 = (event) => {
     setChecked2(event.target.checked);
   };
-  const handleRadiobtn1 = (event) => {
-    setSelected1(event.target.checked);
+  const handlecheckboxm1 = (event) => {
+    setCheckedm1(event.target.checked);
   };
-  const handleRadiobtn2 = (event) => {
-    setSelected2(event.target.checked);
+  const handlecheckboxm2 = (event) => {
+    setCheckedm2(event.target.checked);
+  };
+  const handlecheckboxm3 = (event) => {
+    setCheckedm3(event.target.checked);
+  };
+  const handlecheckboxterms = (event) => {
+    setCheckedterms(event.target.checked);
+  };
+  const handlecheckboxannual = (event) => {
+    setCheckedannual(event.target.checked);
   };
   // style
   const style1 = {
@@ -314,6 +369,21 @@ ${newAddress[index].reference}`
     borderRadius: "10px",
 
     padding: "15px",
+  };
+  const style_map = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "1400px",
+    height: "800px",
+    bgcolor: "background.paper",
+    borderRadius: "30px",
+    p: 4,
+    display: "flex",
+    flexDirection: "column",
+    background: "#ffffff",
+    padding: "42px",
   };
   const names = [
     "Casa",
@@ -437,7 +507,10 @@ ${newAddress[index].reference}`
               </p>
             </div>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div
+            className="upperfirstF"
+            style={{ display: "flex", justifyContent: "space-between" }}
+          >
             <div className="firstF" style={{ width: "390px" }}>
               <TextField
                 onChange={handleChangeInformation}
@@ -717,9 +790,12 @@ ${newAddress[index].reference}`
                       }}
                     >
                       <img style={{ marginBottom: "10px" }} src={addAdd} />
-                      Nueva Dirección
+                      <p style={{ marginBottom: "0" }}>Nueva Dirección</p>
                     </Button>
                     <Modal
+                      style={{
+                        overflowX: "auto",
+                      }}
                       open={openmodel2}
                       // onClose={handleClose2}
                       aria-labelledby="modal-modal-title"
@@ -973,7 +1049,73 @@ ${newAddress[index].reference}`
                         </div>
                       </Box>
                     </Modal>
-
+                    <Modal
+                      open={openmodelmap}
+                      aria-labelledby="modal-modal-title"
+                      aria-describedby="modal-modal-description"
+                    >
+                      <Box className="box_map" sx={style_map}>
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <img onClick={handleCloseMap} src={cross} />
+                        </div>
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            width: "1220px",
+                            alignSelf: "center",
+                          }}
+                        >
+                          <p
+                            style={{
+                              fontFamily: "Nunito",
+                              fontWeight: "700",
+                              fontSize: "30px",
+                              color: "#D96581",
+                            }}
+                          >
+                            Confirma la dirección
+                          </p>
+                          <div
+                            style={{
+                              width: "1220px",
+                              height: "500px",
+                              borderRadius: "30px",
+                              alignSelf: "center",
+                            }}
+                          >
+                            <MapContainer
+                              lat={latitude}
+                              lng={longitude}
+                              name={addressname}
+                            />
+                          </div>
+                          <Button
+                            onClick={handleStore2}
+                            style={{
+                              width: "280px",
+                              height: "50px",
+                              background: "#D96581",
+                              borderRadius: "10px",
+                              color: "#ffffff",
+                              fontFamily: "Nunito",
+                              fontWeight: "500",
+                              fontSize: "24px",
+                              textTransform: "capitalize",
+                              marginTop: "50px",
+                              alignSelf: "end",
+                            }}
+                          >
+                            Guardar
+                          </Button>
+                        </div>
+                      </Box>
+                    </Modal>
                     {/* <TextField
                 value={address}
                 name="address"
@@ -1171,6 +1313,189 @@ ${newAddress[index].reference}`
             }}
           />
         </div>
+        <div className="span-45">
+          <p
+            style={{
+              fontFamily: "Nunito",
+              fontStyle: "normal",
+              fontWeight: "900",
+              fontSize: "20px",
+            }}
+          >
+            5. Método de Pago
+          </p>
+          <div className="tripleDiv">
+            <div
+              className="subDiv"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                width: "35%",
+                justifyContent: "space-around",
+              }}
+            >
+              <input
+                checked={checkedm1}
+                onChange={handlecheckboxm1}
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  borderRadius: "6px",
+                  fontSize: "16px",
+                }}
+                class="form-check-input"
+                type="checkbox"
+                value=""
+              />
+              <img src={m1} />
+              <p style={{ margin: "0", width: "130px" }}>Mercado Pago</p>
+            </div>
+          </div>
+          <div
+            style={{
+              marginTop: "15px",
+            }}
+            className="tripleDiv"
+          >
+            <div
+              className="subDiv"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                width: "35%",
+                justifyContent: "space-around",
+              }}
+            >
+              <input
+                checked={checkedm2}
+                onChange={handlecheckboxm2}
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  borderRadius: "6px",
+                  fontSize: "16px",
+                }}
+                class="form-check-input"
+                type="checkbox"
+                value=""
+              />
+              <img src={m2} />
+              <p style={{ margin: "0", width: "130px" }}>WebPay</p>
+            </div>
+          </div>
+          <div
+            style={{
+              marginTop: "15px",
+            }}
+            className="tripleDiv"
+          >
+            <div
+              className="subDiv"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                width: "35%",
+                justifyContent: "space-around",
+              }}
+            >
+              <input
+                checked={checkedm3}
+                onChange={handlecheckboxm3}
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  borderRadius: "6px",
+                  fontSize: "16px",
+                }}
+                class="form-check-input"
+                type="checkbox"
+                value=""
+              />
+              <img src={m3} />
+              <p style={{ margin: "0", width: "130px" }}>Tarjeta de Crédito</p>
+            </div>
+          </div>
+          <div className="lastCheckboxDiv">
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <input
+                checked={checkedterms}
+                onChange={handlecheckboxterms}
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  borderRadius: "6px",
+                  fontSize: "16px",
+                }}
+                class="form-check-input"
+                type="checkbox"
+                value=""
+              />
+              <p
+                style={{
+                  display: "flex",
+                  marginLeft: "10px",
+                  alignItems: "center",
+                  marginBottom: "0",
+                }}
+              >
+                Acepto los
+                <p
+                  style={{
+                    color: "#D96581",
+                    marginBottom: "0",
+                    marginRight: "5px",
+                    fontWeight: "700",
+                  }}
+                >
+                  Términos y Condiciones
+                </p>
+                de Florería Suecia
+              </p>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginTop: "20px",
+              }}
+            >
+              <input
+                checked={checkedannual}
+                onChange={handlecheckboxannual}
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  borderRadius: "6px",
+                  fontSize: "16px",
+                }}
+                class="form-check-input"
+                type="checkbox"
+                value=""
+              />
+              <p
+                style={{
+                  display: "flex",
+                  marginLeft: "10px",
+                  alignItems: "center",
+                  marginBottom: "0",
+                }}
+              >
+                Activar
+                <p
+                  style={{
+                    color: "#D96581",
+                    marginBottom: "0",
+                    marginRight: "5px",
+                    fontWeight: "700",
+                  }}
+                >
+                  recordatorio anual
+                </p>
+                de Florería Suecia
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="span-5">
           <div
             style={{
@@ -1191,7 +1516,10 @@ ${newAddress[index].reference}`
               <p style={{ marginBottom: "0" }}>Vino Rosa</p>
               <p style={{ color: "#9BABBF" }}>Ramo del día</p>
               <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-                <RemoveIcon sx={{ color: pink[400] }} />
+                <RemoveIcon
+                  onClick={() => setQuantity1(quantity1 - 1)}
+                  sx={{ color: pink[400] }}
+                />
                 <div
                   style={{
                     width: "2px",
@@ -1208,7 +1536,7 @@ ${newAddress[index].reference}`
                     fontFamily: "Poppins",
                   }}
                 >
-                  01
+                  {quantity1}
                 </p>
                 <div
                   style={{
@@ -1218,7 +1546,10 @@ ${newAddress[index].reference}`
                     borderRadius: "6px",
                   }}
                 ></div>
-                <AddIcon sx={{ color: pink[400] }} />
+                <AddIcon
+                  onClick={() => setQuantity1(quantity1 + 1)}
+                  sx={{ color: pink[400] }}
+                />
               </div>
             </div>
             <p>$90.00</p>
@@ -1242,7 +1573,10 @@ ${newAddress[index].reference}`
               <p style={{ marginBottom: "0" }}>Vino Rosa</p>
               <p style={{ color: "#9BABBF" }}>Ramo del día</p>
               <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-                <RemoveIcon sx={{ color: pink[400] }} />
+                <RemoveIcon
+                  onClick={() => setQuantity2(quantity2 - 1)}
+                  sx={{ color: pink[400] }}
+                />
                 <div
                   style={{
                     width: "2px",
@@ -1259,7 +1593,7 @@ ${newAddress[index].reference}`
                     fontFamily: "Poppins",
                   }}
                 >
-                  01
+                  {quantity2}
                 </p>
                 <div
                   style={{
@@ -1269,7 +1603,10 @@ ${newAddress[index].reference}`
                     borderRadius: "6px",
                   }}
                 ></div>
-                <AddIcon sx={{ color: pink[400] }} />
+                <AddIcon
+                  onClick={() => setQuantity2(quantity2 + 1)}
+                  sx={{ color: pink[400] }}
+                />
               </div>
             </div>
             <p>$90.00</p>
@@ -1293,7 +1630,10 @@ ${newAddress[index].reference}`
               <p style={{ marginBottom: "0" }}>Vino Rosa</p>
               <p style={{ color: "#9BABBF" }}>Ramo del día</p>
               <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-                <RemoveIcon sx={{ color: pink[400] }} />
+                <RemoveIcon
+                  onClick={() => setQuantity3(quantity3 - 1)}
+                  sx={{ color: pink[400] }}
+                />
                 <div
                   style={{
                     width: "2px",
@@ -1310,7 +1650,7 @@ ${newAddress[index].reference}`
                     fontFamily: "Poppins",
                   }}
                 >
-                  01
+                  {quantity3}
                 </p>
                 <div
                   style={{
@@ -1320,7 +1660,10 @@ ${newAddress[index].reference}`
                     borderRadius: "6px",
                   }}
                 ></div>
-                <AddIcon sx={{ color: pink[400] }} />
+                <AddIcon
+                  onClick={() => setQuantity3(quantity3 + 1)}
+                  sx={{ color: pink[400] }}
+                />
               </div>
             </div>
             <p>$90.00</p>
@@ -1609,3 +1952,8 @@ ${newAddress[index].reference}`
   );
 };
 export default Step2;
+
+/* export default GoogleApiWrapper({
+  apiKey: "AIzaSyBK93ph5WIzMDsp4EJ6vKBsLGaJFoHGxcs",
+})(Step2);
+ */
