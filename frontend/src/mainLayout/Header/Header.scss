@@ -10,7 +10,9 @@
   margin-top: 20px;
   margin: 0 auto;
   width: 90%;
-
+  .css-12y7drv-MuiInputBase-root .MuiInputBase-input {
+    padding-left: 15px !important ;
+  }
   .searchBar {
     display: flex;
     flex-direction: row;
@@ -141,10 +143,16 @@
 }
 .Hlinks {
   display: flex;
-  justify-content: center;
-  gap: 3rem;
+  justify-content: space-evenly;
+  width: 85%;
+  margin: 0 auto;
   a {
     color: #444444;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
   }
   @media (max-width: 768px) {
     flex-direction: column;

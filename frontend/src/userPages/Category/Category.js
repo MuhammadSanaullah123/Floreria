@@ -162,16 +162,38 @@ const Category = () => {
       </div> */}
       <div className="PageLayout">
         <div className="span-1">
-          <h1>CUMPLEAÑOS</h1>
+          <h1
+            style={{
+              fontFamily: "Nunito",
+              fontWeight: "600",
+              fontSize: "40px",
+            }}
+          >
+            CUMPLEAÑOS
+          </h1>
           <div className="vertialL"></div>
         </div>
 
         <div className="span-2">
-          <h6>
+          <h6
+            style={{
+              fontFamily: "Nunito",
+              fontWeight: "400",
+              fontSize: "18px",
+              color: "#000000",
+            }}
+          >
             Encuentra arreglos florales y regalos para celebrar cualquier
             ocasion especial con envios a domicilio.
           </h6>
-          <p>
+          <p
+            style={{
+              fontFamily: "Nunito",
+              color: "#818181",
+              fontWeight: "400",
+              fontSize: "16px",
+            }}
+          >
             Hermosos affreglos y regalos perfectos para celebrar ese dia
             especial. Nuestros arreglos esten culdadosamente elaborados por
             expertos floistas. eligiendo siempre Ias flores mas frescas y de la
@@ -466,8 +488,8 @@ const Category = () => {
                 color: "#FFF",
                 backgroundColor: "#D96581",
                 borderRadius: "10px",
-                width: "100%",
-                height: "40px",
+                width: "290px",
+                height: "44px",
                 marginTop: "20px",
               }}
             >

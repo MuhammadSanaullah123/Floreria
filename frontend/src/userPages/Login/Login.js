@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Login.scss";
+import { Link } from "react-router-dom";
 
 import Button from "@mui/material/Button";
 
@@ -94,7 +95,9 @@ const Login = () => {
           >
             Olvidé mi contraseña
           </a>
-          <Button style={{ color: "#ffffff" }}>Ingresar</Button>
+          <Link to="home">
+            <Button style={{ color: "#ffffff" }}>Ingresar</Button>
+          </Link>
           <Button
             style={{ background: "#ffffff", border: "1px solid #D96581" }}
           >

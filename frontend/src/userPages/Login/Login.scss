@@ -7,9 +7,8 @@
 .LoginDiv {
   width: 90%;
   display: flex;
-
   margin: 0 auto;
-  margin-bottom: 100px;
+
   p,
   h6 {
     margin: 0 !important;
@@ -48,8 +47,8 @@
       width: 166%;
       height: 100%;
       position: relative;
-      right: 54.5%;
-      top: 5%;
+      right: 55%;
+
       z-index: -1;
       max-width: none;
       @media screen and (max-width: 1050px) {

@@ -1,29 +1,29 @@
 @import "./../utillities_config";
 
-.productCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    .cardImage{
-        img{
+.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  .cardImage {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .cardTitle {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
+  }
 
-            width:100%;
-            height:auto;
-        }
-    }
-    .cardTitle{
-        font-size: medium;
-        color:$primaryFontColor;
-        margin-top: 0.8rem;
-    }
-
-    .cardPrice{
-        font-size: medium;
-        color:black;
-        font-weight: 600;
-    }
-    button{
-        margin-bottom: 1rem;
-    }
-
+  .cardPrice {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 22px;
+    color: #000000;
+  }
+  button {
+    margin-bottom: 1rem;
+  }
 }

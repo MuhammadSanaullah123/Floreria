@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./ProductCard.scss";
 import delivery from "./../../assets/delivery.svg";
+import truckProductCard from "./../../assets/truckProductCard.svg";
+
 import Button from "@mui/material/Button";
 
 const ProductCard = ({ value }) => {
@@ -15,7 +17,7 @@ const ProductCard = ({ value }) => {
       <div className="cardImage">
         <img src={images} />
       </div>
-      <div style={{ width: "95%", alignSelf: "center" }}>
+      <div style={{ width: "90%", alignSelf: "center" }}>
         <p className="cardTitle">{productName}</p>
         <p
           style={{
@@ -37,25 +39,35 @@ const ProductCard = ({ value }) => {
         <div className="both">
           <Link
             className="link"
-            style={{ width: "80%", height: "40px" }}
+            style={{ width: "220px", height: "44px" }}
             to={`/user/product?${params}`}
           >
             <Button
               variant="contained"
               style={{
-                color: "white",
                 backgroundColor: "#D96581",
                 borderRadius: "7px",
                 textTransform: "none",
-                width: "100%",
-                height: "100%",
+                width: "220px",
+                height: "44px",
+                fontFamily: "Nunito",
+
+                fontWeight: "500",
+                fontSize: "14px",
+                color: "#FFFFFF",
               }}
             >
               Agregar al carrito
             </Button>
           </Link>
 
-          <img src={delivery} />
+          <img
+            style={{
+              background: "#FFFFFF",
+              borderRadius: "10px",
+            }}
+            src={truckProductCard}
+          />
         </div>
       </div>
     </div>

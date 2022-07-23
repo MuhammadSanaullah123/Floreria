@@ -662,7 +662,15 @@ const Header = () => {
           </div>
         </Drawer>
       </div>
-      <div style={{ gap: "1.5rem", display: "flex", flexDirection: "column" }}>
+      <div
+        style={{
+          gap: "1.5rem",
+          display: "flex",
+          flexDirection: "column",
+          margin: "0 auto",
+          width: "90%",
+        }}
+      >
         <div style={{ marginTop: "20px" }} className="hline"></div>
         <div className="Hlinks">
           <a>Novedades</a>
