@@ -39,7 +39,7 @@ const App = () => {
     <>
       <ToastContainer />
       <Router>
-        {params[3] == "user" ? <Header /> : null}
+        {params[3] == "user" & params[4] != "login" ? <Header /> : null}
 
         <AccessibleNavigationAnnouncer />
         <Switch>
@@ -74,7 +74,7 @@ const App = () => {
           <Route path="/user/signin" component={Signin} />
           <Redirect exact from="/" to="/user/home" />
         </Switch>
-        {params[3] == "user" ? <Footer /> : null}
+        {params[3] == "user" & params[4] != "login" ? <Footer /> : null}
       </Router>
     </>
   );

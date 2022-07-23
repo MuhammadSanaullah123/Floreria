@@ -212,7 +212,7 @@ const ProductSection = () => {
                   height: "40px",
                   textAlign: "center",
                 }}
-                to="/user/category?products=|"
+                to="/user/category?products=licories"
               >
                 <Button
                   style={{
