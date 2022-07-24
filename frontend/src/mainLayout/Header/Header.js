@@ -183,7 +183,7 @@ const Header = () => {
               src={require("./../../assets/delivery.svg").default}
               alt="Delievry truck"
             />
-            <Link style={{ marginBottom: "0" }} to="/category">
+            <Link style={{ marginBottom: "0" }} to="/user/category">
               Seguimiento
             </Link>
           </span>
@@ -641,7 +641,7 @@ const Header = () => {
                 src={require("./../../assets/delivery.svg").default}
                 alt="Delievry truck"
               />
-              <Link to="/category">Seguimiento</Link>
+              <Link to="/user/category">Seguimiento</Link>
             </span>
             <span style={{ margin: "1rem 0rem" }}>
               <img
