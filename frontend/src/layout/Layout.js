@@ -4,6 +4,8 @@ import { Switch, Route, Redirect, useLocation } from "react-router-dom";
 import Main from "./Main";
 import routes from "../routes";
 import routesClient from "../routes/routesClient";
+import HeaderClient from "../mainLayout/Header/Header"
+import FooterClient from "../mainLayout/Footer/Footer"
 import Header from "../components/header/Header";
 import Sidebar from "../components/sidebar/Sidebar";
 import { SidebarContext } from "../context/SidebarContext";
@@ -21,24 +23,29 @@ const Layout = () => {
   console.log("params", params);
   return (
     <>
-      {params[3] == "user" ? (
-        <Suspense fallback={<ThemeSuspense />}>
-          <Switch>
-            {routes.map((route, i) => {
-              return route.component ? (
-                <Route
-                  key={i}
-                  exact={true}
-                  path={`${route.path}`}
-                  render={(props) => <route.component {...props} />}
-                />
-              ) : null;
-            })}
-            <Redirect exact from="/" to="/dashboard" />
-            {/*<Route component={Page404} />*/}
-          </Switch>
-        </Suspense>
-      ) : (
+      {params[3] == "user" && (
+        <>
+          {params[4] != "login" && <HeaderClient /> }
+          <Suspense fallback={<ThemeSuspense />}>
+            <Switch>
+              {routes.map((route, i) => {
+                return route.component ? (
+                  <Route
+                    key={i}
+                    exact={true}
+                    path={`${route.path}`}
+                    render={(props) => <route.component {...props} />}
+                  />
+                ) : null;
+              })}
+              <Redirect exact from="/" to="/user/login" />
+              {/*<Route component={Page404} />*/}
+            </Switch>
+          </Suspense>
+          {params[4] != "login" && <FooterClient/>}
+        </>
+      )}
+      {params[3] == "" && (
         <>
           <div
             className={`flex h-screen bg-gray-50 dark:bg-gray-900 ${
@@ -62,7 +69,7 @@ const Layout = () => {
                         />
                       ) : null;
                     })}
-                    <Redirect exact from="/" to="/dashboard" />
+                    <Redirect exact from="/" to="/user/login" />
                     {/*<Route component={Page404} />*/}
                   </Switch>
                 </Suspense>

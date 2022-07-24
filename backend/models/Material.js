@@ -14,7 +14,7 @@ const materialSchema = new mongoose.Schema(
       type:String,
       required:true
     },
-    supplier:{
+    supplier:{ 
       type:String,
       required:true
     },
@@ -29,6 +29,10 @@ const materialSchema = new mongoose.Schema(
     status: {
       type:String,
       required:true
+    },
+    price: {
+      type: String,
+      required: true
     }
   },
 );

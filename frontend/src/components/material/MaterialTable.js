@@ -60,9 +60,11 @@ const MaterialTable = ({ materials }) => {
               <span className="text-sm">{materials.producer}</span>
             </TableCell>
             <TableCell>
+              <span className="text-sm font-sm">${materials.price}</span>
+            </TableCell>
+            <TableCell>
               <span className="text-sm font-sm">{materials.quantity}</span>
             </TableCell>
-
             <TableCell>
               {materials.quantity > 0 ? (
                 <Badge type="success">Selling</Badge>
@@ -70,7 +72,7 @@ const MaterialTable = ({ materials }) => {
                 <Badge type="danger">Sold Out</Badge>
               )}
             </TableCell>
-
+              
             <TableCell>
               <Link
                 to={`/materials/${materials._id}`}

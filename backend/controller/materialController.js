@@ -113,6 +113,7 @@ const updateMaterial = async (req, res) => {
       Materials.supplier = req.body.supplier;
       Materials.producer = req.body.producer;
       Materials.quantity = req.body.quantity;
+      Materials.price = req.body.price;
       await Materials.save();
       res.send({ data: Materials, message: 'Material updated successfully!' });
     }

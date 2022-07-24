@@ -194,6 +194,7 @@ const Materials = () => {
                 <TableCell>Material Type</TableCell>
                 <TableCell>Supplier</TableCell>
                 <TableCell>Producer</TableCell>
+                <TableCell>Price</TableCell>
                 <TableCell>Quantity</TableCell>
                 <TableCell>Status</TableCell>
                 <TableCell>Details</TableCell>

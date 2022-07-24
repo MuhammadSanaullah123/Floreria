@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -34,12 +34,15 @@ const ForgetPassword = lazy(() => import("./pages/ForgotPassword"));
 const ResetPassword = lazy(() => import("./pages/ResetPassword"));
 
 const App = () => {
+  
   const params = window.location.href.split("/");
+  console.log(params)
+  
   return (
     <>
       <ToastContainer />
       <Router>
-        {params[3] == "user" & params[4] != "login" ? <Header /> : null}
+        
 
         <AccessibleNavigationAnnouncer />
         <Switch>
@@ -50,13 +53,12 @@ const App = () => {
           <Route path="/reset-password/:token" component={ResetPassword} />
 
           <PrivateRoute>
-            {" "}
             <Route path="/" component={Layout} />
           </PrivateRoute>
           
 
           {/* client side */}
-          <Route path="/user/login" component={Login} />
+         
           <Route path="/user/home" component={Home} />
           <Route path="/user/product" component={Product} />
           <Route path="/user/myaccount/home" component={MyAccount} />
@@ -72,9 +74,10 @@ const App = () => {
           <Route path="/user/cart" component={Cart} />
           <Route path="/user/thankyou" component={ThankYou} />
           <Route path="/user/signin" component={Signin} />
-          <Redirect exact from="/" to="/user/home" />
+          
+          <Route path="/user/login" component={Login} />
+          <Redirect exact from="/" to="/user/login" />
         </Switch>
-        {params[3] == "user" & params[4] != "login" ? <Footer /> : null}
       </Router>
     </>
   );

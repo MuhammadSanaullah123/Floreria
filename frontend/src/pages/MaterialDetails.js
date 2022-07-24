@@ -90,14 +90,14 @@ const MaterialDetails = () => {
                   {data.type}
                 </p>
                 <div className="flex flex-row">
-                  {JSON.parse(data?.tag).map((t, i) => (
+                  {/* {JSON.parse(data?.tag).map((t, i) => (
                     <span
                       key={i + 1}
                       className="bg-gray-200 mr-2 border-0 text-gray-500 rounded-full inline-flex items-center justify-center px-2 py-1 text-xs font-semibold font-serif mt-2 dark:bg-gray-700 dark:text-gray-300"
                     >
                       {t}
                     </span>
-                  ))}
+                  ))} */}
                 </div>
               </div>
               <div className="mt-6">
