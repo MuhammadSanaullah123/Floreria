@@ -145,7 +145,7 @@
         grid-row-end: 5;
       }
       @media (min-width: 768px) {
-        grid-column: 3/6;
+        grid-column: 1/6;
         p {
           font-size: 0.8rem;
         }
@@ -156,7 +156,7 @@
         grid-row-end: 3;
       }
       @media (min-width: 1024px) {
-        grid-column: 3/5;
+        grid-column: 1/5;
         p {
           font-size: 0.9rem;
         }
@@ -165,6 +165,22 @@
         }
         grid-row-start: 2;
         grid-row-end: 3;
+      }
+      .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+        background-image: url("./../../assets/arrowdown.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-x: 90%;
+        font-size: 16px !important;
+        @media (max-width: 1250px) {
+          font-size: 14px !important;
+        }
+        .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+          display: none;
+        }
+        .css-bpeome-MuiSvgIcon-root-MuiSelect-icon {
+          display: none;
+        }
       }
     }
 
@@ -318,4 +334,45 @@
 }
 .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root {
   color: #d96581 !important;
+}
+.MuiDrawer-paperAnchorDown {
+  width: 50% !important;
+  @media (max-width: 650px) {
+    width: 70% !important ;
+  }
+  @media (max-width: 500px) {
+    width: 100% !important ;
+  }
+}
+.downarrowDiv {
+  box-shadow: 0px 5px 20px rgba(155, 171, 191, 0.3);
+  border-radius: 10px;
+  width: 70px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.uparrowDiv {
+  box-shadow: 0px 5px 20px rgba(130, 141, 156, 0.3);
+  border-radius: 10px;
+  width: 70px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .css-1v5z18m {
+    width: auto !important;
+  }
+}
+.css-17djbj3-MuiSlider-valueLabel.MuiSlider-valueLabelOpen {
+  background: transparent;
 }

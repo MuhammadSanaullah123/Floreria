@@ -942,6 +942,7 @@ const Products = () => {
                           position: "relative",
                           left: "26rem",
                           bottom: "5rem",
+                          cursor: "pointer",
                         }}
                         src={cross}
                       />

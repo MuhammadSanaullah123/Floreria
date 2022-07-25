@@ -4,12 +4,15 @@ import "./Category.scss";
 import Stack from "@mui/material/Stack";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import searchbar from "./../../assets/searchbar.svg";
+import arrowdown from "./../../assets/arrowdown.svg";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { styled } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import AddSharpIcon from "@mui/icons-material/AddSharp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+
 import { pink } from "@mui/material/colors";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -125,6 +128,11 @@ const Category = () => {
     setChecked(newChecked);
   };
 
+  const [priceFilter, setPriceFilter] = useState("1");
+  const handlePriceFilter = (event) => {
+    setPriceFilter(event.target.value);
+  };
+
   const search = useLocation().search;
   console.log(search);
   const name = new URLSearchParams(search).get("products");
@@ -204,10 +212,31 @@ const Category = () => {
 
         <div className="span-4" style={{ display: "flex" }}>
           <p style={{ color: "#818181" }}>Ordenar por</p>
-          <button className="dropbtn">
-            <p style={{ color: "#444444" }}>$ Mayor a menor</p>
-            <KeyboardArrowDownIcon sx={{ color: pink[500] }} />
-          </button>
+          <FormControl
+            style={{
+              width: "220px",
+              height: "44px",
+              border: "1px solid #9BABBF",
+              borderRadius: "10px",
+            }}
+          >
+            {/* <InputLabel id="demo-simple-select-label">Price</InputLabel> */}
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={priceFilter}
+              label="Age"
+              onChange={handlePriceFilter}
+              style={{
+                height: "44px",
+                fontSize: "20px",
+              }}
+            >
+              <MenuItem value={1}>$ Mayor a menor</MenuItem>
+              <MenuItem value={2}>$ Menor a mayor</MenuItem>
+            </Select>
+          </FormControl>
+          {/* <KeyboardArrowDownIcon sx={{ color: pink[500] }} /> */}
           <button
             className="recommendbtn"
             variant="contained"
@@ -251,34 +280,44 @@ const Category = () => {
                 </Button>
               </Search>
             </div>
+            <div onClick={toggleDrawer(true)} className="downarrowDiv">
+              <KeyboardArrowDownIcon sx={{ color: pink[300], fontSize: 40 }} />
+            </div>
             <Drawer
+              className="filterDrawer"
               variant="temporary"
-              anchor="right"
+              anchor="down"
               open={state}
               onClose={toggleDrawer(false)}
             >
               <div
-                className="DrawerElements"
                 style={{
+                  width: "80%",
+                  alignSelf: "center",
+                  marginTop: "40px",
                   display: "flex",
                   flexDirection: "column",
-                  width: "250px",
-                  alignItems: "flex-start",
-                  justifyContent: "space-evenly",
-                  padding: "0 2rem",
-                  margin: "1rem",
-                  height: "600px",
                 }}
               >
-                <h6>Rango de precio</h6>
-                <div className="seeachInFilter">
-                  <TextField label="Desde" variant="outlined" />
-                  <TextField label="Hasta" variant="outlined" />
-                  <IconButton aria-label="" style={{ fontSize: "2rem" }}>
-                    {">"}
-                  </IconButton>
+                <div onClick={toggleDrawer(false)} className="uparrowDiv">
+                  <KeyboardArrowUpIcon
+                    sx={{ color: pink[300], fontSize: 40 }}
+                  />
                 </div>
-                <Divider />
+                <h6 style={{ paddingBottom: "20px" }}>Rango de precio</h6>
+                <Box sx={{ width: 300 }}>
+                  <Slider
+                    style={{ color: "#D96581", background: "none" }}
+                    getAriaLabel={() => "Money range"}
+                    value={value}
+                    onChange={handleSlider}
+                    valueLabelDisplay="on"
+                    getAriaValueText={valuetext}
+                    marks={marks}
+                    min={10}
+                    max={5000}
+                  />
+                </Box>
                 <div
                   style={{
                     display: "flex",
@@ -286,11 +325,26 @@ const Category = () => {
                     justifyContent: "space-between",
                     alignItems: "center",
                   }}
+                ></div>
+                <div className="hline"></div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignCenter: "center",
+                    marginTop: "20px",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
                 >
-                  <h6>Producto</h6>
-                  <IconButton aria-label="" onClick={handleProduct}>
+                  <h6>Rango de precio</h6>
+                  <RemoveIcon
+                    sx={{ color: pink[400], fontSize: 40 }}
+                    onClick={handleProduct}
+                  >
+                    {" "}
                     {openProduct ? <ExpandLess /> : <ExpandMore />}
-                  </IconButton>
+                  </RemoveIcon>
                 </div>
                 <Collapse in={openProduct} timeout="auto" unmountOnExit>
                   <List
@@ -301,15 +355,15 @@ const Category = () => {
                     }}
                   >
                     {[
-                      "flores",
-                      "plantas",
-                      "Postres",
-                      "globos",
-                      "pasteles",
-                      "regalos",
-                      "Belleza",
-                      "licories",
-                      "botanas",
+                      "Flores",
+                      "Plantas",
+                      "Postreys",
+                      "Globos",
+                      "Pasteles",
+                      "Regalos",
+                      "Condolenicas",
+                      "Votanas",
+                      "Licories",
                     ].map((item, index) => {
                       const labelId = `checkbox-list-label-${index}`;
 
@@ -326,7 +380,8 @@ const Category = () => {
                                 checked={
                                   false
                                   //checked.indexOf(item) !== -1 ||
-                                  //(twoCategory[index] == index ? true : true)
+                                  //(twoCategory[0] == item ? true : false) ||
+                                  //(twoCategory[1] == item ? true : false)
                                 }
                                 tabIndex={-1}
                                 disableRipple
@@ -340,18 +395,24 @@ const Category = () => {
                     })}
                   </List>
                 </Collapse>
+                <div className="hline"></div>
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "space-between",
                     alignItems: "center",
+                    paddingTop: "20px",
                   }}
                 >
                   <h6>Coleooion</h6>
-                  <IconButton aria-label="" onClick={handleCollection}>
+                  <AddSharpIcon
+                    sx={{ color: pink[400], fontSize: 40 }}
+                    aria-label=""
+                    onClick={handleCollection}
+                  >
                     {openCollection ? <ExpandLess /> : <ExpandMore />}
-                  </IconButton>
+                  </AddSharpIcon>
                 </div>
                 <Collapse
                   in={openCollection}
@@ -359,8 +420,14 @@ const Category = () => {
                   unmountOnExit
                 ></Collapse>
                 <Button
-                  variant="contained"
-                  style={{ color: "#FFF", backgroundColor: "#72509D" }}
+                  style={{
+                    color: "#FFF",
+                    backgroundColor: "#D96581",
+                    borderRadius: "10px",
+                    width: "290px",
+                    height: "44px",
+                    marginTop: "20px",
+                  }}
                 >
                   Limpiar Filtros (0)
                 </Button>

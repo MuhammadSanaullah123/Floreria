@@ -41,7 +41,7 @@
     justify-content: center;
     height: 350px;
     h2 {
-      font-size: 3rem !important;
+      font-size: 60px !important;
       //font-weight: 600;
       text-transform: capitalize;
       line-height: 46px;
@@ -50,16 +50,18 @@
       color: #ffffff;
 
       margin: 2rem 0;
-      @media (min-width: 1024px) {
-        font-size: 3.5rem;
+      @media (max-width: 1024px) {
+        font-size: 50px !important;
       }
 
-      @media (min-width: 768px) {
-        font-size: 2.5rem;
+      /*     @media (min-width: 768px) {
+        font-size: 2.5rem !important;
+      } */
+      @media (max-width: 600px) {
+        font-size: 40px !important;
       }
-
-      @media (min-width: 450px) {
-        font-size: 1.5rem;
+      @media (max-width: 400px) {
+        font-size: 30px !important;
       }
     }
     .socialMedia {
@@ -73,6 +75,15 @@
       }
       @media (min-width: 768px) {
         width: 400px;
+      }
+    }
+    .textField {
+      @media (max-width: 600px) {
+        width: 70% !important;
+      }
+      Button {
+        width: 40% !important;
+        font-size: 80% !important;
       }
     }
   }

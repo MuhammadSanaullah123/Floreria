@@ -644,7 +644,11 @@ ${newAddress[index].reference}`
                   >
                     Dirección de envío
                   </p>
-                  <img onClick={handleClose2} src={cross} />
+                  <img
+                    style={{ cursor: "pointer" }}
+                    onClick={handleClose2}
+                    src={cross}
+                  />
                 </div>
 
                 <div className="superdiv">

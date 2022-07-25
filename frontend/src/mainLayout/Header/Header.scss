@@ -79,6 +79,15 @@
 
   .Mui-focused {
     color: #9babbf !important;
+    @media (min-width: 1200px) {
+      width: 60ch;
+    }
+    @media (min-width: 900px) {
+      width: 20ch !important;
+    }
+    @media (max-width: 900px) {
+      width: 15ch !important;
+    }
   }
   margin-top: 20px;
   @media (max-width: 520px) {
@@ -89,6 +98,9 @@
       width: 60% !important;
     }
   }
+}
+.css-1160xiw-MuiPaper-root-MuiDrawer-paper {
+  width: 250px !important;
 }
 .form-check-input:checked {
   background-color: #d96581 !important;

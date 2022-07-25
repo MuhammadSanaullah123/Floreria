@@ -120,7 +120,7 @@ const Header = () => {
 
     width: "420px",
     height: "700px",
-    left: "82%",
+    left: "50%",
     top: "50%",
     background: "#FFFFFF",
   };
@@ -135,7 +135,9 @@ const Header = () => {
     <div className="mainHeader">
       <div className="Header">
         <div className="logo">
-          <ReactLogo />
+          <Link to="/user/home">
+            <ReactLogo />
+          </Link>
         </div>
         <div className="searchBar">
           <Search>
@@ -179,11 +181,22 @@ const Header = () => {
             <p>{productCount}</p>
           </span> */}
           <span style={{ justifyContent: "flex-end", marginBottom: "0" }}>
-            <img
-              src={require("./../../assets/delivery.svg").default}
-              alt="Delievry truck"
-            />
-            <Link style={{ marginBottom: "0" }} to="/user/category">
+            <Link
+              style={{
+                marginBottom: "0",
+                display: "flex",
+                flexDirection: "column",
+              }}
+              to="/user/category"
+            >
+              <img
+                style={{
+                  width: "34px",
+                  height: "29px",
+                }}
+                src={require("./../../assets/delivery.svg").default}
+                alt="Delievry truck"
+              />
               Seguimiento
             </Link>
           </span>
@@ -194,9 +207,17 @@ const Header = () => {
             <img
               src={require("./../../assets/cart.svg").default}
               alt="Cart"
-              style={{ width: "22px", height: "24.73px" }}
+              style={{ width: "34px", height: "34px" }}
             />
-            <Link style={{ marginBottom: "0" }}>Carrito</Link>
+            <Link
+              style={{
+                marginBottom: "0",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              Carrito
+            </Link>
           </span>
           <Modal
             open={openmodelBox}
@@ -223,7 +244,13 @@ const Header = () => {
                 >
                   Esto llevas hasta ahora...
                 </p>
-                <img src={cross} onClick={handleCloseBox} />
+                <img
+                  style={{
+                    cursor: "pointer",
+                  }}
+                  src={cross}
+                  onClick={handleCloseBox}
+                />
               </div>
               <div
                 style={{
@@ -601,12 +628,19 @@ const Header = () => {
             </Box>
           </Modal>
           <span style={{ justifyContent: "flex-end", marginBottom: "0" }}>
-            <img
-              src={require("./../../assets/user.svg").default}
-              alt="User"
-              style={{ width: "22px", height: "24px" }}
-            />
-            <Link style={{ marginBottom: "0" }} to="/user/myaccount/home">
+            <Link
+              style={{
+                marginBottom: "0",
+                display: "flex",
+                flexDirection: "column",
+              }}
+              to="/user/myaccount/home"
+            >
+              <img
+                src={require("./../../assets/user.svg").default}
+                alt="User"
+                style={{ width: "25.5px", height: "34px" }}
+              />
               Milovan
             </Link>
           </span>
@@ -628,37 +662,97 @@ const Header = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              width: "250px",
+              width: "90%",
               alignItems: "flex-start",
-              justifyContent: "space-evenly",
-              padding: "0 2rem",
+              justifyContent: "space-around",
               margin: "1rem",
-              height: "600px",
+              height: "350px",
             }}
           >
-            <span style={{ margin: "1rem 0rem" }}>
-              <img
-                src={require("./../../assets/delivery.svg").default}
-                alt="Delievry truck"
-              />
-              <Link to="/user/category">Seguimiento</Link>
-            </span>
-            <span style={{ margin: "1rem 0rem" }}>
-              <img
-                src={require("./../../assets/cart.svg").default}
-                alt="Cart"
-                style={{ width: "22px", height: "24.73px" }}
-              />
-              <Link to="/user/cart">Carrito</Link>
-            </span>
-            <span style={{ margin: "1rem 0rem" }}>
-              <img
-                src={require("./../../assets/user.svg").default}
-                alt="User"
-                style={{ width: "22px", height: "24px" }}
-              />
-              <Link to="/myaccount/home">Milovan</Link>
-            </span>
+            <Link
+              to="/user/category"
+              onClick={toggleDrawer(false)}
+              style={{ display: "flex", width: "90%" }}
+            >
+              <span
+                style={{
+                  margin: "1rem 0rem",
+                  width: "80%",
+                  justifyContent: "space-around",
+                }}
+              >
+                <img
+                  src={require("./../../assets/delivery.svg").default}
+                  alt="Delievry truck"
+                  style={{ width: "24px", height: "24px" }}
+                />
+                <p
+                  style={{
+                    alignSelf: "center",
+                    marginBottom: "0",
+                    width: "88px",
+                  }}
+                >
+                  Seguimiento
+                </p>
+              </span>
+            </Link>
+            <Link
+              to="/user/cart"
+              onClick={toggleDrawer(false)}
+              style={{ display: "flex", width: "90%" }}
+            >
+              <span
+                style={{
+                  margin: "1rem 0rem",
+                  width: "80%",
+                  justifyContent: "space-around",
+                }}
+              >
+                <img
+                  src={require("./../../assets/cart.svg").default}
+                  alt="Cart"
+                  style={{ width: "24px", height: "24px" }}
+                />
+                <p
+                  style={{
+                    alignSelf: "center",
+                    marginBottom: "0",
+                    width: "88px",
+                  }}
+                >
+                  Carrito
+                </p>
+              </span>
+            </Link>
+            <Link
+              to="/user/myaccount/home"
+              onClick={toggleDrawer(false)}
+              style={{ display: "flex", width: "90%" }}
+            >
+              <span
+                style={{
+                  margin: "1rem 0rem",
+                  width: "80%",
+                  justifyContent: "space-around",
+                }}
+              >
+                <img
+                  src={require("./../../assets/user.svg").default}
+                  alt="User"
+                  style={{ width: "24px", height: "24px" }}
+                />
+                <p
+                  style={{
+                    alignSelf: "center",
+                    marginBottom: "0",
+                    width: "88px",
+                  }}
+                >
+                  Milovan
+                </p>
+              </span>
+            </Link>
           </div>
         </Drawer>
       </div>
