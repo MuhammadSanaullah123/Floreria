@@ -43,17 +43,11 @@ import Autocomplete from "react-google-autocomplete";
 import { AutoComplete, Input } from "antd";
 import useGoogle from "react-google-autocomplete/lib/usePlacesAutocompleteService";
 
-
-
-
 const DeliveryAddress = () => {
-  const {
-    placePredictions,
-    getPlacePredictions,
-    isPlacePredictionsLoading,
-  } = useGoogle({
-    apiKey: "AIzaSyBK93ph5WIzMDsp4EJ6vKBsLGaJFoHGxcs",
-  });
+  const { placePredictions, getPlacePredictions, isPlacePredictionsLoading } =
+    useGoogle({
+      apiKey: "AIzaSyBK93ph5WIzMDsp4EJ6vKBsLGaJFoHGxcs",
+    });
   // useEffect(() => {
   //   // fetch place details for the first element in placePredictions array
   //   if (placePredictions.length)
@@ -63,8 +57,8 @@ const DeliveryAddress = () => {
   //       },
   //       (placeDetails) => savePlaceDetailsToState(placeDetails)
   //     );
-  // }, [placePredictions]);  
-  
+  // }, [placePredictions]);
+
   //For address model
   const style1 = {
     position: "absolute",
@@ -89,8 +83,9 @@ const DeliveryAddress = () => {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    padding: "25px 25px 10px 25px",
   };
-  
+
   const names = [
     "Casa",
     "Departamento",
@@ -677,7 +672,10 @@ ${newAddress[index].reference}`
                   />
                 </div>
 
-                <div className="superdiv">
+                <div
+                  style={{ height: "100%", paddingTop: "50px" }}
+                  className="superdiv"
+                >
                   <div
                     style={{
                       display: "flex",
@@ -712,7 +710,7 @@ ${newAddress[index].reference}`
                     </a>
                   </div>
                   <div>
-                    <GooglePlacesAutocomplete         
+                    <GooglePlacesAutocomplete
                       selectProps={{
                         googleaddress,
                         onPlaceSelected: setgoogleAddress,
@@ -723,23 +721,21 @@ ${newAddress[index].reference}`
                             zIndex: "5",
                           }),
                         },
-
                       }}
-                      apiOptions={{ language: 'en', region: 'en' }}
+                      apiOptions={{ language: "en", region: "en" }}
                       autocompletionRequest={{
                         // bounds: [
                         //   { lat: 50, lng: 50 },
                         //   { lat: 100, lng: 100 }
                         // ],
                         componentRestrictions: {
-                        country: ['cl'],
-                        }
+                          country: ["cl"],
+                        },
                       }}
                       name="address"
                       // onChange={handleInputChange}
                       placeholder="Dirección (calle y número):"
                       apiKey="AIzaSyBK93ph5WIzMDsp4EJ6vKBsLGaJFoHGxcs"
-                      
                     />
                     {/* <Autocomplete
                       style={{ width: "250px" }}
@@ -753,8 +749,7 @@ ${newAddress[index].reference}`
                       }}
                       defaultValue="Islamabad"
                     /> */}
-                  
-                </div>
+                  </div>
                   {/*         <div
                     style={{
                       display: "flex",
@@ -861,7 +856,14 @@ ${newAddress[index].reference}`
                       </Select>
                     </FormControl>
                   </div>
-                  <div>
+                  <div
+                    style={{
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                    }}
+                  >
                     <TextareaAutosize
                       name="reference"
                       value={inputvalues.reference}

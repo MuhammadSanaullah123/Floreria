@@ -361,6 +361,7 @@ const Step2 = ({ handleNext }) => {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    padding: "25px 25px 10px 25px",
   };
   const style3 = {
     position: "absolute",
@@ -831,7 +832,10 @@ const Step2 = ({ handleNext }) => {
                           />
                         </div>
 
-                        <div className="superdiv">
+                        <div
+                          style={{ height: "100%", paddingTop: "50px" }}
+                          className="superdiv"
+                        >
                           <div
                             style={{
                               display: "flex",
@@ -993,7 +997,14 @@ const Step2 = ({ handleNext }) => {
                               </Select>
                             </FormControl>
                           </div>
-                          <div>
+                          <div
+                            style={{
+                              height: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              justifyContent: "space-between",
+                            }}
+                          >
                             <TextareaAutosize
                               name="reference"
                               value={inputvalues.reference}

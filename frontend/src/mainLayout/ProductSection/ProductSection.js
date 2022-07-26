@@ -54,13 +54,13 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
     <div className="carousel-button-group">
       <ChevronLeftIcon
         className="left_arr"
-        style={{ alignSelf: "center" }}
+        style={{ alignSelf: "center", cursor: "pointer" }}
         sx={{ color: pink[300], fontSize: 60 }}
         onClick={() => previous()}
       />
       <ChevronRightIcon
         className="right_arr"
-        style={{ alignSelf: "center" }}
+        style={{ alignSelf: "center", cursor: "pointer" }}
         sx={{ color: pink[300], fontSize: 60 }}
         onClick={() => next()}
       />

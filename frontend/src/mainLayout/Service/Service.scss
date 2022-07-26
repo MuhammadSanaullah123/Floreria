@@ -2,7 +2,7 @@
   background-color: #f8f8f8 !important;
   display: flex;
   flex-direction: column;
-  padding-bottom: 150px;
+  padding-bottom: 160px;
   h1 {
     font-family: "Cormorant Upright";
     font-style: normal;
@@ -33,9 +33,10 @@
     }
   }
   .bottomp {
-    font-size: 10px;
+    font-family: "Nunito";
+    font-size: 18px;
     line-height: 40px;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
 
     color: #000000;

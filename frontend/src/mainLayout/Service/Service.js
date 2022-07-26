@@ -43,13 +43,13 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
     <div className="carousel-button-group">
       <ChevronLeftIcon
         className="left_arr"
-        style={{ alignSelf: "center" }}
+        style={{ alignSelf: "center", cursor: "pointer" }}
         sx={{ color: pink[300], fontSize: 60 }}
         onClick={() => previous()}
       />
       <ChevronRightIcon
         className="right_arr"
-        style={{ alignSelf: "center" }}
+        style={{ alignSelf: "center", cursor: "pointer" }}
         sx={{ color: pink[300], fontSize: 60 }}
         onClick={() => next()}
       />
@@ -59,7 +59,7 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
 const Service = () => {
   return (
     <div className="Service">
-      <h1>¿Por qué elegirnos?</h1>
+      <h1 style={{ paddingTop: "50px" }}>¿Por qué elegirnos?</h1>
       <p
         style={{
           color: "#9BABBF",
@@ -90,8 +90,8 @@ const Service = () => {
             style={{
               border: "1px solid #444444",
               borderRadius: "50%",
-              width: "100px",
-              height: "100px",
+              width: "160px",
+              height: "160px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -113,8 +113,8 @@ const Service = () => {
             style={{
               border: "1px solid #444444",
               borderRadius: "50%",
-              width: "100px",
-              height: "100px",
+              width: "160px",
+              height: "160px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -156,8 +156,8 @@ const Service = () => {
             style={{
               border: "1px solid #444444",
               borderRadius: "50%",
-              width: "100px",
-              height: "100px",
+              width: "160px",
+              height: "160px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -179,8 +179,8 @@ const Service = () => {
             style={{
               border: "1px solid #444444",
               borderRadius: "50%",
-              width: "100px",
-              height: "100px",
+              width: "160px",
+              height: "160px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -202,8 +202,8 @@ const Service = () => {
             style={{
               border: "1px solid #444444",
               borderRadius: "50%",
-              width: "100px",
-              height: "100px",
+              width: "160px",
+              height: "160px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -225,8 +225,8 @@ const Service = () => {
             style={{
               border: "1px solid #444444",
               borderRadius: "50%",
-              width: "100px",
-              height: "100px",
+              width: "160px",
+              height: "160px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -248,8 +248,8 @@ const Service = () => {
             style={{
               border: "1px solid #444444",
               borderRadius: "50%",
-              width: "100px",
-              height: "100px",
+              width: "160px",
+              height: "160px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -271,8 +271,8 @@ const Service = () => {
             style={{
               border: "1px solid #444444",
               borderRadius: "50%",
-              width: "100px",
-              height: "100px",
+              width: "160px",
+              height: "160px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
