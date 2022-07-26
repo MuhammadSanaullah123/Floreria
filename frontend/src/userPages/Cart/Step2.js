@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 //import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import { geocodeByAddress, getLatLng } from "react-google-places-autocomplete";
+import Autocomplete from "react-google-autocomplete";
+
 // scss
 import "./Cart.scss";
 
@@ -58,6 +60,7 @@ import { setName, setEmail } from "../Redux/Reducer";
 //redux
 import OrderServices from "../../services/OrderServices";
 import useAsync from "../../hooks/useAsync";
+import { AutoComplete } from "antd";
 
 const ApiPagoFacil = require("@pagofacil/api_pago_facil");
 const Signature = require("@pagofacil/sdk-apis-javascript-signature");
@@ -291,11 +294,11 @@ const Step2 = ({ handleNext }) => {
 
     settextArea3(
       `${newAddress[index].recipientname}
-${newAddress[index].phone}
-${newAddress[index].address}
-${newAddress[index].calle} ${","}  ${newAddress[index].number}
-${newAddress[index].state} ${","}  ${newAddress[index].ciudad}
-${newAddress[index].reference}`
+      ${newAddress[index].phone}
+      ${newAddress[index].address}
+      ${newAddress[index].calle} ${","}  ${newAddress[index].number}
+      ${newAddress[index].state} ${","}  ${newAddress[index].ciudad}
+      ${newAddress[index].reference}`
     );
   };
   console.log("Address stored:");
@@ -863,7 +866,7 @@ ${newAddress[index].reference}`
                             </a>
                           </div>
                           <div>
-                            <GooglePlacesAutocomplete
+                            <Autocomplete
                               selectProps={{
                                 googleaddress,
                                 onChange: setgoogleAddress,
@@ -879,6 +882,10 @@ ${newAddress[index].reference}`
                               // onChange={handleInputChange}
                               placeholder="Dirección (calle y número):"
                               apiKey="AIzaSyBK93ph5WIzMDsp4EJ6vKBsLGaJFoHGxcs"
+                              options={{
+                                types: ["(regions)"],
+                                componentRestrictions: { country: "ru" },
+                              }}
                             />
                           </div>
                           {/*         <div

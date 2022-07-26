@@ -211,12 +211,14 @@ const Home = () => {
         <img
           className="whatsapp"
           style={{
-            width: "60px",
-            height: "60px",
+            width: "100px",
+            height: "100px",
             alignSelf: "flex-end",
             position: "fixed",
-            top: "750px",
+            top: "80%",
             right: "50px",
+            zIndex: 9999,
+            cursor:'pointer'
           }}
           src={whatsapp_fix}
         />

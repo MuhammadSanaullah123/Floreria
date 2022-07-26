@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "./MyAccount.scss";
 import { Button, Grid, listClasses, ListItem } from "@mui/material";
 import { List } from "@mui/material";
@@ -39,7 +39,32 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Autocomplete from "react-google-autocomplete";
+import { AutoComplete, Input } from "antd";
+import useGoogle from "react-google-autocomplete/lib/usePlacesAutocompleteService";
+
+
+
+
 const DeliveryAddress = () => {
+  const {
+    placePredictions,
+    getPlacePredictions,
+    isPlacePredictionsLoading,
+  } = useGoogle({
+    apiKey: "AIzaSyBK93ph5WIzMDsp4EJ6vKBsLGaJFoHGxcs",
+  });
+  // useEffect(() => {
+  //   // fetch place details for the first element in placePredictions array
+  //   if (placePredictions.length)
+  //     service.placesService?.getDetails(
+  //       {
+  //         placeId: placePredictions[0].place_id,
+  //       },
+  //       (placeDetails) => savePlaceDetailsToState(placeDetails)
+  //     );
+  // }, [placePredictions]);  
+  
   //For address model
   const style1 = {
     position: "absolute",
@@ -65,20 +90,7 @@ const DeliveryAddress = () => {
     flexDirection: "column",
     justifyContent: "space-between",
   };
-  const [inputvalues, setValues] = useState({
-    recipientname: "",
-    phone: "",
-    address: "",
-    //calle: "",
-    //number: "",
-    colonia: "",
-    //postalcode: "",
-    state: "",
-    ciudad: "",
-    addresstype: personName,
-    absent: absentName,
-    reference: "",
-  });
+  
   const names = [
     "Casa",
     "Departamento",
@@ -115,6 +127,20 @@ const DeliveryAddress = () => {
   const handleClose1 = () => setopenModel1(false);
   const handleOpen2 = () => setopenModel2(true);
   const handleClose2 = () => setopenModel2(false);
+  const [inputvalues, setValues] = useState({
+    recipientname: "",
+    phone: "",
+    address: "",
+    //calle: "",
+    //number: "",
+    colonia: "",
+    //postalcode: "",
+    state: "",
+    ciudad: "",
+    addresstype: personName,
+    absent: absentName,
+    reference: "",
+  });
   const handleaddressButton = (index) => {
     setaddress(newAddress[index]);
     setSelected2(true);
@@ -130,6 +156,7 @@ ${newAddress[index].state} ${","}  ${newAddress[index].ciudad}
 ${newAddress[index].reference}`
     );
   };
+  const inputRef = useRef(null);
 
   const handleInputChange = (e) => {
     const Value = e.target.value;
@@ -339,7 +366,6 @@ ${newAddress[index].reference}`
       </div>
     </Box>
   );
-
   return (
     <div style={{ margin: "0 auto", width: "90%", marginBottom: "100px" }}>
       <div style={{ marginTop: "50px" }} className="deliveryaddressdiv">
@@ -686,10 +712,10 @@ ${newAddress[index].reference}`
                     </a>
                   </div>
                   <div>
-                    <GooglePlacesAutocomplete
+                    <GooglePlacesAutocomplete         
                       selectProps={{
                         googleaddress,
-                        onChange: setgoogleAddress,
+                        onPlaceSelected: setgoogleAddress,
                         styles: {
                           menu: (provided, state) => ({
                             ...provided,
@@ -697,13 +723,38 @@ ${newAddress[index].reference}`
                             zIndex: "5",
                           }),
                         },
+
+                      }}
+                      apiOptions={{ language: 'en', region: 'en' }}
+                      autocompletionRequest={{
+                        // bounds: [
+                        //   { lat: 50, lng: 50 },
+                        //   { lat: 100, lng: 100 }
+                        // ],
+                        componentRestrictions: {
+                        country: ['cl'],
+                        }
                       }}
                       name="address"
                       // onChange={handleInputChange}
                       placeholder="Dirección (calle y número):"
                       apiKey="AIzaSyBK93ph5WIzMDsp4EJ6vKBsLGaJFoHGxcs"
+                      
                     />
-                  </div>
+                    {/* <Autocomplete
+                      style={{ width: "250px" }}
+                      apiKey={'AIzaSyBK93ph5WIzMDsp4EJ6vKBsLGaJFoHGxcs'}
+                      onPlaceSelected={(selected, a, c) => {
+                        console.log(selected);
+                      }}
+                      options={{
+                        types: ["geocode", "establishment"],
+                        componentRestrictions: { country: "pk" },
+                      }}
+                      defaultValue="Islamabad"
+                    /> */}
+                  
+                </div>
                   {/*         <div
                     style={{
                       display: "flex",

@@ -50,7 +50,7 @@ const Hero = () => {
           </p>
           <Link
             to="/user/thankyou"
-            style={{ textDecoration: "none", marginTop: "5px" }}
+            style={{ textDecoration: "none", marginTop: "15px" }}
           >
             <Button
               variant="contianed"
