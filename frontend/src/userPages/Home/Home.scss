@@ -3,6 +3,9 @@
   flex-direction: column;
   min-width: 450px;
   background-color: #ffffff;
+  @media (max-width: 450px) {
+    min-width: auto !important;
+  }
   .emptyDiv {
     @media (max-width: 768px) {
       height: auto;
@@ -44,6 +47,7 @@
       display: flex;
       text-align: -webkit-center;
     }
+
     .tf {
       background-color: #ffffff !important;
     }
@@ -79,6 +83,11 @@
     font-family: "Nunito";
     font-weight: 400;
     font-size: 20px;
+  }
+  img {
+    @media (max-width: 900px) {
+      width: 90%;
+    }
   }
 }
 //ant carousel override

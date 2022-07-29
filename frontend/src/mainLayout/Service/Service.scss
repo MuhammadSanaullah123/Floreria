@@ -65,23 +65,26 @@
   }
   .carousel-button-group {
     display: flex;
-    width: 90%;
+    width: 100%;
     justify-content: space-between;
     align-self: center;
     position: relative;
-    bottom: 125px;
+    bottom: 170px;
     @media (max-width: 1220px) {
       position: relative;
       bottom: 170px;
     }
     @media (max-width: 1012px) {
-      bottom: 130px;
+      bottom: 170px;
     }
     @media (max-width: 605px) {
       bottom: 170px;
     }
+    @media (max-width: 515px) {
+      bottom: 200px;
+    }
     @media (max-width: 465px) {
-      bottom: 130px;
+      bottom: 200px;
     }
   }
 }
