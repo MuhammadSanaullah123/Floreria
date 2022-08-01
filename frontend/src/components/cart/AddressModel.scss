@@ -1,0 +1,36 @@
+.box2 {
+  p {
+    font-size: 20px;
+  }
+  .superdiv {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  @media (max-width: 870px) {
+    width: 90% !important;
+    height: 90% !important;
+    .d1 {
+      flex-direction: column;
+      .t1,
+      .t2 {
+        width: 100% !important;
+      }
+      .t2 {
+        margin-top: 15px;
+      }
+      .a1 {
+        display: none;
+      }
+    }
+    .formsdiv {
+      flex-direction: column;
+      .t3,
+      .t4 {
+        width: 100% !important;
+      }
+      .t4 {
+        margin-top: 15px;
+      }
+    }
+  }
+}

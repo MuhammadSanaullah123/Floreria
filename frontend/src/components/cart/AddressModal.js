@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "../../userPages/Cart/Cart.scss";
+
+import "./AddressModel.scss";
+
 //components
 import MapContainer from "./MapContainer";
 
@@ -198,12 +200,14 @@ const AddressModal = ({
             className="superdiv"
           >
             <div
+              className="d1"
               style={{
                 display: "flex",
                 justifyContent: "space-between",
               }}
             >
               <TextField
+                className="t1"
                 value={inputvalues.recipientname}
                 name="recipientname"
                 // key={index}
@@ -214,6 +218,7 @@ const AddressModal = ({
                 style={{ width: "45%", height: "50px" }}
               />
               <TextField
+                className="t2"
                 value={inputvalues.phone}
                 name="phone"
                 // key={index}
@@ -224,6 +229,7 @@ const AddressModal = ({
                 style={{ width: "45%", height: "50px" }}
               />
               <a
+                className="a1"
                 style={{ color: "#7A838D" }}
                 title="Info: solo llamaremos en caso de no encontrar a la persona"
               >
@@ -273,6 +279,7 @@ const AddressModal = ({
             </div>
             <div className="formsdiv">
               <TextField
+                className="t3"
                 value={inputvalues.state}
                 name="state"
                 // key={index}
@@ -283,6 +290,7 @@ const AddressModal = ({
                 style={{ width: "48%" }}
               />
               <TextField
+                className="t4"
                 value={inputvalues.ciudad}
                 name="ciudad"
                 // key={index}
