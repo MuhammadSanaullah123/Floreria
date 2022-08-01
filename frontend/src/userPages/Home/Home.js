@@ -50,6 +50,12 @@ const Home = () => {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
+  const [priceFilter, setPriceFilter] = useState();
+
+  const handlePriceFilter = (event) => {
+    setPriceFilter(event.target.value);
+  };
+
   return (
     <div style={{ overflow: "hidden" }}>
       {/* <Carousel  dotPosition="right">
@@ -89,7 +95,7 @@ const Home = () => {
               variant="filled"
               style={{ backgroundColor: "#FFFFFF", borderRadius: "0.3rem", width: "100%" }}
             />
-          </Grid>
+          </Grid> 
           <Grid item xs={12} sm={12} md={2}>
             <Button variant="contained" style={{ backgroundColor: "#72509D", color: "#FFFFFF", padding: "0.2rem 1rem" }}>
               encontrar regalo
@@ -112,14 +118,7 @@ const Home = () => {
 
       <div className="landingContainer">
         <Hero />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "170px",
-          }}
-          className="emptyDiv"
-        >
+        <div className="emptyDiv">
           <Grid
             container
             rowSpacing={3}
@@ -127,15 +126,7 @@ const Home = () => {
             className="modalContainer"
           >
             <Grid item xs={12} sm={12} md={4} lg={2}>
-              <Typography
-                variant="h6"
-                style={{
-                  color: "#FFFFFF",
-                  fontSize: "1.2rem",
-                  fontFamily: "Poppins",
-                  fontWeight: "700",
-                }}
-              >
+              <Typography className="modalCP1" variant="h6">
                 BUSCA TU REGALO
               </Typography>
             </Grid>
@@ -143,47 +134,37 @@ const Home = () => {
               <p style={{ color: "#C8CED4" }}>¿Donde envías?</p>
 
               <input
+                style={{ borderRadius: "10px" }}
+                className="modalCI1"
                 type="email"
                 class="form-control"
                 id="email1"
                 placeholder="Comuna"
-                style={{ borderRadius: "10px", height: "40px", width: "200px" }}
               />
             </Grid>
             <Grid item xs={12} sm={4} md={4} lg={2}>
               <p style={{ color: "#C8CED4" }}>Ocasión</p>
-              <button
-                style={{
-                  color: "#9BABBF",
-                  borderRadius: "10px",
-                  background: "#ffffff",
-                  width: "200px",
-                  height: "40px",
-                  display: "flex",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                }}
-              >
-                Ocasion
-                <KeyboardArrowDownIcon
-                  sx={{ color: pink[300], marginLeft: "50px" }}
-                />
-              </button>
+              <FormControl style={{ borderRadius: "10px" }} className="form1">
+                <InputLabel>Ocasion</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={priceFilter}
+                  label="Age"
+                  onChange={handlePriceFilter}
+                  style={{
+                    height: "40px",
+                    fontSize: "20px",
+                  }}
+                >
+                  <MenuItem value={1}>Anniversary</MenuItem>
+                </Select>
+              </FormControl>
             </Grid>
             <Grid item xs={12} sm={4} md={4} lg={2}>
               <p style={{ color: "#C8CED4" }}>¿Cuando debe llegar?</p>
-              <button
-                style={{
-                  display: "flex",
-                  color: "#9BABBF",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                  borderRadius: "10px",
-                  background: "#ffffff",
-                  width: "200px",
-                  height: "40px",
-                }}
-              >
+
+              <button className="modalCb1">
                 Lunas, 21 feb
                 <img style={{ width: "20px" }} src={calender} />
               </button>
@@ -191,37 +172,13 @@ const Home = () => {
             <Grid item xs={12} sm={12} md={4} lg={2}>
               <p style={{ color: "#C8CED4", visibility: "hidden" }}>HIDDEN</p>
 
-              <Button
-                variant="contained"
-                style={{
-                  backgroundColor: "#D96581",
-                  color: "#FFFFFF",
-                  borderRadius: "10px",
-                  padding: "0.2rem 1rem",
-                  width: "220px",
-                  height: "40px",
-                  textTransform: "none",
-                }}
-              >
+              <Button className="modalCb2" variant="contained">
                 Encontrar Egalo
               </Button>
             </Grid>
           </Grid>
         </div>
-        <img
-          className="whatsapp"
-          style={{
-            width: "100px",
-            height: "100px",
-            alignSelf: "flex-end",
-            position: "fixed",
-            top: "80%",
-            right: "50px",
-            zIndex: 9999,
-            cursor:'pointer'
-          }}
-          src={whatsapp_fix}
-        />
+        <img className="whatsapp" src={whatsapp_fix} />
       </div>
 
       <div className="beta">

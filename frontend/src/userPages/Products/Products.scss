@@ -25,6 +25,8 @@
     gap: 1.5rem;
     grid-template-columns: 1fr 2fr;
     .sliderProduct {
+      display: flex;
+      flex-direction: row-reverse;
       grid-column: 1/2;
       padding: 0 0;
       // width: 680px;
@@ -161,6 +163,54 @@
           button:hover {
             border: 3px solid #d96581 !important;
           }
+          .Cardsh61 {
+            font-weight: 900;
+            font-size: 15px;
+            padding-top: 10px;
+            font-family: "Nunito";
+            color: #444444;
+          }
+          .Cardsh62 {
+            font-family: "Nunito";
+            font-weight: 400;
+            font-size: 18px;
+            color: #9babbf;
+          }
+          .Cardsh63 {
+            font-weight: 900;
+            font-size: 15px;
+            padding-top: 10px;
+            font-family: Nunito;
+            color: #444444;
+          }
+          .Cardsh64 {
+            font-family: "Nunito";
+            font-weight: 400;
+            font-size: 18px;
+            color: #9babbf;
+          }
+          .Cardsp1 {
+            font-family: "Nunito";
+            font-weight: 400;
+            font-size: 18px;
+            padding-top: 10px;
+            font-family: "Nunito";
+            color: #9babbf;
+          }
+          .Cardsd1 {
+            font-family: "Nunito";
+            font-weight: 400;
+            font-size: 16px;
+            color: #9babbf;
+          }
+        }
+        .productDescription1h6 {
+          font-weight: 700;
+          font-size: 15px;
+        }
+        .productDescription1p1 {
+          color: #9babbf;
+          font-size: 12px;
         }
       }
 
@@ -186,6 +236,10 @@
             align-items: center;
           }
         }
+        .productDescription2h {
+          font-weight: 600;
+          font-size: 15px;
+        }
       }
 
       #productDescription3 {
@@ -205,6 +259,16 @@
             color: $primaryFontColor;
           }
         }
+        .productDescription3h1 {
+          font-weight: 700;
+          font-size: 15px;
+        }
+        .productDescription3h2 {
+          color: #444444;
+          font-family: "Nunito";
+          font-style: normal;
+          font-weight: 600 !important;
+        }
       }
       #productTotal {
         margin-top: 0.8rem;
@@ -222,6 +286,97 @@
           font-size: 0.8rem;
           text-align: left;
         }
+        .productTotalh1 {
+          font-weight: 700;
+          font-size: 15px;
+        }
+        .productTotalb1 {
+          background-color: #d96581;
+          color: #ffffff;
+          width: 100%;
+          border-radius: 5px;
+          text-transform: none;
+        }
+        .productTotalb1:hover {
+          background-color: #ffffff;
+          color: #d96581;
+          border: 1px solid #d96581;
+        }
+      }
+      .productInformationd1 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .productInformationd2 {
+        display: flex;
+        color: #444444;
+        font-size: 13px;
+        justify-content: end;
+        .productInformationd2p1 {
+          color: rgba(217, 101, 129, 1);
+          font-size: 13px;
+        }
+      }
+      .productInformationh6 {
+        font-weight: 600;
+        font-size: 20px;
+        color: #d96581;
+      }
+      .productInformationp1 {
+        color: #444444;
+        font-size: 13px;
+        margin-left: 0;
+        margin-bottom: 20px;
+      }
+      .productInformationdivider1 {
+        color: #c4c4c4;
+        background: linear-gradient(
+          90deg,
+          rgba(155, 171, 191, 0) 1.04%,
+          #9babbf 51.56%,
+          rgba(155, 171, 191, 0) 100%
+        );
+      }
+      .productInformationline1 {
+        background: linear-gradient(
+          90deg,
+          rgba(155, 171, 191, 0) 1.04%,
+          #9babbf 51.56%,
+          rgba(155, 171, 191, 0) 100%
+        );
+        width: 100%;
+        height: 2px;
+      }
+      .productInformationline2 {
+        background: linear-gradient(
+          90deg,
+          rgba(155, 171, 191, 0) 1.04%,
+          #9babbf 51.56%,
+          rgba(155, 171, 191, 0) 100%
+        );
+        width: 100%;
+        height: 2px;
+      }
+      .productInformationline3 {
+        background: linear-gradient(
+          90deg,
+          rgba(155, 171, 191, 0) 1.04%,
+          #9babbf 51.56%,
+          rgba(155, 171, 191, 0) 100%
+        );
+        width: 100%;
+        height: 2px;
+      }
+      .productInformationline3 {
+        background: linear-gradient(
+          90deg,
+          rgba(155, 171, 191, 0) 1.04%,
+          #9babbf 51.56%,
+          rgba(155, 171, 191, 0) 100%
+        );
+        width: 100%;
+        height: 2px;
+        margin-top: 20px;
       }
     }
   }
@@ -302,6 +457,48 @@
   }
   .css-4pdmu4-MuiBreadcrumbs-ol {
     align-items: baseline;
+  }
+  .tabpaneld1 {
+    .tabpaneld1h1 {
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
+      font-family: Nunito;
+      color: #444444;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .tabpaneld1h2 {
+      font-weight: bold;
+      color: #444444;
+      font-family: "Nunito";
+      font-size: 17px;
+    }
+    .tabpaneld2 {
+      background: #d96581;
+      border-radius: 10px;
+      width: 5px;
+      height: 24px;
+    }
+    .tabpanelp1 {
+      color: #44444491;
+      font-family: "Nunito";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+    }
+    .tabpaneld3 {
+      background: #d96581;
+      border-radius: 10px;
+      width: 5px;
+      height: 24px;
+    }
+    .tabpanelp2 {
+      color: #44444491;
+      font-family: "Nunito";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+    }
   }
 }
 //---------------------------------calender--------------------------------------->
@@ -400,6 +597,149 @@
   .css-l0iinn {
     margin-right: 0;
   }
+  .Cardsline1 {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(155, 171, 191, 0) 1.04%,
+      #9babbf 51.56%,
+      rgba(155, 171, 191, 0) 100%
+    );
+  }
+  .Cardsp2 {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 18px;
+    color: #d96581;
+    margin-bottom: 5px;
+  }
+  .Cardsp3 {
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 16px;
+    color: #9babbf;
+  }
+  .Cardsline2 {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(155, 171, 191, 0) 1.04%,
+      #9babbf 51.56%,
+      rgba(155, 171, 191, 0) 100%
+    );
+  }
+  .Cardsp4 {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 18px;
+    color: #d96581;
+    margin-bottom: 5px;
+  }
+  .Cardsp5 {
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 16px;
+    color: #9babbf;
+  }
+  .Cardspic1 {
+    position: relative;
+    left: 26rem;
+    bottom: 5rem;
+    cursor: pointer;
+  }
+  .Cardsp6 {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #d96581;
+    text-decoration: underline;
+    margin-top: 50px;
+  }
+  .css-1cnkspq {
+    min-height: 290px !important;
+  }
+  .Cardsd2 {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+  }
+  .Cardsp7 {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #9babbf;
+  }
+  .Cardsd3 {
+    width: 320px;
+    height: 140px;
+    background: rgba(217, 101, 129, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Cardsp8 {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 30px;
+    color: #d96581;
+    margin: 0;
+  }
+  .Cardsp9 {
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 20px;
+    color: #d96581;
+    margin: 0;
+  }
+  .Cardsp10 {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #9babbf;
+  }
+  .Cardsd4 {
+    width: 320px;
+    height: 80px;
+    background: rgba(217, 101, 129, 0.1);
+    border-radius: 20px;
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 20px;
+    color: #d96581;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .confirmbtn {
+    width: 280px;
+    height: 50px;
+    background: #d96581;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .confirmbtn:hover {
+    background-color: #ffffff;
+    color: #d96581;
+    border: 1px solid #d96581;
+  }
+  .Cardsp11 {
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: #9babbf;
+  }
 }
 
 //-----------------------------------end--------------------------------------->
@@ -449,10 +789,12 @@
   background: #d96581;
   border-radius: 10px;
   color: #ffffff !important;
+  cursor: pointer;
 }
 .timingnormal {
   background: #ffffff;
   color: #000000;
+  cursor: pointer;
 }
 .calender {
   align-items: normal !important;
@@ -567,8 +909,8 @@
   }
 }
 .css-15x1sh8-MuiButtonBase-root-MuiCheckbox-root {
-  left: 8.5rem !important;
-  bottom: 13rem !important;
+  left: 10rem !important;
+  //  bottom: 13rem !important;
   z-index: 10;
 }
 .css-15x1sh8-MuiButtonBase-root-MuiCheckbox-root .MuiSvgIcon-root {

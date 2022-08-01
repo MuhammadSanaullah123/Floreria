@@ -39,63 +39,13 @@ const MyOrders = () => {
           marginLeft: "20px",
         }}
       >
-        <List
-          style={{
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-around",
-          }}
-          classname="list"
-        >
+        <List classname="list">
           <div className="accountPic">
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "43px",
-                background: "#D96581",
-                display: "flex",
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "30px",
-                alignItems: "center",
-                justifyContent: "center",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-                marginTop: "10px",
-              }}
-            >
-              M
-            </div>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "20px",
-                textAlign: "center",
-                textTransform: "capitalize",
-                color: "#444444",
-                margin: "0",
-                marginTop: "15px",
-              }}
-            >
-              Milovan
-            </p>
+            <div className="myaccountbox1d1">M</div>
+            <p className="myaccountbox1p1">Milovan</p>
           </div>
 
-          <Link
-            to="home"
-            style={{
-              display: "flex",
-              color: "#FFFFFF",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="home" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navhome1}
@@ -103,17 +53,7 @@ const MyOrders = () => {
             Inicio
           </Link>
 
-          <Link
-            to="reminders"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="reminders" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbell1}
@@ -121,17 +61,7 @@ const MyOrders = () => {
             Recordatorios
           </Link>
 
-          <Link
-            to="deliveryaddress"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="deliveryaddress" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navmap1}
@@ -139,17 +69,7 @@ const MyOrders = () => {
             Direcciones
           </Link>
 
-          <Link
-            style={{
-              background: "#D96581",
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#ffffff",
-            }}
-          >
+          <Link className="myaccountbox1l1">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbag2}
@@ -157,16 +77,7 @@ const MyOrders = () => {
             Pedidos
           </Link>
 
-          <Link
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navgift1}
@@ -174,17 +85,7 @@ const MyOrders = () => {
             VIP
           </Link>
 
-          <Link
-            to="referrals"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="referrals" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navshare1}
@@ -201,109 +102,29 @@ const MyOrders = () => {
       <div style={{ marginTop: "50px" }} className="myorderdiv">
         <div style={{ height: "537px", width: "300px" }} className="leftdiv">
           <div className="name">
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "43px",
-                background: "#D96581",
-                display: "flex",
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "30px",
-                alignItems: "center",
-                justifyContent: "center",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-                marginTop: "10px",
-              }}
-            >
-              M
-            </div>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "20px",
-                textAlign: "center",
-                textTransform: "capitalize",
-                color: "#444444",
-                margin: "0",
-                marginTop: "15px",
-              }}
-            >
-              Milovan
-            </p>
+            <div className="superdivd1">M</div>
+            <p className="superdivp1">Milovan</p>
           </div>
-          <Link
-            to="home"
-            style={{
-              display: "flex",
-
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="home" className="superdivl2">
             <img style={{ marginRight: "10px" }} src={navhome1} />
             Inicio
           </Link>
-          <Link
-            to="reminders"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="reminders" className="superdivl2">
             <img style={{ marginRight: "10px" }} src={navbell1} /> Recordatorios
           </Link>
-          <Link
-            to="deliveryaddress"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="deliveryaddress" className="superdivl2">
             <img style={{ marginRight: "10px" }} src={navmap1} />
             Direcciones
           </Link>
-          <Link
-            style={{
-              display: "flex",
-              background: "#D96581",
-              color: "#FFFFFF",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="superdivl1">
             <img style={{ marginRight: "10px" }} src={navbag2} />
             Pedidos
           </Link>
-          <Link
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="superdivl2">
             <img style={{ marginRight: "10px" }} src={navgift1} />
             VIP
           </Link>
-          <Link
-            to="referrals"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="referrals" className="superdivl2">
             <img style={{ marginRight: "10px" }} src={navshare1} />
             Referidos
           </Link>
@@ -324,15 +145,7 @@ const MyOrders = () => {
 
         <div className="twodiv">
           <div className="leftDiv">
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "90%",
-                alignSelf: "center",
-              }}
-            >
+            <div className="myorderdivd1">
               <div
                 style={{
                   display: "flex",
@@ -340,111 +153,37 @@ const MyOrders = () => {
               >
                 {" "}
                 <img style={{ width: "70px", borderRadius: "10px" }} src={f2} />
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <p style={{ marginBottom: "0", fontSize: "16px" }}>
-                    Vino Rosa
-                  </p>
-                  <p style={{ color: "#9BABBF", fontSize: "14px" }}>
-                    Ramo del día
-                  </p>
+                <div className="myorderdivd2">
+                  <p className="myorderdivp1">Vino Rosa</p>
+                  <p className="myorderdivp2">Ramo del día</p>
                 </div>
               </div>
 
               <p>$90.00</p>
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "90%",
-                alignSelf: "center",
-              }}
-            >
+            <div className="myorderdivd1">
               <div style={{ display: "flex" }}>
                 {" "}
                 <img style={{ width: "70px", borderRadius: "10px" }} src={f4} />
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <p style={{ marginBottom: "0", fontSize: "16px" }}>
-                    Vino Rosa
-                  </p>
-                  <p style={{ color: "#9BABBF" }}>Ramo del día</p>
+                <div className="myorderdivd2">
+                  <p className="myorderdivp1">Vino Rosa</p>
+                  <p className="myorderdivp2">Ramo del día</p>
                 </div>
               </div>
 
               <p>$90.00</p>
             </div>
             <div className="allP">
-              <p
-                style={{
-                  fontSize: "16px",
-
-                  textDecorationLine: "underline",
-
-                  color: "#D96581",
-                }}
-              >
-                2 Item Máss
-              </p>
-              <p
-                style={{
-                  fontFamily: "Poppins",
-                  fontWeight: "400",
-                  fontSize: "16px",
-
-                  color: "#000000",
-                }}
-              >
-                Fecha & Hora
-              </p>
+              <p className="myorderdivp3">2 Item Máss</p>
+              <p className="myorderdivp4">Fecha & Hora</p>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div style={{ display: "flex" }}>
                   {" "}
-                  <p
-                    style={{
-                      fontWeight: "700",
-                      fontSize: "16px",
-                      fontFamily: "Nunito",
-
-                      color: "#9BABBF",
-                    }}
-                  >
-                    Domingo 20
-                  </p>
-                  <p
-                    style={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      fontFamily: "Nunito",
-
-                      color: "#9BABBF",
-                    }}
-                  >
-                    Agosto 2022
-                  </p>
+                  <p className="myorderdivp5">Domingo 20</p>
+                  <p className="myorderdivp6">Agosto 2022</p>
                 </div>
 
-                <p
-                  style={{
-                    fontFamily: "Nunito",
-                    fontWeight: "700",
-                    fontSize: "16px",
-
-                    color: "#9BABBF",
-                  }}
-                >
-                  12:00 PM - 04:00 PM
-                </p>
+                <p className="myorderdivp7">12:00 PM - 04:00 PM</p>
               </div>
               <div
                 style={{
@@ -453,42 +192,15 @@ const MyOrders = () => {
                   width: "90%",
                 }}
               >
-                <p
-                  style={{
-                    fontFamily: "Poppins",
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    color: "#000000",
-                    marginBottom: "0",
-                  }}
-                >
-                  Mensaje
-                </p>
-                <p
-                  style={{
-                    fontFamily: "Nunito",
-                    fontWeight: "400",
-                    fontSize: "14px",
-                    color: "#444444",
-                  }}
-                >
+                <p className="myorderdivp8">Mensaje</p>
+                <p className="myorderdivp9">
                   Lörem ipsum dekatrepp ultrast: men susade så adåligt #metoo.
                   Ner klimatångest deterat sedan jäliga när kis hexagov. Iskap
                   gigaburen, gåras.{" "}
                 </p>
               </div>
               <div>
-                <p
-                  style={{
-                    fontFamily: "Poppins",
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    color: "#000000",
-                    marginBottom: "0",
-                  }}
-                >
-                  Dirección
-                </p>
+                <p className="myorderdivp10">Dirección</p>
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
@@ -499,151 +211,51 @@ const MyOrders = () => {
                 </div>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <Button
-                  style={{
-                    width: "240px",
-                    height: "44px",
-                    background: "#D96581",
-                    borderRadius: "10px",
-                    color: " #FFFFFF",
-                  }}
-                >
-                  Editar Pedido
-                </Button>
-                <Button
-                  style={{
-                    width: "160px",
-                    height: "44px",
-                    background: "#FFFFFF",
-                    borderRadius: "10px",
-                    color: " #D96581",
-                    boxShadow: "0px 4px 12px rgba(155, 171, 191, 0.2)",
-                    borderRadius: "10px",
-                  }}
-                >
-                  Seguimiento
-                </Button>
+                <Button className="myorderdivb1">Editar Pedido</Button>
+                <Button className="myorderdivb2">Seguimiento</Button>
               </div>
             </div>
           </div>
           <div className="rightDiv">
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "90%",
-                alignSelf: "center",
-              }}
-            >
-              <div style={{ display: "flex" }}>
+            <div className="myorderdivd1">
+              <div
+                style={{
+                  display: "flex",
+                }}
+              >
                 {" "}
                 <img style={{ width: "70px", borderRadius: "10px" }} src={f2} />
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <p style={{ marginBottom: "0", fontSize: "16px" }}>
-                    Vino Rosa
-                  </p>
-                  <p style={{ color: "#9BABBF", fontSize: "14px" }}>
-                    Ramo del día
-                  </p>
+                <div className="myorderdivd2">
+                  <p className="myorderdivp1">Vino Rosa</p>
+                  <p className="myorderdivp2">Ramo del día</p>
                 </div>
               </div>
 
               <p>$90.00</p>
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "90%",
-                alignSelf: "center",
-              }}
-            >
+            <div className="myorderdivd1">
               <div style={{ display: "flex" }}>
                 {" "}
                 <img style={{ width: "70px", borderRadius: "10px" }} src={f4} />
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <p style={{ marginBottom: "0", fontSize: "16px" }}>
-                    Vino Rosa
-                  </p>
-                  <p style={{ color: "#9BABBF" }}>Ramo del día</p>
+                <div className="myorderdivd2">
+                  <p className="myorderdivp1">Vino Rosa</p>
+                  <p className="myorderdivp2">Ramo del día</p>
                 </div>
               </div>
 
               <p>$90.00</p>
             </div>
             <div className="allP">
-              <p
-                style={{
-                  fontSize: "16px",
-
-                  textDecorationLine: "underline",
-
-                  color: "#D96581",
-                }}
-              >
-                2 Item Máss
-              </p>
-              <p
-                style={{
-                  fontFamily: "Poppins",
-                  fontWeight: "400",
-                  fontSize: "16px",
-
-                  color: "#000000",
-                }}
-              >
-                Fecha & Hora
-              </p>
+              <p className="myorderdivp3">2 Item Máss</p>
+              <p className="myorderdivp4">Fecha & Hora</p>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div style={{ display: "flex" }}>
                   {" "}
-                  <p
-                    style={{
-                      fontWeight: "700",
-                      fontSize: "16px",
-                      fontFamily: "Nunito",
-
-                      color: "#9BABBF",
-                    }}
-                  >
-                    Domingo 20
-                  </p>
-                  <p
-                    style={{
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      fontFamily: "Nunito",
-
-                      color: "#9BABBF",
-                    }}
-                  >
-                    Agosto 2022
-                  </p>
+                  <p className="myorderdivp5">Domingo 20</p>
+                  <p className="myorderdivp6">Agosto 2022</p>
                 </div>
 
-                <p
-                  style={{
-                    fontFamily: "Nunito",
-                    fontWeight: "700",
-                    fontSize: "16px",
-
-                    color: "#9BABBF",
-                  }}
-                >
-                  12:00 PM - 04:00 PM
-                </p>
+                <p className="myorderdivp7">12:00 PM - 04:00 PM</p>
               </div>
               <div
                 style={{
@@ -652,42 +264,15 @@ const MyOrders = () => {
                   width: "90%",
                 }}
               >
-                <p
-                  style={{
-                    fontFamily: "Poppins",
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    color: "#000000",
-                    marginBottom: "0",
-                  }}
-                >
-                  Mensaje
-                </p>
-                <p
-                  style={{
-                    fontFamily: "Nunito",
-                    fontWeight: "400",
-                    fontSize: "14px",
-                    color: "#444444",
-                  }}
-                >
+                <p className="myorderdivp8">Mensaje</p>
+                <p className="myorderdivp9">
                   Lörem ipsum dekatrepp ultrast: men susade så adåligt #metoo.
                   Ner klimatångest deterat sedan jäliga när kis hexagov. Iskap
                   gigaburen, gåras.{" "}
                 </p>
               </div>
               <div>
-                <p
-                  style={{
-                    fontFamily: "Poppins",
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    color: "#000000",
-                    marginBottom: "0",
-                  }}
-                >
-                  Dirección
-                </p>
+                <p className="myorderdivp10">Dirección</p>
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
@@ -698,30 +283,8 @@ const MyOrders = () => {
                 </div>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <Button
-                  style={{
-                    width: "240px",
-                    height: "44px",
-                    background: "#D96581",
-                    borderRadius: "10px",
-                    color: " #FFFFFF",
-                  }}
-                >
-                  Editar Pedido
-                </Button>
-                <Button
-                  style={{
-                    width: "160px",
-                    height: "44px",
-                    background: "#FFFFFF",
-                    borderRadius: "10px",
-                    color: " #D96581",
-                    boxShadow: "0px 4px 12px rgba(155, 171, 191, 0.2)",
-                    borderRadius: "10px",
-                  }}
-                >
-                  Seguimiento
-                </Button>
+                <Button className="myorderdivb1">Editar Pedido</Button>
+                <Button className="myorderdivb2">Seguimiento</Button>
               </div>
             </div>
           </div>

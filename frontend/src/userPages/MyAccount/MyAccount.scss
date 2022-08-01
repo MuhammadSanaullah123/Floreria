@@ -17,6 +17,166 @@
     grid-column: 2/5;
     grid-row: 1/3;
   }
+  .superdivbar1 {
+    background: rgba(229, 229, 229, 1);
+    width: 85%;
+    height: 0px;
+    border: 3px solid #e5e5e5;
+    border-radius: 20px;
+    margin-left: 20px;
+  }
+  .superdivbar2 {
+    background: rgba(85, 166, 48, 1);
+    width: 70%;
+    height: 0px;
+    border: 3px solid rgba(85, 166, 48, 1);
+    border-radius: 20px;
+    margin-left: -5px;
+    margin-top: -4px;
+  }
+  .superdivh1 {
+    color: #d96581;
+    font-family: "Nunito";
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+  }
+  .firstLine {
+    width: 90%;
+    height: 2px;
+    grid-column: 2/5;
+    grid-row: 4/5;
+    background: linear-gradient(
+      90deg,
+      rgba(155, 171, 191, 0) 1.04%,
+      #9babbf 51.56%,
+      rgba(155, 171, 191, 0) 100%
+    );
+  }
+  .superdivdiv1 {
+    display: flex;
+    justify-content: space-around;
+    width: 33%;
+  }
+  .superdivbar3 {
+    background: rgba(229, 229, 229, 1);
+    width: 160px;
+    height: 0px;
+    border: 3px solid #e5e5e5;
+    border-radius: 20px;
+    margin-left: 20px;
+  }
+  .superdivbar4 {
+    background: rgba(80, 157, 111, 1);
+    width: 110px;
+    height: 0px;
+    border: 3px solid rgba(80, 157, 111, 1);
+    border-radius: 20px;
+    margin-left: -5px;
+    margin-top: -4px;
+  }
+  .secondLine {
+    width: 90%;
+    height: 2px;
+    margin-bottom: 120px;
+    grid-column: 2/5;
+    grid-row: 7/8;
+    background: linear-gradient(
+      90deg,
+      rgba(155, 171, 191, 0) 1.04%,
+      #9babbf 51.56%,
+      rgba(155, 171, 191, 0) 100%
+    );
+  }
+}
+.superdivd1 {
+  width: 80px;
+  height: 80px;
+  border-radius: 43px;
+  background: #d96581;
+  display: flex;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.superdivp1 {
+  font-family: Nunito;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #444444;
+  margin: 0;
+  margin-top: 15px;
+}
+.superdivl1 {
+  display: flex;
+  background: #d96581;
+  color: #ffffff !important;
+  width: 260px;
+  height: 60px;
+  align-items: center;
+}
+.superdivl2 {
+  display: flex;
+  width: 260px;
+  height: 60px;
+  align-items: center;
+}
+.myaccountbox1 {
+  .list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .myaccountbox1d1 {
+    width: 80px;
+    height: 80px;
+    border-radius: 43px;
+    background: #d96581;
+    display: flex;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+  .myaccountbox1p1 {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #444444;
+    margin: 0;
+    margin-top: 15px;
+  }
+  .myaccountbox1l1 {
+    display: flex;
+    background: #d96581;
+    color: #ffffff;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    align-items: center;
+  }
+  .myaccountbox1l2 {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    align-items: center;
+    color: #9babbf;
+  }
 }
 .accountPic {
   display: flex;
@@ -69,6 +229,99 @@
       }
     }
   }
+  .myorderdivd1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    align-self: center;
+  }
+  .myorderdivd2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .myorderdivp1 {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+  .myorderdivp2 {
+    color: #9babbf;
+    font-size: 14px;
+  }
+  .myorderdivp3 {
+    font-size: 16px;
+    text-decoration-line: underline;
+    color: #d96581;
+  }
+  .myorderdivp4 {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+  }
+  .myorderdivp5 {
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "Nunito";
+    color: #9babbf;
+  }
+  .myorderdivp6 {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Nunito";
+    color: #9babbf;
+  }
+  .myorderdivp7 {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 16px;
+    color: #9babbf;
+  }
+  .myorderdivp8 {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 0;
+  }
+  .myorderdivp9 {
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 14px;
+    color: #444444;
+  }
+  .myorderdivp10 {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 0;
+  }
+  .myorderdivb1 {
+    width: 240px;
+    height: 44px;
+    background: #d96581;
+    border-radius: 10px;
+    color: #ffffff;
+  }
+  .myorderdivb1:hover {
+    background-color: #ffffff;
+    color: #d96581;
+    border: 1px solid #d96581;
+  }
+  .myorderdivb2 {
+    width: 160px;
+    height: 44px;
+    background: #ffffff;
+    border-radius: 10px;
+    color: #d96581;
+    box-shadow: 0px 4px 12px rgba(155, 171, 191, 0.2);
+    border-radius: 10px;
+  }
+  .myorderdivb2:hover {
+    background-color: #d96581;
+    color: #ffffff;
+  }
 }
 .reminderdiv {
   display: grid;
@@ -76,6 +329,7 @@
   gap: 1.5rem;
   grid-column: 2/6;
   grid-row: 1/3;
+  margin-top: 50px;
   .leftDiv {
     grid-column: 2/4;
     grid-row: 1/3;
@@ -101,7 +355,7 @@
       }
     }
     .css-mvmu1r {
-      margin: 20px 0 !important;
+      margin: 10px 0 !important;
     }
     .css-epd502 {
       margin: 0 !important;
@@ -205,6 +459,7 @@
         color: #444444;
       }
       input {
+        padding-left: 10px;
         border-radius: 10px;
         background: #ffffff;
         height: 44px;
@@ -288,6 +543,84 @@
       overflow-x: auto;
     }
   }
+  .leftdiv {
+    height: 537px;
+    width: 300px;
+  }
+  .reminderdivd1 {
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(155, 171, 191, 0) 1.04%,
+      #9babbf 51.56%,
+      rgba(155, 171, 191, 0) 100%
+    );
+  }
+  .ver_line {
+    width: 6px;
+    height: 90px;
+    background: #d96581;
+    border-radius: 10px;
+  }
+  .reminderdivd2 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: auto;
+  }
+  .reminderdivd3 {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+  }
+  .reminderdivp1 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #d96581;
+  }
+  .reminderdivp2 {
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 14px;
+    color: #9babbf;
+  }
+  .reminderdivp3 {
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 14px;
+    color: #444444;
+  }
+  .paragh {
+    width: 240px;
+    height: 76px;
+  }
+  .reminderdivp4 {
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 14px;
+    color: #444444;
+    margin: 0;
+    line-height: 19px;
+  }
+  .reminderdivb1 {
+    font-family: "Nunito";
+    width: 100%;
+    height: 44px;
+    background: #d96581;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+  .reminderdivb1:hover {
+    background-color: #ffffff;
+    color: #d96581;
+    border: 1px solid #d96581;
+  }
 }
 .deliveryaddressdiv {
   display: grid;
@@ -299,6 +632,63 @@
     grid-column: 2/5;
     grid-row: 1/3;
     margin-bottom: 0 !important;
+  }
+  .deliveryaddressdivd1 {
+    color: #444444;
+    background: #f8f8f8;
+    border-radius: 10px;
+    width: 280px;
+    height: 200px;
+    text-transform: inherit;
+    padding: 10px;
+    text-align-last: start;
+    margin-right: 10px;
+  }
+  .deliveryaddressdivp1 {
+    display: flex;
+    width: 120px;
+    font-size: 14px;
+    height: 40px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+  }
+  .deliveryaddressdivd2 {
+    width: 40px;
+    height: 40px;
+    background: rgba(68, 68, 68, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+  .deliveryaddressdivd3 {
+    width: 40px;
+    height: 40px;
+    background: rgba(217, 101, 129, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .addbtn {
+    width: 200px;
+    height: 200px;
+    background: #d96581;
+    border-radius: 10px;
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: none;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .addbtn:hover {
+    border: 2px solid #ffffff;
+    background: #d96581;
   }
 }
 .css-yk16xz-control {
@@ -1073,312 +1463,75 @@
     }
   }
 }
-/*
-@media screen and (max-width: 899px) {
-  .superdiv {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+.rightdiv {
+  .rightdivh1 {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 30px;
+    color: #444444;
   }
-  .leftdiv {
-    grid-column: 1/2;
-    grid-row: 1/3;
-    width: 253px;
-    height: 455px;
-    background: #ffffff;
-    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: -webkit-center;
-    text-align-last: center;
+  .rightdivd1 {
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(155, 171, 191, 0) 1.04%,
+      #9babbf 51.56%,
+      rgba(155, 171, 191, 0) 100%
+    );
+    margin-top: 10px;
   }
-  .socialcards {
-    //display: grid;
-    //grid-template-columns: repeat(6, 1fr);
-    grid-column: 2/4;
-    grid-row: 1/2;
-    grid-column-gap: 0.5rem;
-  }
-  .buttondiv {
-    grid-column: 2/4;
-    grid-row: 2/3;
-    // display: grid;
-    //grid-template-columns: repeat(4, 1fr);
-    //grid-column-gap: 0.5rem;
-  }
-  .para {
-    grid-column: 2/4;
-    grid-row: 3/4;
-    width: 970px;
-    height: 85px;
-    background: rgba(114, 80, 157, 0.2);
-
-    border-radius: 10px;
-  }
-  .speakerdiv {
-    grid-column: 2/4;
-    grid-row: 4/5;
-    background: #ffffff;
-    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 970px;
-    height: 200px;
-  }
-}
-
-
-
-
-/*
-@media screen and (max-width: 899px) {
-  .leftdiv {
-    width: 250px;
-    height: 500px;
-    position: relative;
-    background: #ffffff;
-    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    left: 40px;
-    text-align: -webkit-center;
-    margin-bottom: 60px;
-    text-align-last: center;
-  }
-
-  .leftdiv a {
-    width: 220px;
-    padding: 10px;
-    color: rgba(129, 129, 129, 1);
-    text-decoration: none;
-    font-family: "Poppins";
-    padding-right: 143px;
-    position: relative;
-    top: 20px;
-    display: block;
-    border-radius: 6px;
-    font-size: 120%;
-    text-align-last: start;
-  }
-  .logdiv {
-    position: relative;
-    top: 25px;
-    left: 3px;
-    background-color: "red";
-    width: 200px;
+  .email {
     display: flex;
-  }
-  .logdiv img {
-    width: 12%;
-    height: 12%;
-  }
-  .logdiv h6 {
-    font-size: 100%;
-    margin-left: 20px;
-  }
-
-  .carddiv {
-    display: flex;
-    width: 170px;
-    height: 160px;
-    justify-content: center;
-  }
-
-  .cardpic {
-    width: 40%;
-    height: 40%;
-    position: relative;
-    top: 30px;
-    left: 53px;
-  }
-  .carddiv p {
-    font-size: 100%;
-    text-align: center;
-    position: relative;
-    top: 105px;
-    left: -32px;
-  }
-  .buttondiv {
-    margin-top: 200px;
-    margin-left: -30px;
-  }
-  .buttoncard {
-    width: 250px !important;
-    height: 250px !important;
-    background: #ffffff;
-    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    position: relative;
-    left: 102px;
-    margin-left: 22px !important;
-
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  .buttoncard p {
-    font-size: 20px;
-    text-align: center;
+    align-items: baseline;
+    justify-content: space-between;
     margin-top: 20px;
+    width: 90%;
   }
-  .buttoncard h5 {
-    line-height: 0%;
-    font-size: 25px;
-    text-align: center;
-    color: rgba(114, 80, 157, 1);
-    font-weight: 600;
+  .rightdivp1 {
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 16px;
+    color: #9babbf;
   }
-  .para {
-    margin-top: 450px;
-    width: 845px;
-    height: 110px;
-    background: rgba(114, 80, 157, 0.2);
+  .rightdivb1 {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    background: #d96581;
     border-radius: 10px;
-    position: relative;
-    left: 25px;
-  }
-  .para h6 {
-    font-size: 120%;
-  }
-  .para p {
-    font-size: 120%;
-    margin-top: 15px;
-  }
-  .buttoncard {
-    width: 420px;
-    height: 444px;
-    background: #ffffff;
-    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    position: relative;
-    left: 102px;
-    margin-left: 40px;
-
-    justify-content: center;
-  }
-  .speakerdiv {
-    width: 855px;
-    height: 200px;
-    position: relative;
-    left: 25px;
-    top: -80px;
-  }
-
-  .speakerdiv h6 {
-    font-weight: 600;
-    font-size: 20px;
-    position: relative;
-    left: 20px;
-    top: 23px;
-  }
-  .speakerdiv2 img {
-    position: relative;
-    left: 21px;
-    top: 66px;
-    width: 8%;
-  }
-  .speakerdiv2 p {
-    position: relative;
-    left: 96px;
-    top: 13px;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 1);
-    line-height: 0.3;
-    font-size: 15px;
-  }
-  .socialapp {
-    width: 330px;
-    height: 80px;
-    position: relative;
-    left: 510px;
-    top: -68px;
-    background: #f4f4f4;
-    border-radius: 80px;
-  }
-  .socialapp img {
-    position: relative;
-    top: 20px;
-    width: 13%;
-    margin-left: 10px;
-  }
-  .tablediv {
-    position: relative;
-    width: 855px;
-    height: 320px;
-    left: 25px;
-    top: -50px;
-    overflow: auto;
-    background: #ffffff;
-    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-
-  .tablediv h6 {
-    font-size: 18px;
-    font-weight: 600;
-    position: relative;
-    left: 20px;
-    top: 23px;
-  }
-  .table1 {
-    position: relative;
-    top: 40px;
-    left: 20px;
-    width: 925px;
-    overflow-x: auto;
-  }
-  .table1 tr th {
-    background-color: #f4f4f4;
-    padding-left: 35px;
+    width: 200px;
     height: 50px;
-    font-weight: 500;
-    font-size: 15px;
   }
-  .table1 tr td {
-    font-weight: 500;
-    padding-left: 35px;
-    padding-top: 15px;
-    font-size: 15px;
-    color: #000000;
-    margin-left: 50px;
-    font-weight: 500;
+  .ref_s1,
+  .ref_s2 {
+    display: flex;
+    width: 33%;
+    justify-content: space-around;
   }
-  .table1 tr td:last-child {
-    padding-left: 20px;
+  .ref_s3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23%;
   }
-
-  .enddiv {
-    position: relative;
-    width: 855px;
-    height: 235px;
-    left: 25px;
-    top: -20px;
-    background: #ffffff;
-    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+  .rightdivd2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rightdivd3 {
+    background: #d96581;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
-    margin-bottom: 100px;
-  }
-  .enddiv h6 {
-    font-weight: 600;
-    font-size: 20px;
-    position: relative;
-    left: 20px;
-    top: 23px;
-  }
-  .endline {
-    position: relative;
-    width: 95% !important;
-    height: 0px;
-    left: 20px;
-    top: 40px;
-    border: 0.4px solid #e5e5e59d;
-    //border: 0.4px solid red;
-  }
-  .enddiv p {
-    font-size: 15px;
-    font-weight: 500;
-    position: relative;
-    left: 20px;
-    top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
-*/
 .PrivatePickersToolbar-root {
   display: none !important;
 }

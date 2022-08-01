@@ -56,6 +56,43 @@
       }
     }
   }
+  .herodiv1 {
+    background: #ffffff;
+    display: flex;
+    height: 400px;
+    width: 90%;
+    justify-content: space-between;
+    .allP {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .allP1 {
+        text-transform: capitalize;
+        font-size: 50px;
+        color: #444444;
+        font-weight: 500;
+        font-family: "Cormorant Upright";
+        margin-bottom: 0;
+      }
+      .allPb1 {
+        background-color: #d96581;
+        color: #ffffff;
+        font-size: 11px;
+        border-radius: 20px;
+        text-transform: none;
+        width: 180px;
+        height: 40px;
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+    .backgroundpic {
+      width: 850px;
+      position: relative;
+      left: 12%;
+    }
+  }
 }
 @media (max-width: 768px) {
   .allP {

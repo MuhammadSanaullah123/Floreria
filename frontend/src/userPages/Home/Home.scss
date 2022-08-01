@@ -3,6 +3,11 @@
   flex-direction: column;
   min-width: 450px;
   background-color: #ffffff;
+  .emptyDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+  }
   @media (max-width: 450px) {
     min-width: auto !important;
   }
@@ -51,11 +56,85 @@
     .tf {
       background-color: #ffffff !important;
     }
+    .modalCP1 {
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-family: "Poppins";
+      font-weight: 700;
+    }
+    .modalCI1 {
+      border-radius: 10px;
+      height: 40px;
+      width: 200px;
+      padding-left: 10px;
+    }
+    .form1 {
+      width: 220px;
+      height: 40px;
+      border: 1px solid #9babbf;
+      border-radius: 10px;
+      .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+        color: #9babbf;
+        line-height: 0.8rem;
+      }
+      .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+        border-radius: 10px;
+      }
+    }
+
+    .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+      background-color: #ffffff;
+      background-image: url("./../../assets/arrowdown.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-position-x: 90%;
+      font-size: 16px !important;
+      .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+        display: none;
+      }
+      .css-bpeome-MuiSvgIcon-root-MuiSelect-icon {
+        display: none;
+      }
+    }
+    .modalCb1 {
+      display: flex;
+      color: #9babbf;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 10px;
+      background: #ffffff;
+      width: 200px;
+      height: 40px;
+    }
+    .modalCb2 {
+      background-color: #d96581;
+      color: #ffffff;
+      border-radius: 10px;
+      padding: 0.2rem 1rem;
+      width: 220px;
+      height: 40px;
+      text-transform: none;
+    }
+    .modalCb2:hover {
+      background-color: #ffffff;
+      color: #d96581;
+    }
   }
   @media (max-width: 550px) {
     .whatsapp {
       display: none;
     }
+  }
+
+  .whatsapp {
+    width: 100px;
+    height: 100px;
+    align-self: flex-end;
+    position: fixed;
+    top: 80%;
+    right: 50px;
+    z-index: 9999;
+    cursor: pointer;
   }
 }
 .css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:before {

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import { Navigation, Thumbs } from "swiper";
+//component
+import ProductSection from "../../mainLayout/ProductSection/ProductSection";
 // Import Swiper styles
 import "swiper/swiper.scss"; // core Swiper
 import "swiper/modules/navigation/navigation.scss"; // Navigation module
@@ -579,10 +581,7 @@ const Products = () => {
       </div>
       {/* Product Display Slider */}
       <div className="productDetails">
-        <div
-          className="sliderProduct"
-          style={{ display: "flex", flexDirection: "row-reverse" }}
-        >
+        <div className="sliderProduct">
           <Swiper
             loop={true}
             spaceBetween={5}
@@ -630,144 +629,57 @@ const Products = () => {
           </Swiper>
         </div>
         <div className="productInformation">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
+          <div className="productInformationd1">
             <h6 style={{ fontSize: "20px" }}>{data.productName}</h6>
           </div>
-          <div
-            style={{
-              display: "flex",
-              color: "#444444",
-              fontSize: "13px",
-              justifyContent: "end",
-            }}
-          >
+          <div className="productInformationd2">
             Puntos :{" "}
-            <p style={{ color: "rgba(217, 101, 129, 1)", fontSize: "13px" }}>
-              {data.variantPrice}
-            </p>
+            <p className="productInformationd2p1">{data.variantPrice}</p>
           </div>
           <div style={{ marginTop: "10px" }}>
             {" "}
-            <h6
-              style={{ fontWeight: "600", fontSize: "20px", color: "#D96581" }}
-            >
-              ${data.variantPrice}{" "}
-            </h6>
+            <h6 className="productInformationh6">${data.variantPrice} </h6>
           </div>
-          <p
-            style={{
-              color: "#444444",
-              fontSize: "13px",
-              marginLeft: "0",
-              marginBottom: "20px",
-            }}
-          >
-            $12.990 Precio Normal{" "}
-          </p>
-          <Divider
-            style={{
-              color: "#C4C4C4",
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-            }}
-          />
+          <p className="productInformationp1">$12.990 Precio Normal </p>
+          <Divider className="productInformationdivider1" />
           <div id="productDescription1">
-            <h6 style={{ fontWeight: "700", fontSize: "15px" }}>
-              1.- Selecciona un horario
-            </h6>
-            <p style={{ color: "#9BABBF", fontSize: "12px" }}>
+            <h6 className="productDescription1h6">1.- Selecciona un horario</h6>
+            <p className="productDescription1p1">
               * Se hará un cargo de envío por $99.00 MXN
             </p>
             <div className="Cards">
               {showResults1 ? (
                 <button className="button1">
-                  <h6
-                    style={{
-                      fontWeight: "900",
-                      fontSize: "15px",
-                      paddingTop: "10px",
-                      fontFamily: "Nunito",
-                      color: "#444444",
-                    }}
-                  >
-                    Hoy
-                  </h6>
+                  <h6 className="Cardsh61">Hoy</h6>
                   {date} {month}
                   {showResults1 ? <Results /> : null}
                 </button>
               ) : (
                 <button className="button1" onClick={onClick1}>
-                  <h6
-                    style={{
-                      fontFamily: "Nunito",
-                      fontWeight: "400",
-                      fontSize: "18px",
-                      color: "#9BABBF",
-                    }}
-                  >
-                    Hoy
-                  </h6>
+                  <h6 className="Cardsh62">Hoy</h6>
                   {date} {month}
                 </button>
               )}
 
               {showResults2 ? (
                 <button className="button2">
-                  <h6
-                    style={{
-                      fontWeight: "900",
-                      fontSize: "15px",
-                      paddingTop: "10px",
-                      fontFamily: "Nunito",
-                      color: "#444444",
-                    }}
-                  >
-                    Manana
-                  </h6>
+                  <h6 className="Cardsh63">Manana</h6>
                   {nextdate} {month}
                   {showResults2 ? <Results /> : null}
                 </button>
               ) : (
                 <button className="button2" onClick={onClick2}>
-                  <h6
-                    style={{
-                      fontFamily: "Nunito",
-                      fontWeight: "400",
-                      fontSize: "18px",
-                      color: "#9BABBF",
-                    }}
-                  >
-                    Manana
-                  </h6>
+                  <h6 className="Cardsh64">Manana</h6>
                   {nextdate} {month}
                 </button>
               )}
               <button className="button3" onClick={handleOpen}>
                 <div>
                   <img style={{ width: "25px" }} src={cal} />
-                  <p
-                    style={{
-                      fontFamily: "Nunito",
-                      fontWeight: "400",
-                      fontSize: "18px",
-                      paddingTop: "10px",
-                      fontFamily: "Nunito",
-                      color: "#9BABBF",
-                    }}
-                  >
-                    Mas fechas
-                  </p>
+                  <p className="Cardsp1">Mas fechas</p>
                   <div
+                    className="Cardsd1"
                     style={{
-                      fontFamily: "Nunito",
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      color: "#9BABBF",
                       display: `${caldatebool ? "flex" : "none"}`,
                     }}
                   >
@@ -864,69 +776,21 @@ const Products = () => {
                           renderInput={(params) => <TextField {...params} />}
                         />
                       </LocalizationProvider>
-                      <div
-                        style={{
-                          marginBottom: "30px",
-                          width: "100%",
-                          height: "2px",
-                          background:
-                            "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-                        }}
-                      ></div>
+                      <div className="Cardsline1"></div>
                       <div className="timediv">
                         <div style={{ width: "100%" }}>
-                          <p
-                            style={{
-                              fontFamily: "Nunito",
-                              fontWeight: "700",
-                              fontSize: "18px",
-                              color: "#D96581",
-                              marginBottom: "5px",
-                            }}
-                          >
+                          <p className="Cardsp2">
                             Selecciona el horario de entrega
                           </p>
-                          <p
-                            style={{
-                              fontFamily: "Nunito",
-                              fontWeight: "400",
-                              fontSize: "16px",
-                              color: "#9BABBF",
-                            }}
-                          >
+                          <p className="Cardsp3">
                             Se hara un cargo de envío por $4.990
                           </p>
                           <div className="result">
                             <Results />
                           </div>
-                          <div
-                            style={{
-                              marginBottom: "30px",
-                              width: "100%",
-                              height: "2px",
-                              background:
-                                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-                            }}
-                          ></div>
-                          <p
-                            style={{
-                              fontFamily: "Nunito",
-                              fontWeight: "700",
-                              fontSize: "18px",
-                              color: "#D96581",
-                              marginBottom: "5px",
-                            }}
-                          >
-                            Horario especial
-                          </p>
-                          <p
-                            style={{
-                              fontFamily: "Nunito",
-                              fontWeight: "400",
-                              fontSize: "16px",
-                              color: "#9BABBF",
-                            }}
-                          >
+                          <div className="Cardsline2"></div>
+                          <p className="Cardsp4">Horario especial</p>
+                          <p className="Cardsp5">
                             Se hara un cargo adicional de envío por $3.990
                           </p>
                           <div className="result">
@@ -937,84 +801,35 @@ const Products = () => {
                     </div>
                     <div className="rightSide">
                       <img
+                        className="Cardspic1"
                         onClick={handleClear}
-                        style={{
-                          position: "relative",
-                          left: "26rem",
-                          bottom: "5rem",
-                          cursor: "pointer",
-                        }}
                         src={cross}
                       />
 
                       <div style={{ height: "100%" }} className="time">
                         <p
+                          className="Cardsp6"
                           style={{
-                            fontFamily: "Nunito",
-                            fontWeight: "700",
-                            fontSize: "30px",
-                            textAlign: "center",
-                            color: "#D96581",
-                            textDecoration: "underline",
-                            marginTop: "50px",
                             display: `${timebool ? "none" : "block"}`,
                           }}
                         >
                           Sin tiempo seleccionado
                         </p>
                         <div
+                          className="Cardsd2"
                           style={{
                             display: `${timebool ? "flex" : "none"}`,
-                            flexDirection: "column",
-                            alignItems: "center",
-                            height: "100%",
-                            justifyContent: "space-around",
                           }}
                         >
                           <div>
-                            <p
-                              style={{
-                                fontFamily: "Nunito",
-                                fontWeight: "700",
-                                fontSize: "18px",
-                                textAlign: "center",
-                                color: "#9BABBF",
-                              }}
-                            >
+                            <p className="Cardsp7">
                               Su pedido se entregará el día
                             </p>
-                            <div
-                              style={{
-                                width: "320px",
-                                height: "140px",
-                                background: "rgba(217, 101, 129, 0.1)",
-                                borderRadius: "20px",
-                                display: "flex",
-                                flexDirection: "column",
-                                alignItems: "center",
-                                justifyContent: "center",
-                              }}
-                            >
-                              <p
-                                style={{
-                                  fontFamily: "Nunito",
-                                  fontWeight: "700",
-                                  fontSize: "30px",
-                                  color: "#D96581",
-                                  margin: "0",
-                                }}
-                              >
+                            <div className="Cardsd3">
+                              <p className="Cardsp8">
                                 {weekday} {calDate}
                               </p>
-                              <p
-                                style={{
-                                  fontFamily: "Nunito",
-                                  fontWeight: "400",
-                                  fontSize: "20px",
-                                  color: "#D96581",
-                                  margin: "0",
-                                }}
-                              >
+                              <p className="Cardsp9">
                                 {calMonth}
                                 {new Date().getFullYear()}
                               </p>
@@ -1022,59 +837,22 @@ const Products = () => {
                           </div>
 
                           <div>
-                            <p
-                              style={{
-                                fontFamily: "Nunito",
-                                fontWeight: "700",
-                                fontSize: "18px",
-                                textAlign: "center",
-                                color: "#9BABBF",
-                              }}
-                            >
-                              En el horario :
-                            </p>
-                            <div
-                              style={{
-                                width: "320px",
-                                height: "80px",
-                                background: "rgba(217, 101, 129, 0.1)",
-                                borderRadius: "20px",
-                                fontFamily: "Nunito",
-                                fontWeight: "700",
-                                fontSize: "20px",
-                                color: "#D96581",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                              }}
-                            >
+                            <p className="Cardsp10">En el horario :</p>
+                            <div className="Cardsd4" style={{}}>
                               {time}
                             </div>
                           </div>
 
                           <button
+                            className="confirmbtn"
                             style={{
-                              width: "280px",
-                              height: "50px",
-                              background: "#D96581",
-                              borderRadius: "10px",
-                              color: "#ffffff",
                               display: `${timebool ? "block" : "none"}`,
                             }}
-                            className="confirmbtn"
                             onClick={setConfirm}
                           >
                             Confirmar
                           </button>
-                          <p
-                            style={{
-                              fontFamily: "Nunito",
-                              fontWeight: "400",
-                              fontSize: "12px",
-                              textAlign: "center",
-                              color: "#9BABBF",
-                            }}
-                          >
+                          <p className="Cardsp11">
                             Todos nuestros precios están en CLP
                           </p>
                         </div>
@@ -1086,16 +864,9 @@ const Products = () => {
             </div>
           </div>
 
-          <div
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-              width: "100%",
-              height: "2px",
-            }}
-          ></div>
+          <div className="productInformationline1"></div>
           <div id="productDescription2">
-            <h6 style={{ fontWeight: "600", fontSize: "15px" }}>
+            <h6 className="productDescription2">
               2.-Agrandar producto (opcional)
             </h6>
             <div className="Cards2">
@@ -1115,7 +886,7 @@ const Products = () => {
                 >
                   GRAND
                 </p>
-                <p style={{ fontSize: "15px" }}>
+                <p className="productDescription2">
                   JG Rose Stems <br /> Triple line Blooms
                 </p>
               </button>
@@ -1164,17 +935,10 @@ const Products = () => {
               </button>
             </div>
           </div>
-          <div
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-              width: "100%",
-              height: "2px",
-            }}
-          ></div>
+          <div className="productInformationline2"></div>
 
           <div id="productDescription3">
-            <h6 style={{ fontWeight: "700", fontSize: "15px" }}>
+            <h6 className="productDescription3h1">
               3.- Complementar pedido (opcional)
             </h6>
             <Carousel itemsToShow={3} className="carousel">
@@ -1200,7 +964,10 @@ const Products = () => {
                   />
 
                   <h6>{item.title}</h6>
-                  <h6 style={{ color: "black", fontWeight: "bold" }}>
+                  <h6
+                    style={{ fontWeight: "700" }}
+                    className="productDescription3h2"
+                  >
                     {item.price}
                   </h6>
                 </div>
@@ -1230,48 +997,25 @@ const Products = () => {
               </p>
             </Button> */}
           </div>
-          <div
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-              width: "100%",
-              height: "2px",
-            }}
-          ></div>
+          <div className="productInformationline3"></div>
           <div id="productTotal">
-            <h6 style={{ fontWeight: "700", fontSize: "15px" }}>
-              4.- Agregar a tu carrito
-            </h6>
+            <h6 className="productTotalh1">4.- Agregar a tu carrito</h6>
             <p>
               Podrás escribir un mensaje en una tarjeta más adelante en el
               Carrito
             </p>
             <Link to="cart">
               <Button
+                className="productTotalb1"
                 onClick={() => assignProductDetails()}
                 variant="contained"
-                style={{
-                  backgroundColor: "#D96581",
-                  color: "#FFFFFF",
-                  width: "100%",
-                  borderRadius: "5px",
-                  textTransform: "none",
-                }}
               >
                 Agregar( ${data.variantPrice} CLP)
                 <ArrowForwardIcon sx={{ marginLeft: "5px" }} />
               </Button>
             </Link>
           </div>
-          <div
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-              width: "100%",
-              height: "2px",
-              marginTop: "20px",
-            }}
-          ></div>
+          <div className="productInformationline3"></div>
         </div>
       </div>
       <div>
@@ -1289,17 +1033,8 @@ const Products = () => {
         </div>
         <div style={{ margin: "0 0.3rem" }}>
           <TabPanel value={value} index={0}>
-            <div>
-              <h4
-                style={{
-                  marginTop: "0.8rem",
-                  marginBottom: "0.8rem",
-                  fontFamily: "Nunito",
-                  color: "#444444",
-                  fontWeight: "700",
-                  fontSize: "20px",
-                }}
-              >
+            <div className="tabpaneld1">
+              <h4 className="tabpaneld1h1">
                 Vino 3V y Botanas con Globo "Love You"
               </h4>
               <p style={{ textAlign: "left", color: "#9BABBF" }}>
@@ -1313,16 +1048,7 @@ const Products = () => {
                 presencia desde antiguas civilizaciones, y se posiciona hasta el
                 día de hoy como la bebida por excelencia para celebraciones.
               </p>
-              <h5
-                style={{
-                  fontWeight: "bold",
-                  color: "#444444",
-                  fontFamily: "Nunito",
-                  fontSize: "17px",
-                }}
-              >
-                Especificaciones del Empaque:
-              </h5>
+              <h5 className="tabpaneld1h2">Especificaciones del Empaque:</h5>
               <List
                 sx={{
                   width: "100%",
@@ -1336,47 +1062,15 @@ const Products = () => {
                 className="DetailList"
               >
                 <div style={{ display: "flex", width: "700px" }}>
-                  <div
-                    style={{
-                      background: "#D96581",
-                      borderRadius: "10px",
-                      width: "5px",
-                      height: "24px",
-                    }}
-                  ></div>
-                  <p
-                    style={{
-                      color: "#44444491",
-
-                      fontFamily: "Nunito",
-                      fontSize: "15px",
-                      fontStyle: "normal",
-                      fontWeight: "600",
-                    }}
-                  >
+                  <div className="tabpaneld2"></div>
+                  <p className="tabpanelp1">
                     Caja rígida decorativa o reutilizable tipo libro color hueso
                     y foil color champagne
                   </p>
                 </div>
                 <div style={{ display: "flex", width: "700px" }}>
-                  <div
-                    style={{
-                      background: "#D96581",
-                      borderRadius: "10px",
-                      width: "5px",
-                      height: "24px",
-                    }}
-                  ></div>
-                  <p
-                    style={{
-                      color: "#44444491",
-
-                      fontFamily: "Nunito",
-                      fontSize: "15px",
-                      fontStyle: "normal",
-                      fontWeight: "600",
-                    }}
-                  >
+                  <div className="tabpaneld3"></div>
+                  <p className="tabpanelp2">
                     Medidas de la caja: 36.5 cm x 21 cm x 9.5 cm
                   </p>
                 </div>
@@ -1398,17 +1092,8 @@ const Products = () => {
             </div>
           </TabPanel>
           <TabPanel value={value} index={1}>
-            <div>
-              <h4
-                style={{
-                  marginTop: "0.8rem",
-                  marginBottom: "0.8rem",
-                  fontFamily: "Nunito",
-                  color: "#444444",
-                  fontWeight: "700",
-                  fontSize: "20px",
-                }}
-              >
+            <div className="tabpaneld1">
+              <h4 className="tabpaneld1h1">
                 Vino 3V y Botanas con Globo "Love You"
               </h4>
               <p style={{ textAlign: "left", color: "#9BABBF" }}>
@@ -1422,16 +1107,7 @@ const Products = () => {
                 presencia desde antiguas civilizaciones, y se posiciona hasta el
                 día de hoy como la bebida por excelencia para celebraciones.
               </p>
-              <h5
-                style={{
-                  fontWeight: "bold",
-                  color: "#444444",
-                  fontFamily: "Nunito",
-                  fontSize: "17px",
-                }}
-              >
-                Especificaciones del Empaque:
-              </h5>
+              <h5 className="tabpaneld1h2">Especificaciones del Empaque:</h5>
               <List
                 sx={{
                   width: "100%",
@@ -1445,47 +1121,15 @@ const Products = () => {
                 className="DetailList"
               >
                 <div style={{ display: "flex", width: "700px" }}>
-                  <div
-                    style={{
-                      background: "#D96581",
-                      borderRadius: "10px",
-                      width: "5px",
-                      height: "24px",
-                    }}
-                  ></div>
-                  <p
-                    style={{
-                      color: "#44444491",
-
-                      fontFamily: "Nunito",
-                      fontSize: "15px",
-                      fontStyle: "normal",
-                      fontWeight: "600",
-                    }}
-                  >
+                  <div className="tabpaneld2"></div>
+                  <p className="tabpanelp1">
                     Caja rígida decorativa o reutilizable tipo libro color hueso
                     y foil color champagne
                   </p>
                 </div>
                 <div style={{ display: "flex", width: "700px" }}>
-                  <div
-                    style={{
-                      background: "#D96581",
-                      borderRadius: "10px",
-                      width: "5px",
-                      height: "24px",
-                    }}
-                  ></div>
-                  <p
-                    style={{
-                      color: "#44444491",
-
-                      fontFamily: "Nunito",
-                      fontSize: "15px",
-                      fontStyle: "normal",
-                      fontWeight: "600",
-                    }}
-                  >
+                  <div className="tabpaneld3"></div>
+                  <p className="tabpanelp2">
                     Medidas de la caja: 36.5 cm x 21 cm x 9.5 cm
                   </p>
                 </div>
@@ -1507,17 +1151,8 @@ const Products = () => {
             </div>
           </TabPanel>
           <TabPanel value={value} index={2}>
-            <div>
-              <h4
-                style={{
-                  marginTop: "0.8rem",
-                  marginBottom: "0.8rem",
-                  fontFamily: "Nunito",
-                  color: "#444444",
-                  fontWeight: "700",
-                  fontSize: "20px",
-                }}
-              >
+            <div className="tabpaneld1">
+              <h4 className="tabpaneld1h1">
                 Vino 3V y Botanas con Globo "Love You"
               </h4>
               <p style={{ textAlign: "left", color: "#9BABBF" }}>
@@ -1531,16 +1166,7 @@ const Products = () => {
                 presencia desde antiguas civilizaciones, y se posiciona hasta el
                 día de hoy como la bebida por excelencia para celebraciones.
               </p>
-              <h5
-                style={{
-                  fontWeight: "bold",
-                  color: "#444444",
-                  fontFamily: "Nunito",
-                  fontSize: "17px",
-                }}
-              >
-                Especificaciones del Empaque:
-              </h5>
+              <h5 className="tabpaneld1h2">Especificaciones del Empaque:</h5>
               <List
                 sx={{
                   width: "100%",
@@ -1554,47 +1180,15 @@ const Products = () => {
                 className="DetailList"
               >
                 <div style={{ display: "flex", width: "700px" }}>
-                  <div
-                    style={{
-                      background: "#D96581",
-                      borderRadius: "10px",
-                      width: "5px",
-                      height: "24px",
-                    }}
-                  ></div>
-                  <p
-                    style={{
-                      color: "#44444491",
-
-                      fontFamily: "Nunito",
-                      fontSize: "15px",
-                      fontStyle: "normal",
-                      fontWeight: "600",
-                    }}
-                  >
+                  <div className="tabpaneld2"></div>
+                  <p className="tabpanelp1">
                     Caja rígida decorativa o reutilizable tipo libro color hueso
                     y foil color champagne
                   </p>
                 </div>
                 <div style={{ display: "flex", width: "700px" }}>
-                  <div
-                    style={{
-                      background: "#D96581",
-                      borderRadius: "10px",
-                      width: "5px",
-                      height: "24px",
-                    }}
-                  ></div>
-                  <p
-                    style={{
-                      color: "#44444491",
-
-                      fontFamily: "Nunito",
-                      fontSize: "15px",
-                      fontStyle: "normal",
-                      fontWeight: "600",
-                    }}
-                  >
+                  <div className="tabpaneld3"></div>
+                  <p className="tabpanelp2">
                     Medidas de la caja: 36.5 cm x 21 cm x 9.5 cm
                   </p>
                 </div>
@@ -1621,203 +1215,8 @@ const Products = () => {
       <div className="productSlideHeading">
         <h4>Productos Relacionados</h4>
       </div>
-      <div className="lastslider">
-        <ChevronLeftIcon
-          style={{ alignSelf: "center" }}
-          sx={{ color: pink[300], fontSize: 60 }}
-        />
-        <div className="dabba" style={{ justifySelf: "self-end" }}>
-          <img style={{ width: "100%" }} src={f1} />
-          <p style={{ fontWeight: "600", color: "#000000", marginTop: "15px" }}>
-            iEntrega en menos de 2 horas!
-          </p>
-          <p
-            style={{
-              color: "#818181",
-              fontSize: "12px",
-              lineHeight: "0",
-              paddingTop: "10px",
-            }}
-          >
-            iCompra hoy, entrega cuando quieras!
-          </p>
-          <p style={{ color: "#D96581", paddingTop: "15px", fontSize: "12px" }}>
-            {" "}
-            Ramo del día
-          </p>
-          <p
-            style={{
-              fontWeight: "700",
-              color: "#000000",
-              fontSize: "17px",
-              paddingTop: "10px",
-            }}
-          >
-            {" "}
-            $19.990
-          </p>
-          <div style={{ display: "flex", paddingTop: "10px" }}>
-            <Link
-              style={{
-                color: "#ffffff",
-                textTransform: "none",
-                backgroundColor: "#D96581",
-                borderRadius: "10px",
-                marginRight: "10px",
-                width: "80%",
-                height: "40px",
-                textAlign: "center",
-              }}
-              to="/user/category?products=|"
-            >
-              <Button
-                style={{
-                  color: "#ffffff",
-                  textTransform: "none",
-                  backgroundColor: "#D96581",
-                  borderRadius: "10px",
-                  marginRight: "10px",
-                  width: "80%",
-                  height: "40px",
-                  fontSize: "12px",
-                }}
-              >
-                Agregar al carrito
-              </Button>
-            </Link>
 
-            <img style={{ width: "20px" }} src={delivery} />
-          </div>
-        </div>
-        <div className="dabba">
-          <img style={{ width: "100%" }} src={f2} />
-          <p style={{ fontWeight: "600", color: "#000000", marginTop: "15px" }}>
-            iEntrega en menos de 2 horas!
-          </p>
-          <p
-            style={{
-              color: "#818181",
-              fontSize: "12px",
-              lineHeight: "0",
-              paddingTop: "10px",
-            }}
-          >
-            iCompra hoy, entrega cuando quieras!
-          </p>
-          <p style={{ color: "#D96581", paddingTop: "15px", fontSize: "12px" }}>
-            {" "}
-            Ramo del día
-          </p>
-          <p
-            style={{
-              fontWeight: "700",
-              color: "#000000",
-              fontSize: "17px",
-              paddingTop: "10px",
-            }}
-          >
-            {" "}
-            $19.990
-          </p>
-          <div style={{ display: "flex", paddingTop: "10px" }}>
-            <Link
-              style={{
-                color: "#ffffff",
-                textTransform: "none",
-                backgroundColor: "#D96581",
-                borderRadius: "10px",
-                marginRight: "10px",
-                width: "80%",
-                height: "40px",
-                textAlign: "center",
-              }}
-              to="/user/category?products=|"
-            >
-              <Button
-                style={{
-                  color: "#ffffff",
-                  textTransform: "none",
-                  backgroundColor: "#D96581",
-                  borderRadius: "10px",
-                  marginRight: "10px",
-                  width: "80%",
-                  height: "40px",
-                  fontSize: "12px",
-                }}
-              >
-                Agregar al carrito
-              </Button>
-            </Link>
-            <img style={{ width: "20px" }} src={delivery} />
-          </div>
-        </div>
-        <div className="dabba" style={{ justifySelf: "start" }}>
-          <img style={{ width: "100%" }} src={f3} />
-          <p style={{ fontWeight: "600", color: "#000000", marginTop: "15px" }}>
-            iEntrega en menos de 2 horas!
-          </p>
-          <p
-            style={{
-              color: "#818181",
-              fontSize: "12px",
-              lineHeight: "0",
-              paddingTop: "10px",
-            }}
-          >
-            iCompra hoy, entrega cuando quieras!
-          </p>
-          <p style={{ color: "#D96581", paddingTop: "15px", fontSize: "12px" }}>
-            {" "}
-            Ramo del día
-          </p>
-          <p
-            style={{
-              fontWeight: "700",
-              color: "#000000",
-              fontSize: "17px",
-              paddingTop: "10px",
-            }}
-          >
-            {" "}
-            $19.990
-          </p>
-          <div style={{ display: "flex", paddingTop: "10px" }}>
-            <Link
-              style={{
-                color: "#ffffff",
-                textTransform: "none",
-                backgroundColor: "#D96581",
-                borderRadius: "10px",
-                marginRight: "10px",
-                width: "80%",
-                height: "40px",
-                textAlign: "center",
-              }}
-              to="/user/category?products=|"
-            >
-              <Button
-                style={{
-                  color: "#ffffff",
-                  textTransform: "none",
-                  backgroundColor: "#D96581",
-                  borderRadius: "10px",
-                  marginRight: "10px",
-                  width: "80%",
-                  height: "40px",
-                  fontSize: "12px",
-                }}
-              >
-                Agregar al carrito
-              </Button>
-            </Link>
-            <img style={{ width: "20px" }} src={delivery} />
-          </div>
-        </div>
-        <ChevronRightIcon
-          style={{ alignSelf: "center" }}
-          sx={{ color: pink[300], fontSize: 60 }}
-        />
-      </div>
+      <ProductSection />
     </div>
   );
 };

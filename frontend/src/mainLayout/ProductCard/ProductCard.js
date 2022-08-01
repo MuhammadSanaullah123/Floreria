@@ -19,55 +19,21 @@ const ProductCard = ({ value }) => {
       </div>
       <div style={{ width: "90%", alignSelf: "center" }}>
         <p className="cardTitle">{productName}</p>
-        <p
-          style={{
-            color: "#818181",
-            fontSize: "12px",
-            lineHeight: "0",
-            paddingTop: "10px",
-          }}
-        >
-          iCompra hoy, entrega cuando quieras!
-        </p>
-        <p style={{ color: "#D96581", paddingTop: "10px", fontSize: "12px" }}>
-          Ramo del día
-        </p>
+        <p className="productcardp1">iCompra hoy, entrega cuando quieras!</p>
+        <p className="productcardp2">Ramo del día</p>
         <p className="cardPrice">
           {"$ "}
           {variantPrice}
         </p>
         <div className="both">
-          <Link
-            className="link"
-            style={{ width: "220px", height: "44px" }}
-            to={`/user/product?${params}`}
-          >
-            <Button
-              variant="contained"
-              style={{
-                backgroundColor: "#D96581",
-                borderRadius: "7px",
-                textTransform: "none",
-                width: "220px",
-                height: "44px",
-                fontFamily: "Nunito",
-
-                fontWeight: "500",
-                fontSize: "14px",
-                color: "#FFFFFF",
-              }}
-            >
+          <Link className="link" to={`/user/product?${params}`}>
+            <Button className="productcardb1" variant="contained">
               Agregar al carrito
             </Button>
           </Link>
-
-          <img
-            style={{
-              background: "#FFFFFF",
-              borderRadius: "10px",
-            }}
-            src={truckProductCard}
-          />
+          <div className="productcardd1">
+            <img className="productcardpic" src={truckProductCard} />
+          </div>
         </div>
       </div>
     </div>

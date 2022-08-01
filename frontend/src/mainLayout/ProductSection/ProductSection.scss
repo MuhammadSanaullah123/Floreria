@@ -41,6 +41,67 @@
     @media (max-width: 768px) {
       margin-top: 20px;
     }
+    .dabbap1 {
+      font-weight: 600;
+      color: #000000;
+      margin-top: 15px;
+    }
+    .dabbap2 {
+      color: #818181;
+      font-size: 12px;
+      line-height: 0;
+      padding-top: 10px;
+    }
+    .dabbap3 {
+      color: #d96581;
+      padding-top: 15px "; font-size: 12px";
+    }
+    .dabbap4 {
+      font-weight: 700;
+      color: #000000;
+      font-size: 17px;
+      padding-top: 10px;
+    }
+    .dabbaa1 {
+      color: #ffffff;
+      text-transform: none;
+      background-color: #d96581;
+      border-radius: 10px;
+      margin-right: 10px;
+      width: 80%;
+      height: 40px;
+      text-align: center;
+      transition: 0s;
+    }
+    .dabbaa1:hover {
+      background-color: #ffffff;
+      color: #d96581;
+      border: 1px solid #d96581;
+
+      .dabbab1 {
+        background-color: #ffffff;
+        color: #d96581;
+        border-bottom: px solid #d96581;
+        border-radius: 0;
+      }
+    }
+    .dabbab1 {
+      color: #ffffff;
+      text-transform: none;
+      background-color: #d96581;
+      border-radius: 10px;
+      margin-right: 10px;
+      width: 80%;
+      height: 40px;
+      font-size: 12px;
+      transition: 0s;
+    }
+    .dabbab1:hover {
+      background-color: #ffffff;
+      color: #d96581;
+      border-bottom: 0.5px solid #d96581;
+      border-radius: 0;
+    }
   }
   .carosel {
     @media (max-width: 600px) {

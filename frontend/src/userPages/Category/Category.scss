@@ -17,13 +17,13 @@
     grid-template-columns: repeat(4, 1fr);
 
     .span-1 {
+      justify-content: space-between;
       display: flex;
       align-items: center;
       .vertialL {
-        width: 77px;
-        height: 0px;
+        width: 2px;
+        height: 77px;
         border: 0.5px solid #818181;
-        transform: rotate(-90deg);
       }
 
       margin-top: 1rem;
@@ -43,6 +43,14 @@
       h1 {
         color: #db6e88;
         font-size: 40px;
+      }
+      .span1h1 {
+        font-family: "Nunito";
+        font-weight: 600;
+        font-size: 50px;
+        @media (min-width: 1600px) {
+          font-size: 40px;
+        }
       }
     }
 
@@ -66,6 +74,18 @@
       @media (min-width: 1024px) {
         grid-column: 2/5;
       }
+      .span2h1 {
+        font-family: "Nunito";
+        font-weight: 400;
+        font-size: 18px;
+        color: #000000;
+      }
+      .span2p1 {
+        font-family: "Nunito";
+        color: #818181;
+        font-weight: 400;
+        font-size: 16px;
+      }
     }
     .span-3 {
       grid-column-start: 1;
@@ -80,6 +100,12 @@
       }
       @media (min-width: 1024px) {
         grid-column: 1/2;
+      }
+      .span3S {
+        display: flex;
+        justify-content: space-between;
+        background: #f8f8f8;
+        border-radius: 10px;
       }
     }
     .span-4 {
@@ -132,6 +158,9 @@
         border: 1px solid #d96581;
         background-color: #ffffff;
         font-size: 12px !important;
+        width: 250px;
+        color: #d96581;
+        border-radius: 10px;
       }
       p {
         margin: 0;
@@ -182,6 +211,12 @@
           display: none;
         }
       }
+      .span4f1 {
+        width: 220px;
+        height: 44px;
+        border: 1px solid #9babbf;
+        border-radius: 10px;
+      }
     }
 
     .span-5 {
@@ -230,6 +265,87 @@
       }
       .css-17djbj3-MuiSlider-valueLabel.MuiSlider-valueLabelOpen {
         background-color: transparent;
+      }
+      .span5d1 {
+        display: block;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .span5d2 {
+        width: 80%;
+        align-self: center;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+      .span5l1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .span5d3 {
+        display: flex;
+        flex-direction: row;
+        //align-items: center;
+        margin-top: 20px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .span5d4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+      }
+      .span5b1 {
+        color: #fff;
+        background-color: #d96581;
+        border-radius: 10px;
+        width: 290px;
+        height: 44px;
+        margin-top: 20px;
+      }
+      .span5b1:hover {
+        background-color: #ffffff;
+        color: #d96581;
+        border: 1px solid #d96581;
+      }
+      .span5d5 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .span5d6 {
+        display: flex;
+        flex-direction: row;
+        //align-center: center;
+        margin-top: 20px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .span5d7 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+      }
+      .span5b2 {
+        color: #fff;
+        background-color: #d96581;
+        border-radius: 10px;
+        width: 290px;
+        height: 44px;
+        margin-top: 20px;
+      }
+      .span5b2:hover {
+        background-color: #ffffff;
+        color: #d96581;
+        border: 1px solid #db6e88;
       }
     }
 

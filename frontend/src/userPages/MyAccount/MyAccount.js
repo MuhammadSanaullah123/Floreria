@@ -74,7 +74,11 @@ const MyAccount = () => {
   };
 
   const list = () => (
-    <Box sx={{ width: "250px", height: "100%" }} onClick={toggleDrawer(false)}>
+    <Box
+      className="myaccountbox1"
+      sx={{ width: "250px", height: "100%" }}
+      onClick={toggleDrawer(false)}
+    >
       <div
         style={{
           width: "80%",
@@ -82,64 +86,13 @@ const MyAccount = () => {
           marginLeft: "20px",
         }}
       >
-        <List
-          style={{
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-around",
-          }}
-          classname="list"
-        >
+        <List classname="list">
           <div className="accountPic">
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "43px",
-                background: "#D96581",
-                display: "flex",
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "30px",
-                alignItems: "center",
-                justifyContent: "center",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-                marginTop: "10px",
-              }}
-            >
-              M
-            </div>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "20px",
-                textAlign: "center",
-                textTransform: "capitalize",
-                color: "#444444",
-                margin: "0",
-                marginTop: "15px",
-              }}
-            >
-              Milovan
-            </p>
+            <div className="myaccountbox1d1">M</div>
+            <p className="myaccountbox1p1">Milovan</p>
           </div>
 
-          <Link
-            to="myaccount/home"
-            style={{
-              display: "flex",
-
-              background: "#D96581",
-              color: "#FFFFFF",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="myaccountbox1l1" to="myaccount/home">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navhome2}
@@ -147,17 +100,7 @@ const MyAccount = () => {
             Inicio
           </Link>
 
-          <Link
-            to="reminders"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link className="myaccountbox1l2" to="reminders">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbell1}
@@ -165,17 +108,7 @@ const MyAccount = () => {
             Recordatorios
           </Link>
 
-          <Link
-            to="deliveryaddress"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="deliveryaddress" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navmap1}
@@ -183,17 +116,7 @@ const MyAccount = () => {
             Direcciones
           </Link>
 
-          <Link
-            to="myorders"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="myorders" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbag1}
@@ -201,16 +124,7 @@ const MyAccount = () => {
             Pedidos
           </Link>
 
-          <Link
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navgift1}
@@ -218,17 +132,7 @@ const MyAccount = () => {
             VIP
           </Link>
 
-          <Link
-            to="referrals"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="referrals" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navshare1}
@@ -244,126 +148,45 @@ const MyAccount = () => {
       <div className="superdiv">
         <div style={{ width: "300px" }} className="leftdiv">
           <div className="accountPic">
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "43px",
-                background: "#D96581",
-                display: "flex",
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "30px",
-                alignItems: "center",
-                justifyContent: "center",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-                marginTop: "10px",
-              }}
-            >
-              M
-            </div>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "20px",
-                textAlign: "center",
-                textTransform: "capitalize",
-                color: "#444444",
-                margin: "0",
-                marginTop: "15px",
-              }}
-            >
-              Milovan
-            </p>
+            <div className="superdivd1">M</div>
+            <p className="superdivp1">Milovan</p>
           </div>
-          <Link
-            to="myaccount/home"
-            style={{
-              display: "flex",
-
-              background: "#D96581",
-              color: "#FFFFFF",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="superdivl1" to="myaccount/home">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navhome2}
             />
             Inicio
           </Link>
-          <Link
-            to="reminders"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="superdivl2" to="reminders">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbell1}
             />{" "}
             Recordatorios
           </Link>
-          <Link
-            to="deliveryaddress"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="deliveryaddress" className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navmap1}
             />
             Direcciones
           </Link>
-          <Link
-            to="myorders"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="myorders" className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbag1}
             />
             Pedidos
           </Link>
-          <Link
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navgift1}
             />
             VIP
           </Link>
-          <Link
-            to="referrals"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="referrals" className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navshare1}
@@ -482,27 +305,8 @@ const MyAccount = () => {
             <p style={{ color: "#444444", marginBottom: "0" }}>
               100.000 Puntos
             </p>
-            <div
-              style={{
-                background: "rgba(229, 229, 229, 1)",
-                width: "85%",
-                height: "0px",
-                border: "3px solid #E5E5E5",
-                borderRadius: "20px",
-                marginLeft: "20px",
-              }}
-            >
-              <div
-                style={{
-                  background: "rgba(85, 166, 48, 1)",
-                  width: "70%",
-                  height: "0px",
-                  border: "3px solid rgba(85, 166, 48, 1)",
-                  borderRadius: "20px",
-                  marginLeft: "-5px",
-                  marginTop: "-4px",
-                }}
-              ></div>
+            <div className="superdivbar1">
+              <div className="superdivbar2"></div>
             </div>
             <Button className="cardbutton">Se Necesitan Más Puntos</Button>
             {/*  <a className="cardbutton">Se Necesitan Más Puntos</a> */}
@@ -513,27 +317,8 @@ const MyAccount = () => {
             <p style={{ color: "#444444", marginBottom: "0" }}>
               100.000 Puntos
             </p>
-            <div
-              style={{
-                background: "rgba(229, 229, 229, 1)",
-                width: "85%",
-                height: "0px",
-                border: "3px solid #E5E5E5",
-                borderRadius: "20px",
-                marginLeft: "20px",
-              }}
-            >
-              <div
-                style={{
-                  background: "rgba(85, 166, 48, 1)",
-                  width: "70%",
-                  height: "0px",
-                  border: "3px solid rgba(85, 166, 48, 1)",
-                  borderRadius: "20px",
-                  marginLeft: "-5px",
-                  marginTop: "-4px",
-                }}
-              ></div>
+            <div className="superdivbar1">
+              <div className="superdivbar2"></div>
             </div>
             <Button className="cardbutton">Se Necesitan Más Puntos</Button>
           </div>
@@ -544,66 +329,25 @@ const MyAccount = () => {
             <p style={{ color: "#444444", marginBottom: "0" }}>
               100.000 Puntos
             </p>
-            <div
-              style={{
-                background: "rgba(229, 229, 229, 1)",
-                width: "85%",
-                height: "0px",
-                border: "3px solid #E5E5E5",
-                borderRadius: "20px",
-                marginLeft: "20px",
-              }}
-            >
-              <div
-                style={{
-                  background: "rgba(85, 166, 48, 1)",
-                  width: "70%",
-                  height: "0px",
-                  border: "3px solid rgba(85, 166, 48, 1)",
-                  borderRadius: "20px",
-                  marginLeft: "-5px",
-                  marginTop: "-4px",
-                }}
-              ></div>
+            <div className="superdivbar1">
+              <div className="superdivbar2"></div>
             </div>
 
             <Button className="cardbutton">Se Necesitan Más Puntos</Button>
           </div>
         </div>
         <div className="para">
-          <h6
-            style={{
-              color: "#D96581",
-              fontFamily: "Nunito",
-
-              fontWeight: "600",
-              fontSize: "24px",
-              textAlign: "center",
-            }}
-          >
-            Tus recompensas
-          </h6>
+          <h6 className="superdivh1">Tus recompensas</h6>
           <p
             style={{
               color: "#444444",
-
               textAlign: "center",
             }}
           >
             Todavia no has canjeado un cupon de descuento. Tus recompensas
           </p>
         </div>
-        <div
-          className="firstLine"
-          style={{
-            width: "90%",
-            height: "2px",
-            gridColumn: "2/5",
-            gridRow: "4/5",
-            background:
-              "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-          }}
-        ></div>
+        <div className="firstLine"></div>
         <div className="speakerdiv">
           <h6>Invitar a amigos</h6>
           <div className="both">
@@ -617,33 +361,15 @@ const MyAccount = () => {
               </p>
             </div>
             <div className="socialapp">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  width: "33%",
-                }}
-              >
+              <div className="superdivdiv1">
                 <img src={twitter} />
                 <img src={whatsapp} />
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  width: "33%",
-                }}
-              >
+              <div className="superdivdiv1">
                 <img src={messenger} />
                 <img src={facebook} />
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  width: "33%",
-                }}
-              >
+              <div className="superdivdiv1">
                 <img src={mail2} />
                 <img src={link} />
               </div>
@@ -666,27 +392,8 @@ const MyAccount = () => {
               <td>Suscribete a nuestra lista de correo</td>
               <td>10.000</td>
               <td>
-                <div
-                  style={{
-                    background: "rgba(229, 229, 229, 1)",
-                    width: "160px",
-                    height: "0px",
-                    border: "3px solid #E5E5E5",
-                    borderRadius: "20px",
-                    marginLeft: "20px",
-                  }}
-                >
-                  <div
-                    style={{
-                      background: "rgba(80, 157, 111, 1)",
-                      width: "110px",
-                      height: "0px",
-                      border: "3px solid rgba(80, 157, 111, 1)",
-                      borderRadius: "20px",
-                      marginLeft: "-5px",
-                      marginTop: "-4px",
-                    }}
-                  ></div>
+                <div className="superdivbar3">
+                  <div className="superdivbar4"></div>
                 </div>
               </td>
             </tr>
@@ -698,27 +405,8 @@ const MyAccount = () => {
               <td>Suscribete a nuestra lista de correo</td>
               <td>10.000</td>
               <td>
-                <div
-                  style={{
-                    background: "rgba(229, 229, 229, 1)",
-                    width: "160px",
-                    height: "0px",
-                    border: "3px solid #E5E5E5",
-                    borderRadius: "20px",
-                    marginLeft: "20px",
-                  }}
-                >
-                  <div
-                    style={{
-                      background: "rgba(80, 157, 111, 1)",
-                      width: "110px",
-                      height: "0px",
-                      border: "3px solid rgba(80, 157, 111, 1)",
-                      borderRadius: "20px",
-                      marginLeft: "-5px",
-                      marginTop: "-4px",
-                    }}
-                  ></div>
+                <div className="superdivbar3">
+                  <div className="superdivbar4"></div>
                 </div>
               </td>
             </tr>
@@ -730,44 +418,14 @@ const MyAccount = () => {
               <td>Suscribete a nuestra lista de correo</td>
               <td>10.000</td>
               <td>
-                <div
-                  style={{
-                    background: "rgba(229, 229, 229, 1)",
-                    width: "160px",
-                    height: "0px",
-                    border: "3px solid #E5E5E5",
-                    borderRadius: "20px",
-                    marginLeft: "20px",
-                  }}
-                >
-                  <div
-                    style={{
-                      background: "rgba(80, 157, 111, 1)",
-                      width: "110px",
-                      height: "0px",
-                      border: "3px solid rgba(80, 157, 111, 1)",
-                      borderRadius: "20px",
-                      marginLeft: "-5px",
-                      marginTop: "-4px",
-                    }}
-                  ></div>
+                <div className="superdivbar3">
+                  <div className="superdivbar4"></div>
                 </div>
               </td>
             </tr>
           </table>
         </div>
-        <div
-          className="secondLine"
-          style={{
-            width: "90%",
-            height: "2px",
-            marginBottom: "120px",
-            gridColumn: "2/5",
-            gridRow: "7/8",
-            background:
-              "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-          }}
-        ></div>
+        <div className="secondLine"></div>
       </div>
     </div>
   );

@@ -53,63 +53,13 @@ const Reminders = () => {
           marginLeft: "20px",
         }}
       >
-        <List
-          style={{
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-around",
-          }}
-          classname="list"
-        >
+        <List classname="list">
           <div className="accountPic">
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "43px",
-                background: "#D96581",
-                display: "flex",
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "30px",
-                alignItems: "center",
-                justifyContent: "center",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-                marginTop: "10px",
-              }}
-            >
-              M
-            </div>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "20px",
-                textAlign: "center",
-                textTransform: "capitalize",
-                color: "#444444",
-                margin: "0",
-                marginTop: "15px",
-              }}
-            >
-              Milovan
-            </p>
+            <div className="myaccountbox1d1">M</div>
+            <p className="myaccountbox1p1">Milovan</p>
           </div>
 
-          <Link
-            to="home"
-            style={{
-              display: "flex",
-              color: "#FFFFFF",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="home" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navhome1}
@@ -117,17 +67,7 @@ const Reminders = () => {
             Inicio
           </Link>
 
-          <Link
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              background: "#D96581",
-              color: "#ffffff",
-            }}
-          >
+          <Link className="myaccountbox1l1">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbell2}
@@ -135,17 +75,7 @@ const Reminders = () => {
             Recordatorios
           </Link>
 
-          <Link
-            to="deliveryaddress"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="deliveryaddress" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navmap1}
@@ -153,17 +83,7 @@ const Reminders = () => {
             Direcciones
           </Link>
 
-          <Link
-            to="myorders"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="myorders" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbag1}
@@ -171,16 +91,7 @@ const Reminders = () => {
             Pedidos
           </Link>
 
-          <Link
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navgift1}
@@ -188,17 +99,7 @@ const Reminders = () => {
             VIP
           </Link>
 
-          <Link
-            to="referrals"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="referrals" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navshare1}
@@ -212,128 +113,48 @@ const Reminders = () => {
 
   return (
     <div style={{ margin: "0 auto", width: "90%", marginBottom: "100px" }}>
-      <div style={{ marginTop: "50px" }} className="reminderdiv">
-        <div style={{ height: "537px", width: "300px" }} className="leftdiv">
+      <div className="reminderdiv">
+        <div className="leftdiv">
           <div className="name">
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "43px",
-                background: "#D96581",
-                display: "flex",
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "30px",
-                alignItems: "center",
-                justifyContent: "center",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-                marginTop: "10px",
-              }}
-            >
-              M
-            </div>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "20px",
-                textAlign: "center",
-                textTransform: "capitalize",
-                color: "#444444",
-                margin: "0",
-                marginTop: "15px",
-              }}
-            >
-              Milovan
-            </p>
+            <div className="superdivd1">M</div>
+            <p className="superdivp1">Milovan</p>
           </div>
-          <Link
-            to="home"
-            style={{
-              display: "flex",
-
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="home" className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navhome1}
             />
             Inicio
           </Link>
-          <Link
-            style={{
-              display: "flex",
-              background: "#D96581",
-              color: "#FFFFFF",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="superdivl1">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbell2}
             />{" "}
             Recordatorios
           </Link>
-          <Link
-            to="deliveryaddress"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="deliveryaddress" className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navmap1}
             />
             Direcciones
           </Link>
-          <Link
-            to="myorders"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="myorders" className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbag1}
             />
             Pedidos
           </Link>
-          <Link
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navgift1}
             />
             VIP
           </Link>
-          <Link
-            to="referrals"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="referrals" className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navshare1}
@@ -369,89 +190,26 @@ const Reminders = () => {
               />
             </LocalizationProvider>
           </div>
-          <div
-            style={{
-              width: "90%",
-              height: "2px",
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-            }}
-          ></div>
+          <div className="reminderdivd1"></div>
           <div className="event_des">
-            <div
-              className="ver_line"
-              style={{
-                width: "6px",
-                height: "90px",
-                background: "#D96581",
-                borderRadius: "10px",
-              }}
-            ></div>
+            <div className="ver_line"></div>
 
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                height: "100%",
-                marginRight: "auto",
-              }}
-            >
-              <div
-                style={{
-                  marginLeft: "30px",
-                  display: "flex",
-                  flexDirection: "column",
-                  height: "100%",
-                  justifyContent: "space-around",
-                }}
-              >
+            <div className="reminderdivd2">
+              <div className="reminderdivd3">
                 <h6>Agosto 22 - 09:00PM</h6>
-                <p
-                  style={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    color: "#D96581",
-                  }}
-                >
-                  Aniversario de Matrimonio
-                </p>
+                <p className="reminderdivp1">Aniversario de Matrimonio</p>
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
-                  <p
-                    style={{
-                      fontFamily: "Nunito",
-                      fontWeight: "400",
-                      fontSize: "14px",
-                      color: "#9BABBF",
-                    }}
-                  >
-                    Recordar
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: "Nunito",
-                      fontWeight: "400",
-                      fontSize: "14px",
-                      color: "#444444",
-                    }}
-                  >
+                  <p className="reminderdivp2">Recordar</p>
+                  <p className="reminderdivp3" style={{}}>
                     1 semana antes
                   </p>
                 </div>
               </div>
             </div>
-            <div className="paragh" style={{ width: "240px", height: "76px" }}>
-              <p
-                style={{
-                  fontFamily: "Nunito",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  color: "#444444",
-                  margin: "0",
-                  lineHeight: "19px",
-                }}
-              >
+            <div className="paragh">
+              <p className="reminderdivp4">
                 Lörem ipsum spim decid. Lådvinsalkoholism kåfyskap juktiga.
                 Decijåst egofas disade endotism fast hov.{" "}
               </p>
@@ -459,78 +217,27 @@ const Reminders = () => {
           </div>
           <div className="event_des">
             <div
-              className="ver_line"
               style={{
-                width: "6px",
-                height: "90px",
                 background: "#509D6F",
-                borderRadius: "10px",
               }}
+              className="ver_line"
             ></div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                height: "100%",
-                marginRight: "auto",
-              }}
-            >
-              <div
-                style={{
-                  marginLeft: "30px",
-                  display: "flex",
-                  flexDirection: "column",
-                  height: "100%",
-                  justifyContent: "space-around",
-                }}
-              >
+            <div className="reminderdivd2">
+              <div className="reminderdivd3">
                 <h6>Agosto 30 - 12:00AM</h6>
-                <p
-                  style={{
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    color: "#509D6F",
-                  }}
-                >
+                <p style={{ color: "#509D6F" }} className="reminderdivp1">
                   Cumpleaños de Jeritza
                 </p>
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
-                  <p
-                    style={{
-                      fontFamily: "Nunito",
-                      fontWeight: "400",
-                      fontSize: "14px",
-                      color: "#9BABBF",
-                    }}
-                  >
-                    Recordar
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: "Nunito",
-                      fontWeight: "400",
-                      fontSize: "14px",
-                      color: "#444444",
-                    }}
-                  >
-                    1 semana antes
-                  </p>
+                  <p className="reminderdivp2">Recordar</p>
+                  <p className="reminderdivp3">1 semana antes</p>
                 </div>
               </div>
             </div>
-            <div className="paragh" style={{ width: "240px", height: "76px" }}>
-              <p
-                style={{
-                  fontFamily: "Nunito",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  color: "#444444",
-                  margin: "0",
-                  lineHeight: "19px",
-                }}
-              >
+            <div className="paragh">
+              <p className="reminderdivp4">
                 Lörem ipsum spim decid. Lådvinsalkoholism kåfyskap juktiga.
                 Decijåst egofas disade endotism fast hov.{" "}
               </p>
@@ -596,21 +303,7 @@ const Reminders = () => {
             </textarea>
             <br />
             <br />
-            <Button
-              style={{
-                fontFamily: "Nunito",
-                width: "100%",
-                height: "44px",
-                background: "#D96581",
-                borderRadius: "10px",
-                fontWeight: "400",
-                fontSize: "16px",
-                color: "#FFFFFF",
-                textTransform: "capitalize",
-              }}
-            >
-              Añadir Recordatorio
-            </Button>
+            <Button className="reminderdivb1">Añadir Recordatorio</Button>
           </form>
         </div>
       </div>

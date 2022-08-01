@@ -31,6 +31,91 @@
       }
     }
   }
+  .sabkapapad1 {
+    background: linear-gradient(
+      90deg,
+      rgba(155, 171, 191, 0) 1.04%,
+      #9babbf 51.56%,
+      rgba(155, 171, 191, 0) 100%
+    );
+    width: 80%;
+    height: 2px;
+  }
+  .sabkapapap1 {
+    font-family: "Cormorant Upright";
+    color: #000000;
+    font-weight: 700;
+    font-size: 50px;
+  }
+  .sabkapapap2 {
+    font-family: "Cormorant Upright";
+    font-weight: 700;
+    font-size: 50px;
+    color: #444444;
+    margin-top: 100px;
+  }
+  .sabkapapad2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+  .sabkapapad3 {
+    display: flex;
+    flex-direction: column;
+    margin-left: -170px;
+  }
+  .sabkapapad4 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .sabkapapap3 {
+    font-size: 22px;
+    font-weight: 700;
+    font-family: "Nunito";
+    color: #444444;
+    width: 90%;
+  }
+  .sabkapapad5 {
+    background: #d96581;
+    border-radius: 30px;
+    width: 4px;
+    height: 24px;
+  }
+  .Ref {
+    font-family: "Cormorant Upright";
+    font-size: 60px;
+    color: #444444;
+    font-weight: 600;
+    margin-top: 50px;
+  }
+  .sabkapapap4 {
+    color: #9babbf;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 60px;
+  }
+  .sabkapapad6 {
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+    margin-top: 50px;
+  }
+  .sabkapapad7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sabkapapad8 {
+    background: #d96581;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .flexwali {
   justify-content: center;
@@ -126,6 +211,18 @@
   font-size: 12px;
   width: 150px;
   border-radius: 10px;
+  cursor: pointer;
+  .sabkapapapic1 {
+    color: #ffffff;
+  }
+}
+.btn:hover {
+  background-color: #ffffff;
+  color: #d96581;
+  border: 1px solid #d96581;
+  .sabkapapapic1 {
+    color: #d96581 !important;
+  }
 }
 
 .form-group {

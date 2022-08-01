@@ -112,6 +112,28 @@
       .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
         color: #000;
       }
+      .span2p1 {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .span2p2 {
+        color: #d96581;
+        font-family: "Nunito";
+        font-weight: 700;
+      }
+      .span2t1 {
+        width: 100%;
+        margin: 0.2rem 0;
+        background: #f8f8f8;
+        border-radius: 10px;
+      }
+      .span2i1 {
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+      }
     }
     .span-23 {
       width: 800px;
@@ -133,6 +155,20 @@
 
           font-weight: 700;
         }
+      }
+      .span23p1 {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .span23b1 {
+        width: 320px;
+        height: 50px;
+        background: #d96581;
+        border-radius: 10px;
+        margin-top: 10px;
+        cursor: pointer;
       }
     }
     .span-3 {
@@ -310,6 +346,73 @@
       .address {
         margin-bottom: 30px !important;
       }
+      .span3p1 {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .span3d1 {
+        background: #f8f8f8;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .truck {
+        position: relative;
+        top: 80px;
+        left: 70px;
+        z-index: 5;
+      }
+      .home {
+        position: relative;
+        top: 60px;
+        left: 460px;
+        z-index: 5;
+      }
+      .span3p2 {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .span3d2 {
+        margin-left: 20px;
+        display: flex;
+        width: 100%;
+      }
+      .span3d3 {
+        margin-right: 20px;
+        background: #ffffff;
+        border-radius: 10px;
+      }
+      .span3d4 {
+        background: #ffffff;
+        border-radius: 10px;
+        width: 200px;
+        text-transform: inherit;
+        padding: 10px;
+        text-align-last: start;
+        margin-right: 10px;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 16px;
+        padding: 1rem;
+      }
+      .addbtn {
+        width: 200px;
+        height: 150px;
+        background: #d96581;
+        border-radius: 10px;
+        font-family: "Nunito";
+        font-weight: 400;
+        font-size: 16px;
+        text-transform: none;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
     }
 
     .span-4 {
@@ -409,6 +512,59 @@
           width: 320px !important;
         }
       }
+      .span4p1 {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .span4d1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .span4i1 {
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .span4l1 {
+        margin-left: 20px;
+        color: #444444;
+        font-family: "Nunito";
+      }
+      .span4p2 {
+        color: #d96581;
+        font-family: "Nunito";
+        align-self: end;
+        font-weight: 700;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+      .span4t1 {
+        width: 799px;
+        height: 183px;
+        background: #f8f8f8;
+        border-radius: 10px;
+      }
+      .span4d2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .span4d3 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .secondForm {
+        width: 799px;
+        height: 48px;
+        background: #f8f8f8;
+        border-radius: 10px;
+      }
     }
     .span-45 {
       display: flex;
@@ -468,6 +624,41 @@
           right: 50px;
         }
       }
+      .span45p1 {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .subDiv {
+        display: flex;
+        align-items: center;
+        width: 35%;
+        justify-content: space-around;
+      }
+      .span45i1 {
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+      .span45p2 {
+        display: flex;
+        margin-left: 10px;
+        align-items: center;
+        margin-bottom: 0;
+      }
+      .span45p3 {
+        color: #d96581;
+        margin-bottom: 0;
+        margin-right: 5px;
+        font-weight: 700;
+      }
+      .span45d1 {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+      }
     }
 
     .span-5 {
@@ -513,6 +704,89 @@
         grid-row-end: 52;
         margin-bottom: 50px;
       }
+      .span5d1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+      }
+      .span5d2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: -170px;
+      }
+      .span5d3 {
+        width: 2px;
+        height: 20px;
+        background: #9babbf;
+        border-radius: 6px;
+      }
+      .span5p1 {
+        margin-left: 0;
+        font-weight: 700;
+        color: #444444;
+        font-family: "Poppins";
+      }
+      .bigbtn {
+        width: 420px;
+        height: 50px;
+        font-family: "Poppins";
+        background: #d96581;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: capitalize;
+        color: #ffffff;
+        cursor: pointer;
+      }
+      .bigbtn:hover {
+        background-color: #ffffff;
+        color: #d96581;
+        border: 1px solid #d96581;
+      }
+      .span5d4 {
+        background: linear-gradient(
+          90deg,
+          rgba(155, 171, 191, 0) 1.04%,
+          #9babbf 51.56%,
+          rgba(155, 171, 191, 0) 100%
+        );
+        width: 80%;
+        height: 2px;
+      }
+      .span5d5 {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+      }
+      .span5t1 {
+        width: 300px;
+        height: 50px;
+        background: #f8f8f8;
+        border-radius: 10px;
+      }
+      .span5b1 {
+        width: 100px;
+        height: 50px;
+        font-family: Poppins;
+        background: #d96581;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        cursor: pointer;
+      }
+      .span5b1:hover {
+        background-color: #ffffff;
+        color: #d96581;
+        border: 1px solid #d96581;
+      }
+      .span5p2 {
+        color: #444444;
+        font-weight: 600;
+        line-height: 22px;
+      }
     }
     .span-6 {
       grid-column-start: 1;
@@ -544,6 +818,34 @@
       @media (max-width: 800px) {
         grid-column-start: 1;
         grid-column-end: 2;
+      }
+      .span6d1 {
+        background: linear-gradient(
+          90deg,
+          rgba(155, 171, 191, 0) 1.04%,
+          #9babbf 51.56%,
+          rgba(155, 171, 191, 0) 100%
+        );
+        width: 95%;
+        height: 2px;
+        margin-bottom: 15px;
+      }
+      .buttonViolet {
+        background-color: #d96581;
+        width: 800px;
+        height: 60px;
+        text-transform: none;
+        border-radius: 10px;
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 33px;
+        cursor: pointer;
+      }
+      .buttonViolet:hover {
+        background-color: #ffffff;
+        color: #d96581;
+        border: 1px solid #d96581;
       }
     }
 

@@ -123,64 +123,13 @@ ${newAddress[index].reference}`
           marginLeft: "20px",
         }}
       >
-        <List
-          style={{
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-around",
-          }}
-          classname="list"
-        >
+        <List classname="list">
           <div className="accountPic">
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "43px",
-                background: "#D96581",
-                display: "flex",
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "30px",
-                alignItems: "center",
-                justifyContent: "center",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-                marginTop: "10px",
-              }}
-            >
-              M
-            </div>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "20px",
-                textAlign: "center",
-                textTransform: "capitalize",
-                color: "#444444",
-                margin: "0",
-                marginTop: "15px",
-              }}
-            >
-              Milovan
-            </p>
+            <div className="myaccountbox1d1">M</div>
+            <p className="myaccountbox1p1">Milovan</p>
           </div>
 
-          <Link
-            to="home"
-            style={{
-              display: "flex",
-
-              color: "#FFFFFF",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="home" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navhome1}
@@ -188,17 +137,7 @@ ${newAddress[index].reference}`
             Inicio
           </Link>
 
-          <Link
-            to="reminders"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="reminders" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbell1}
@@ -206,17 +145,7 @@ ${newAddress[index].reference}`
             Recordatorios
           </Link>
 
-          <Link
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              background: "#D96581",
-              alignItems: "center",
-              color: "#ffffff",
-            }}
-          >
+          <Link className="myaccountbox1l1">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navmap2}
@@ -224,17 +153,7 @@ ${newAddress[index].reference}`
             Direcciones
           </Link>
 
-          <Link
-            to="myorders"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="myorders" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbag1}
@@ -242,16 +161,7 @@ ${newAddress[index].reference}`
             Pedidos
           </Link>
 
-          <Link
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navgift1}
@@ -259,17 +169,7 @@ ${newAddress[index].reference}`
             VIP
           </Link>
 
-          <Link
-            to="referrals"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="referrals" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navshare1}
@@ -285,124 +185,45 @@ ${newAddress[index].reference}`
       <div style={{ marginTop: "50px" }} className="deliveryaddressdiv">
         <div style={{ height: "537px", width: "300px" }} className="leftdiv">
           <div className="name">
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "43px",
-                background: "#D96581",
-                display: "flex",
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "30px",
-                alignItems: "center",
-                justifyContent: "center",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-                marginTop: "10px",
-              }}
-            >
-              M
-            </div>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "20px",
-                textAlign: "center",
-                textTransform: "capitalize",
-                color: "#444444",
-                margin: "0",
-                marginTop: "15px",
-              }}
-            >
-              Milovan
-            </p>
+            <div className="superdivd1">M</div>
+            <p className="superdivp1">Milovan</p>
           </div>
-          <Link
-            to="home"
-            style={{
-              display: "flex",
-
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="home" className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navhome1}
             />
             Inicio
           </Link>
-          <Link
-            to="reminders"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="reminders" className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbell1}
             />{" "}
             Recordatorios
           </Link>
-          <Link
-            style={{
-              display: "flex",
-              background: "#D96581",
-              color: "#FFFFFF",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="superdivl1">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navmap2}
             />
             Direcciones
           </Link>
-          <Link
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="myorders" className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbag1}
             />
             Pedidos
           </Link>
-          <Link
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navgift1}
             />
             VIP
           </Link>
-          <Link
-            to="referrals"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="referrals" className="superdivl2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navshare1}
@@ -438,21 +259,13 @@ ${newAddress[index].reference}`
                 ? newAddress.map((addresses, index) => {
                     return (
                       <div
-                        className={`${index}`}
+                        className={`${index} deliveryaddressdivd1`}
                         key={index}
                         disabled={disable}
                         variant="contained"
                         style={{
                           //display: `${style_index2 === index ? "none" : ""}`,
-                          color: "#444444",
-                          background: "#F8F8F8",
-                          borderRadius: "10px",
-                          width: "280px",
-                          height: "200px",
-                          textTransform: "inherit",
-                          padding: "10px",
-                          textAlignLast: "start",
-                          marginRight: "10px",
+
                           border: `${
                             style_index === index ? "1px solid #D96581" : " "
                           }`,
@@ -466,52 +279,26 @@ ${newAddress[index].reference}`
                           }}
                         >
                           <p
+                            className="deliveryaddressdivp1"
                             style={{
-                              display: "flex",
-                              width: "120px",
-                              fontSize: "14px",
-                              height: "40px",
                               background: `${
                                 style_index === index ? "#ffffff" : "#D96581"
                               }`,
                               color: `${
                                 style_index === index ? "#D96581" : "#ffffff"
                               }`,
-                              borderRadius: "10px",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              marginLeft: "0",
                             }}
                           >
                             Casa
                           </p>
                           <div style={{ display: "flex" }}>
                             <div
-                              style={{
-                                width: "40px",
-                                height: "40px",
-                                background: "rgba(68, 68, 68, 0.1)",
-                                borderRadius: "10px",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                marginRight: "10px",
-                              }}
+                              className="deliveryaddressdivd2"
                               onClick={() => handleRemove(index)}
                             >
                               <img src={addCross} />
                             </div>
-                            <div
-                              style={{
-                                width: "40px",
-                                height: "40px",
-                                background: "rgba(217, 101, 129, 0.1)",
-                                borderRadius: "10px",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                              }}
-                            >
+                            <div className="deliveryaddressdivd3">
                               <img src={addEdit} />
                             </div>
                           </div>
@@ -532,18 +319,6 @@ ${newAddress[index].reference}`
               className="addbtn"
               variant="contained"
               onClick={handleOpen2}
-              style={{
-                width: "200px",
-                height: "200px",
-                background: "#D96581",
-                borderRadius: "10px",
-                fontFamily: "Nunito",
-                fontWeight: "400",
-                fontSize: "16px",
-                textTransform: "none",
-                display: "flex",
-                flexDirection: "column",
-              }}
             >
               <img style={{ marginBottom: "10px" }} src={addAdd} />
               Nueva Dirección

@@ -90,311 +90,65 @@ const ProductSection = () => {
         ))} */}
         <div className="dabba" style={{ justifySelf: "self-end" }}>
           <img style={{ width: "100%" }} src={f1} />
-          <p style={{ fontWeight: "600", color: "#000000", marginTop: "15px" }}>
-            iEntrega en menos de 2 horas!
-          </p>
-          <p
-            style={{
-              color: "#818181",
-              fontSize: "12px",
-              lineHeight: "0",
-              paddingTop: "10px",
-            }}
-          >
-            iCompra hoy, entrega cuando quieras!
-          </p>
-          <p style={{ color: "#D96581", paddingTop: "15px", fontSize: "12px" }}>
-            {" "}
-            Ramo del día
-          </p>
-          <p
-            style={{
-              fontWeight: "700",
-              color: "#000000",
-              fontSize: "17px",
-              paddingTop: "10px",
-            }}
-          >
-            {" "}
-            $19.990
-          </p>
+          <p className="dabbap1">iEntrega en menos de 2 horas!</p>
+          <p className="dabbap2">iCompra hoy, entrega cuando quieras!</p>
+          <p className="dabbap3"> Ramo del día</p>
+          <p className="dabbap4"> $19.990</p>
           <div style={{ display: "flex", paddingTop: "10px" }}>
-            <Link
-              style={{
-                color: "#ffffff",
-                textTransform: "none",
-                backgroundColor: "#D96581",
-                borderRadius: "10px",
-                marginRight: "10px",
-                width: "80%",
-                height: "40px",
-                textAlign: "center",
-              }}
-              to="/user/category?products=|"
-            >
-              <Button
-                style={{
-                  color: "#ffffff",
-                  textTransform: "none",
-                  backgroundColor: "#D96581",
-                  borderRadius: "10px",
-                  marginRight: "10px",
-                  width: "80%",
-                  height: "40px",
-                  fontSize: "12px",
-                }}
-              >
-                Agregar al carrito
-              </Button>
+            <Link className="dabbaa1" to="/user/category?products=|">
+              <Button className="dabbab1">Agregar al carrito</Button>
             </Link>
-
             <img style={{ width: "20px" }} src={delivery} />
           </div>
         </div>
         <div className="dabba">
           <img style={{ width: "100%" }} src={f2} />
-          <p style={{ fontWeight: "600", color: "#000000", marginTop: "15px" }}>
-            iEntrega en menos de 2 horas!
-          </p>
-          <p
-            style={{
-              color: "#818181",
-              fontSize: "12px",
-              lineHeight: "0",
-              paddingTop: "10px",
-            }}
-          >
-            iCompra hoy, entrega cuando quieras!
-          </p>
-          <p style={{ color: "#D96581", paddingTop: "15px", fontSize: "12px" }}>
-            {" "}
-            Ramo del día
-          </p>
-          <p
-            style={{
-              fontWeight: "700",
-              color: "#000000",
-              fontSize: "17px",
-              paddingTop: "10px",
-            }}
-          >
-            {" "}
-            $19.990
-          </p>
+          <p className="dabbap1">iEntrega en menos de 2 horas!</p>
+          <p className="dabbap2">iCompra hoy, entrega cuando quieras!</p>
+          <p className="dabbap3"> Ramo del día</p>
+          <p className="dabbap4"> $19.990</p>
           <div style={{ display: "flex", paddingTop: "10px" }}>
-            <Link
-              style={{
-                color: "#ffffff",
-                textTransform: "none",
-                backgroundColor: "#D96581",
-                borderRadius: "10px",
-                marginRight: "10px",
-                width: "80%",
-                height: "40px",
-                textAlign: "center",
-              }}
-              to="/user/category?products=|"
-            >
-              <Button
-                style={{
-                  color: "#ffffff",
-                  textTransform: "none",
-                  backgroundColor: "#D96581",
-                  borderRadius: "10px",
-                  marginRight: "10px",
-                  width: "80%",
-                  height: "40px",
-                  fontSize: "12px",
-                }}
-              >
-                Agregar al carrito
-              </Button>
+            <Link className="dabbaa1" to="/user/category?products=|">
+              <Button className="dabbab1">Agregar al carrito</Button>
             </Link>
             <img style={{ width: "20px" }} src={delivery} />
           </div>
         </div>
         <div className="dabba" style={{ justifySelf: "start" }}>
           <img style={{ width: "100%" }} src={f3} />
-          <p style={{ fontWeight: "600", color: "#000000", marginTop: "15px" }}>
-            iEntrega en menos de 2 horas!
-          </p>
-          <p
-            style={{
-              color: "#818181",
-              fontSize: "12px",
-              lineHeight: "0",
-              paddingTop: "10px",
-            }}
-          >
-            iCompra hoy, entrega cuando quieras!
-          </p>
-          <p style={{ color: "#D96581", paddingTop: "15px", fontSize: "12px" }}>
-            {" "}
-            Ramo del día
-          </p>
-          <p
-            style={{
-              fontWeight: "700",
-              color: "#000000",
-              fontSize: "17px",
-              paddingTop: "10px",
-            }}
-          >
-            {" "}
-            $19.990
-          </p>
+          <p className="dabbap1">iEntrega en menos de 2 horas!</p>
+          <p className="dabbap2">iCompra hoy, entrega cuando quieras!</p>
+          <p className="dabbap3"> Ramo del día</p>
+          <p className="dabbap4"> $19.990</p>
           <div style={{ display: "flex", paddingTop: "10px" }}>
-            <Link
-              style={{
-                color: "#ffffff",
-                textTransform: "none",
-                backgroundColor: "#D96581",
-                borderRadius: "10px",
-                marginRight: "10px",
-                width: "80%",
-                height: "40px",
-                textAlign: "center",
-              }}
-              to="/user/category?products=licories"
-            >
-              <Button
-                style={{
-                  color: "#ffffff",
-                  textTransform: "none",
-                  backgroundColor: "#D96581",
-                  borderRadius: "10px",
-                  marginRight: "10px",
-                  width: "80%",
-                  height: "40px",
-                  fontSize: "12px",
-                }}
-              >
-                Agregar al carrito
-              </Button>
+            <Link className="dabbaa1" to="/user/category?products=licories">
+              <Button className="dabbab1">Agregar al carrito</Button>
             </Link>
             <img style={{ width: "20px" }} src={delivery} />
           </div>
         </div>
         <div className="dabba" style={{ justifySelf: "start" }}>
           <img style={{ width: "100%" }} src={f3} />
-          <p style={{ fontWeight: "600", color: "#000000", marginTop: "15px" }}>
-            iEntrega en menos de 2 horas!
-          </p>
-          <p
-            style={{
-              color: "#818181",
-              fontSize: "12px",
-              lineHeight: "0",
-              paddingTop: "10px",
-            }}
-          >
-            iCompra hoy, entrega cuando quieras!
-          </p>
-          <p style={{ color: "#D96581", paddingTop: "15px", fontSize: "12px" }}>
-            {" "}
-            Ramo del día
-          </p>
-          <p
-            style={{
-              fontWeight: "700",
-              color: "#000000",
-              fontSize: "17px",
-              paddingTop: "10px",
-            }}
-          >
-            {" "}
-            $19.990
-          </p>
+          <p className="dabbap1">iEntrega en menos de 2 horas!</p>
+          <p className="dabbap2">iCompra hoy, entrega cuando quieras!</p>
+          <p className="dabbap3"> Ramo del día</p>
+          <p className="dabbap4"> $19.990</p>
           <div style={{ display: "flex", paddingTop: "10px" }}>
-            <Link
-              style={{
-                color: "#ffffff",
-                textTransform: "none",
-                backgroundColor: "#D96581",
-                borderRadius: "10px",
-                marginRight: "10px",
-                width: "80%",
-                height: "40px",
-                textAlign: "center",
-              }}
-              to="/user/category?products=licories"
-            >
-              <Button
-                style={{
-                  color: "#ffffff",
-                  textTransform: "none",
-                  backgroundColor: "#D96581",
-                  borderRadius: "10px",
-                  marginRight: "10px",
-                  width: "80%",
-                  height: "40px",
-                  fontSize: "12px",
-                }}
-              >
-                Agregar al carrito
-              </Button>
+            <Link className="dabbaa1" to="/user/category?products=licories">
+              <Button className="dabbab1">Agregar al carrito</Button>
             </Link>
             <img style={{ width: "20px" }} src={delivery} />
           </div>
         </div>
         <div className="dabba" style={{ justifySelf: "start" }}>
           <img style={{ width: "100%" }} src={f3} />
-          <p style={{ fontWeight: "600", color: "#000000", marginTop: "15px" }}>
-            iEntrega en menos de 2 horas!
-          </p>
-          <p
-            style={{
-              color: "#818181",
-              fontSize: "12px",
-              lineHeight: "0",
-              paddingTop: "10px",
-            }}
-          >
-            iCompra hoy, entrega cuando quieras!
-          </p>
-          <p style={{ color: "#D96581", paddingTop: "15px", fontSize: "12px" }}>
-            {" "}
-            Ramo del día
-          </p>
-          <p
-            style={{
-              fontWeight: "700",
-              color: "#000000",
-              fontSize: "17px",
-              paddingTop: "10px",
-            }}
-          >
-            {" "}
-            $19.990
-          </p>
+          <p className="dabbap1">iEntrega en menos de 2 horas!</p>
+          <p className="dabbap2">iCompra hoy, entrega cuando quieras!</p>
+          <p className="dabbap3"> Ramo del día</p>
+          <p className="dabbap4"> $19.990</p>
           <div style={{ display: "flex", paddingTop: "10px" }}>
-            <Link
-              style={{
-                color: "#ffffff",
-                textTransform: "none",
-                backgroundColor: "#D96581",
-                borderRadius: "10px",
-                marginRight: "10px",
-                width: "80%",
-                height: "40px",
-                textAlign: "center",
-              }}
-              to="/user/category?products=licories"
-            >
-              <Button
-                style={{
-                  color: "#ffffff",
-                  textTransform: "none",
-                  backgroundColor: "#D96581",
-                  borderRadius: "10px",
-                  marginRight: "10px",
-                  width: "80%",
-                  height: "40px",
-                  fontSize: "12px",
-                }}
-              >
-                Agregar al carrito
-              </Button>
+            <Link className="dabbaa1" to="/user/category?products=licories">
+              <Button className="dabbab1">Agregar al carrito</Button>
             </Link>
             <img style={{ width: "20px" }} src={delivery} />
           </div>

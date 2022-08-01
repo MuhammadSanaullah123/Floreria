@@ -10,7 +10,7 @@
   .both {
     display: flex;
     flex-direction: row !important;
-    width: 93%;
+    width: 93% !important;
     margin-bottom: 30px;
     .link {
       @media (min-width: 1600px) {
@@ -21,21 +21,14 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    img {
-      border-radius: 20px !important;
-      width: 20px;
-      @media (min-width: 1600px) {
-        width: 25px !important;
-      }
-    }
   }
   .cardImage {
     border-radius: 20px 20px 0px 0px;
     img {
       border-radius: 20px 20px 0px 0px;
-
       width: 330px !important;
       height: 330px !important;
+      min-width: 330px;
     }
   }
   .cardTitle {
@@ -64,5 +57,48 @@
     @media (min-width: 768px) {
       font-size: 0.7rem;
     }
+  }
+  .productcardp1 {
+    color: #818181;
+    font-size: 12px;
+    line-height: 0;
+    padding-top: 10px;
+  }
+  .productcardp2 {
+    color: #d96581;
+    padding-top: 10px;
+    font-size: 12px;
+  }
+  .link {
+    width: 220px;
+    height: 44px;
+  }
+  .productcardb1 {
+    background-color: #d96581;
+    border-radius: 7px;
+    text-transform: none;
+    width: 220px;
+    height: 44px;
+    font-family: "Nunito";
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .productcardb1:hover {
+    background-color: #ffffff;
+    color: #d96581;
+    border: 1px solid #d96581;
+  }
+  .productcardpic {
+    background: #ffffff;
+    width: 24px;
+  }
+  .productcardd1 {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

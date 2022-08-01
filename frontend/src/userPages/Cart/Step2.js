@@ -383,27 +383,10 @@ const Step2 = ({ handleNext }) => {
         </div>
         <div className="span-2">
           <div className="numbers">
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontStyle: "normal",
-                fontWeight: "700",
-                fontSize: "20px",
-              }}
-            >
-              1. Datos del cliente
-            </p>
+            <p className="span2p1">1. Datos del cliente</p>
             <div style={{ display: "flex" }}>
               <p style={{ color: "#9BABBF" }}>Ya tienes una cuenta?</p>
-              <p
-                style={{
-                  color: "#D96581",
-                  fontFamily: "Nunito",
-                  fontWeight: "700",
-                }}
-              >
-                Ingresar
-              </p>
+              <p className="span2p2">Ingresar</p>
             </div>
           </div>
           <div
@@ -412,70 +395,50 @@ const Step2 = ({ handleNext }) => {
           >
             <div className="firstF" style={{ width: "390px" }}>
               <TextField
+                className="span2t1"
                 onChange={handleChangeInformation}
                 name="name"
                 label="Nombre"
                 variant="outlined"
-                style={{
-                  width: "100%",
-                  margin: "0.2rem 0",
-                  background: "#F8F8F8",
-                  borderRadius: "10px",
-                }}
                 value={personalInformation.name}
               />
             </div>
             <div className="firstF" style={{ width: "390px" }}>
               <TextField
+                className="span2t1"
                 onChange={handleChangeInformation}
                 name="surname"
                 label="Apellido"
                 variant="outlined"
-                style={{
-                  width: "100%",
-                  margin: "0.2rem 0",
-                  background: "#F8F8F8",
-                  borderRadius: "10px",
-                }}
                 value={personalInformation.surname}
               />
             </div>
           </div>
           <div style={{ marginTop: "10px" }}>
             <TextField
+              className="span2t1"
               onChange={handleChangeInformation}
               name="telephone"
               label="Teléfono"
               variant="outlined"
-              style={{
-                width: "100%",
-                margin: "0.2rem 0",
-                background: "#F8F8F8",
-                borderRadius: "10px",
-              }}
               value={personalInformation.telephone}
             />
           </div>
           <div>
             <div className="FieldUpperText"></div>
             <TextField
+              className="span2t1"
               name="email"
               label="Email"
               onChange={handleChangeInformation}
               variant="outlined"
               type={showPassword ? "text" : "password"}
-              style={{
-                width: "100%",
-                margin: "1rem 0",
-                background: "#F8F8F8",
-                borderRadius: "10px",
-              }}
               value={personalInformation.email}
             />
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>
             <input
-              style={{ width: "24px", height: "24px", borderRadius: "6px" }}
+              className="span2i1"
               class="form-check-input"
               type="checkbox"
               value=""
@@ -489,33 +452,9 @@ const Step2 = ({ handleNext }) => {
               Activar recordatorio anual
             </label>
           </div>
-
-          {/*     <div
-            style={{
-              display: "grid",
-              gap: "0.5rem",
-            }}
-          >
-            <Button
-              variant="contained"
-              style={{ backgroundColor: "#D96581", color: "white" }}
-              onClick={handleSaveInformation}
-            >
-              Enter
-            </Button>
-          </div> */}
         </div>
         <div className="span-23">
-          <p
-            style={{
-              fontFamily: "Nunito",
-              fontStyle: "normal",
-              fontWeight: "700",
-              fontSize: "20px",
-            }}
-          >
-            2. Fecha y horario de entrega
-          </p>
+          <p className="span23p1">2. Fecha y horario de entrega</p>
           <div>
             <div className="time">
               <p style={{ fontSize: "20px" }}>Domingo 20</p>
@@ -530,61 +469,18 @@ const Step2 = ({ handleNext }) => {
               <p style={{ fontSize: "16px" }}>12:00 PM - 04:00 PM</p>
             </div>
           </div>
-          <Button
-            style={{
-              width: "320px",
-              height: "50px",
-              background: "#D96581",
-              borderRadius: "10px",
-              marginTop: "10px",
-            }}
-          >
+          <Button className="span23b1">
             <img src={btncal} />
           </Button>
         </div>
         <div className="span-3">
           <div className="numbers">
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontStyle: "normal",
-                fontWeight: "700",
-                fontSize: "20px",
-              }}
-            >
-              3. Entrega del pedido
-            </p>
+            <p className="span3p1">3. Entrega del pedido</p>
           </div>
-          <div
-            style={{
-              background: "#f8f8f8",
-              borderRadius: "20px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+          <div className="span3d1">
             <div className="resp">
-              <img
-                className="truck"
-                style={{
-                  position: "relative",
-                  top: "80px",
-                  left: "70px",
-                  zIndex: "5",
-                }}
-                src={truck}
-              />
-              <img
-                className="home"
-                style={{
-                  position: "relative",
-                  top: "60px",
-                  left: "460px",
-                  zIndex: "5",
-                }}
-                src={home}
-              />
+              <img className="truck" src={truck} />
+              <img className="home" src={home} />
               <Tabs
                 value={valueTab}
                 onChange={handleChangeTab}
@@ -599,30 +495,12 @@ const Step2 = ({ handleNext }) => {
               <TabPanel value={valueTab} index={0}>
                 <div>
                   <div className="onlyP" style={{ width: "740px" }}>
-                    <p
-                      style={{
-                        fontFamily: "Nunito",
-                        fontStyle: "normal",
-                        fontWeight: "700",
-                        fontSize: "20px",
-                      }}
-                    >
-                      ¿Donde enviamos este pedido?
-                    </p>
+                    <p className="span3p2">¿Donde enviamos este pedido?</p>
                   </div>
-                  <div
-                    style={{
-                      marginLeft: "20px",
-                      display: "flex",
-                      width: "100%",
-                    }}
-                  >
+                  <div className="span3d2">
                     <div
+                      className="span3d3"
                       style={{
-                        marginRight: "20px",
-                        background: "#FFFFFF",
-
-                        borderRadius: "10px",
                         display: `${show ? "flex" : "none"}`,
                       }}
                     >
@@ -630,23 +508,11 @@ const Step2 = ({ handleNext }) => {
                         ? newAddress.map((addresses, index) => {
                             return (
                               <div
-                                className={`${index}`}
+                                className={`${index} span3d4`}
                                 key={index}
                                 disabled={disable}
                                 variant="contained"
                                 style={{
-                                  background: "#FFFFFF",
-                                  borderRadius: "10px",
-                                  width: "200px",
-
-                                  textTransform: "inherit",
-                                  padding: "10px",
-                                  textAlignLast: "start",
-                                  marginRight: "10px",
-                                  fontFamily: "Roboto",
-                                  fontWeight: "400",
-                                  fontSize: "16px",
-                                  padding: "1rem",
                                   border: `${
                                     style_index === index
                                       ? "1px solid #D96581"
@@ -675,18 +541,6 @@ const Step2 = ({ handleNext }) => {
                       className="addbtn"
                       variant="contained"
                       onClick={handleOpen2}
-                      style={{
-                        width: "200px",
-                        height: "150px",
-                        background: "#D96581",
-                        borderRadius: "10px",
-                        fontFamily: "Nunito",
-                        fontWeight: "400",
-                        fontSize: "16px",
-                        textTransform: "none",
-                        display: "flex",
-                        flexDirection: "column",
-                      }}
                     >
                       <img style={{ marginBottom: "10px" }} src={addAdd} />
                       <p style={{ marginBottom: "0" }}>Nueva Dirección</p>
@@ -699,40 +553,6 @@ const Step2 = ({ handleNext }) => {
                       setShow={setShow}
                       setNewAddress={setNewAddress}
                     />
-
-                    {/* <TextField
-                value={address}
-                name="address"
-                //key={index}
-                //onChange={(event) => handleChangeinput(index, event)}
-                variant="outlined"
-                label="Address"
-                style={{
-                  width: "100%",
-                  margin: "0.8rem 0",
-                  display: `${booldata ? "block" : "none"}`,
-                }}
-              /> */}
-                    {/* <div
-              style={{
-                display: `${booldata ? 'block' : 'none'}`,
-                border: '1px solid #C4C4C4',
-                borderRadius: '5px',
-                fontSize: '13px',
-                padding: '10px'
-              }}
-            >
-              {`${address.recipientname}`}
-              <br />
-              {`${address.phone}`} <br />
-              {`${address.address}`}
-              <br />
-              {`${address.calle}`} {`${address.number}`}
-              <br />
-              {`${address.state}`} {`${address.ciudad}`}
-              <br />
-              {`${address.reference}`}
-            </div> */}
                   </div>
                 </div>
               </TabPanel>
@@ -747,44 +567,20 @@ const Step2 = ({ handleNext }) => {
         </div>
         <div className="span-4">
           <div className="numbers">
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontStyle: "normal",
-                fontWeight: "700",
-                fontSize: "20px",
-              }}
-            >
-              4. Mensaje (opcional)
-            </p>
+            <p className="span4p1">4. Mensaje (opcional)</p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              marginBottom: "10px",
-            }}
-          >
+          <div className="span4d1">
             <input
+              className="span4i1"
               checked={checked1}
               onChange={handlecheckbox1}
-              style={{
-                width: "24px",
-                height: "24px",
-                borderRadius: "6px",
-                fontSize: "16px",
-              }}
               class="form-check-input"
               type="checkbox"
               value=""
               id="flexCheckDefault"
             />
             <label
-              style={{
-                marginLeft: "20px",
-                color: "#444444",
-                fontFamily: "Nunito",
-              }}
+              className="span4l1"
               class="form-check-label"
               for="flexCheckDefault"
             >
@@ -809,59 +605,35 @@ const Step2 = ({ handleNext }) => {
             </FormControl>
           </Box>
           <p
+            className="span4p2"
             style={{
-              color: "#D96581",
-              fontFamily: "Nunito",
-              alignSelf: "end",
-              fontWeight: "700",
-              fontSize: "16px",
-              marginTop: "10px",
               display: `${checked1 ? "none" : "block"}`,
             }}
           >
             Vista previa
           </p>
           <TextareaAutosize
+            className="span4t1"
             aria-label="empty textarea"
             placeholder="Escribe aquí..."
             style={{
-              width: "799px",
-              height: "183px",
-              background: "#F8F8F8",
-              borderRadius: "10px",
               display: `${checked1 ? "none" : "block"}`,
             }}
           />
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
+          <div className="span4d2">
             {" "}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginBottom: "10px",
-              }}
-            >
+            <div className="span4d3">
               <input
+                className="span4i1"
                 checked={checked2}
                 onChange={handlecheckbox2}
-                style={{
-                  width: "24px",
-                  height: "24px",
-                  borderRadius: "6px",
-                  fontSize: "16px",
-                }}
                 class="form-check-input"
                 type="checkbox"
                 value=""
                 id="flexCheckDefault"
               />
               <label
+                className="span4l1"
                 style={{
                   marginLeft: "20px",
                   color: "#444444",
@@ -889,44 +661,18 @@ const Step2 = ({ handleNext }) => {
             label="Firma la tarjeta con el nombre que quieras."
             variant="outlined"
             style={{
-              width: "799px",
-              height: "48px",
-              background: "#F8F8F8",
-              borderRadius: "10px",
               display: `${checked2 ? "none" : "block"}`,
             }}
           />
         </div>
         <div className="span-45">
-          <p
-            style={{
-              fontFamily: "Nunito",
-              fontStyle: "normal",
-              fontWeight: "700",
-              fontSize: "20px",
-            }}
-          >
-            5. Método de Pago
-          </p>
+          <p className="span45p1">5. Método de Pago</p>
           <div className="tripleDiv">
-            <div
-              className="subDiv"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                width: "35%",
-                justifyContent: "space-around",
-              }}
-            >
+            <div className="subDiv">
               <input
+                className="span45i1"
                 checked={checkedm1}
                 onChange={handlecheckboxm1}
-                style={{
-                  width: "24px",
-                  height: "24px",
-                  borderRadius: "6px",
-                  fontSize: "16px",
-                }}
                 class="form-check-input"
                 type="checkbox"
                 value=""
@@ -941,24 +687,11 @@ const Step2 = ({ handleNext }) => {
             }}
             className="tripleDiv"
           >
-            <div
-              className="subDiv"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                width: "35%",
-                justifyContent: "space-around",
-              }}
-            >
+            <div className="subDiv">
               <input
+                className="span45i1"
                 checked={checkedm2}
                 onChange={handlecheckboxm2}
-                style={{
-                  width: "24px",
-                  height: "24px",
-                  borderRadius: "6px",
-                  fontSize: "16px",
-                }}
                 class="form-check-input"
                 type="checkbox"
                 value=""
@@ -973,24 +706,11 @@ const Step2 = ({ handleNext }) => {
             }}
             className="tripleDiv"
           >
-            <div
-              className="subDiv"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                width: "35%",
-                justifyContent: "space-around",
-              }}
-            >
+            <div className="subDiv">
               <input
+                className="span45i1"
                 checked={checkedm3}
                 onChange={handlecheckboxm3}
-                style={{
-                  width: "24px",
-                  height: "24px",
-                  borderRadius: "6px",
-                  fontSize: "16px",
-                }}
                 class="form-check-input"
                 type="checkbox"
                 value=""
@@ -1002,101 +722,40 @@ const Step2 = ({ handleNext }) => {
           <div className="lastCheckboxDiv">
             <div style={{ display: "flex", alignItems: "center" }}>
               <input
+                className="span45i1"
                 checked={checkedterms}
                 onChange={handlecheckboxterms}
-                style={{
-                  width: "24px",
-                  height: "24px",
-                  borderRadius: "6px",
-                  fontSize: "16px",
-                }}
                 class="form-check-input"
                 type="checkbox"
                 value=""
               />
-              <p
-                style={{
-                  display: "flex",
-                  marginLeft: "10px",
-                  alignItems: "center",
-                  marginBottom: "0",
-                }}
-              >
+              <p className="span45p2">
                 Acepto los
-                <p
-                  style={{
-                    color: "#D96581",
-                    marginBottom: "0",
-                    marginRight: "5px",
-                    fontWeight: "700",
-                  }}
-                >
-                  Términos y Condiciones
-                </p>
+                <p className="span45p3">Términos y Condiciones</p>
                 de Florería Suecia
               </p>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginTop: "20px",
-              }}
-            >
+            <div className="span45d1">
               <input
+                className="span45i1"
                 checked={checkedannual}
                 onChange={handlecheckboxannual}
-                style={{
-                  width: "24px",
-                  height: "24px",
-                  borderRadius: "6px",
-                  fontSize: "16px",
-                }}
                 class="form-check-input"
                 type="checkbox"
                 value=""
               />
-              <p
-                style={{
-                  display: "flex",
-                  marginLeft: "10px",
-                  alignItems: "center",
-                  marginBottom: "0",
-                }}
-              >
+              <p className="span45p2">
                 Activar
-                <p
-                  style={{
-                    color: "#D96581",
-                    marginBottom: "0",
-                    marginRight: "5px",
-                    fontWeight: "700",
-                  }}
-                >
-                  recordatorio anual
-                </p>
+                <p className="span45p3">recordatorio anual</p>
                 de Florería Suecia
               </p>
             </div>
           </div>
         </div>
         <div className="span-5">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: "90%",
-            }}
-          >
+          <div className="span5d1">
             <img style={{ width: "70px", borderRadius: "10px" }} src={f2} />
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                marginLeft: "-170px",
-              }}
-            >
+            <div className="span5d2">
               <p style={{ marginBottom: "0" }}>Vino Rosa</p>
               <p style={{ color: "#9BABBF" }}>Ramo del día</p>
               <div style={{ display: "flex", justifyContent: "space-evenly" }}>
@@ -1104,32 +763,9 @@ const Step2 = ({ handleNext }) => {
                   onClick={() => setQuantity1(quantity1 - 1)}
                   sx={{ color: pink[400] }}
                 />
-                <div
-                  style={{
-                    width: "2px",
-                    height: "20px",
-                    background: "#9BABBF",
-                    borderRadius: "6px",
-                  }}
-                ></div>
-                <p
-                  style={{
-                    marginLeft: "0",
-                    fontWeight: "700",
-                    color: "#444444",
-                    fontFamily: "Poppins",
-                  }}
-                >
-                  {quantity1}
-                </p>
-                <div
-                  style={{
-                    width: "2px",
-                    height: "20px",
-                    background: "#9BABBF",
-                    borderRadius: "6px",
-                  }}
-                ></div>
+                <div className="span5d3"></div>
+                <p className="span5p1">{quantity1}</p>
+                <div className="span5d3"></div>
                 <AddIcon
                   onClick={() => setQuantity1(quantity1 + 1)}
                   sx={{ color: pink[400] }}
@@ -1138,22 +774,9 @@ const Step2 = ({ handleNext }) => {
             </div>
             <p>$90.00</p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: "90%",
-            }}
-          >
+          <div className="span5d1">
             <img style={{ width: "70px", borderRadius: "10px" }} src={f4} />
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                marginLeft: "-170px",
-              }}
-            >
+            <div className="span5d2">
               <p style={{ marginBottom: "0" }}>Vino Rosa</p>
               <p style={{ color: "#9BABBF" }}>Ramo del día</p>
               <div style={{ display: "flex", justifyContent: "space-evenly" }}>
@@ -1161,32 +784,9 @@ const Step2 = ({ handleNext }) => {
                   onClick={() => setQuantity2(quantity2 - 1)}
                   sx={{ color: pink[400] }}
                 />
-                <div
-                  style={{
-                    width: "2px",
-                    height: "20px",
-                    background: "#9BABBF",
-                    borderRadius: "6px",
-                  }}
-                ></div>
-                <p
-                  style={{
-                    marginLeft: "0",
-                    fontWeight: "700",
-                    color: "#444444",
-                    fontFamily: "Poppins",
-                  }}
-                >
-                  {quantity2}
-                </p>
-                <div
-                  style={{
-                    width: "2px",
-                    height: "20px",
-                    background: "#9BABBF",
-                    borderRadius: "6px",
-                  }}
-                ></div>
+                <div className="span5d3"></div>
+                <p className="span5p1">{quantity2}</p>
+                <div className="span5d3"></div>
                 <AddIcon
                   onClick={() => setQuantity2(quantity2 + 1)}
                   sx={{ color: pink[400] }}
@@ -1195,22 +795,9 @@ const Step2 = ({ handleNext }) => {
             </div>
             <p>$90.00</p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: "90%",
-            }}
-          >
+          <div className="span5d1">
             <img style={{ width: "70px", borderRadius: "10px" }} src={f1} />
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                marginLeft: "-170px",
-              }}
-            >
+            <div className="span5d2">
               <p style={{ marginBottom: "0" }}>Vino Rosa</p>
               <p style={{ color: "#9BABBF" }}>Ramo del día</p>
               <div style={{ display: "flex", justifyContent: "space-evenly" }}>
@@ -1218,32 +805,9 @@ const Step2 = ({ handleNext }) => {
                   onClick={() => setQuantity3(quantity3 - 1)}
                   sx={{ color: pink[400] }}
                 />
-                <div
-                  style={{
-                    width: "2px",
-                    height: "20px",
-                    background: "#9BABBF",
-                    borderRadius: "6px",
-                  }}
-                ></div>
-                <p
-                  style={{
-                    marginLeft: "0",
-                    fontWeight: "700",
-                    color: "#444444",
-                    fontFamily: "Poppins",
-                  }}
-                >
-                  {quantity3}
-                </p>
-                <div
-                  style={{
-                    width: "2px",
-                    height: "20px",
-                    background: "#9BABBF",
-                    borderRadius: "6px",
-                  }}
-                ></div>
+                <div className="span5d3"></div>
+                <p className="span5p1">{quantity3}</p>
+                <div className="span5d3"></div>
                 <AddIcon
                   onClick={() => setQuantity3(quantity3 + 1)}
                   sx={{ color: pink[400] }}
@@ -1252,147 +816,39 @@ const Step2 = ({ handleNext }) => {
             </div>
             <p>$90.00</p>
           </div>
-          <Button
-            className="bigbtn"
-            style={{
-              width: "420px",
-              height: "50px",
-              fontFamily: "Poppins",
-              background: "#D96581",
-              borderRadius: "10px",
-              fontWeight: "500",
-              fontSize: "14px",
-              textTransform: "capitalize",
-              color: "#FFFFFF",
-            }}
-          >
-            Complementar pedido
-          </Button>
-          <div
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-              width: "80%",
-              height: "2px",
-            }}
-          ></div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "90%",
-            }}
-          >
+          <Button className="bigbtn">Complementar pedido</Button>
+          <div className="span5d4"></div>
+          <div className="span5d5">
             <TextField
+              className="span5t1"
               id="outlined-basic"
               label="Cupón de descuento"
               variant="outlined"
-              style={{
-                width: "300px",
-                height: "50px",
-                background: "#F8F8F8",
-                borderRadius: "10px",
-              }}
             />
-            <Button
-              style={{
-                width: "100px",
-                height: "50px",
-                fontFamily: "Poppins",
-                background: "#D96581",
-                borderRadius: "10px",
-                fontWeight: "500",
-                fontSize: "16px",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-              }}
-            >
-              Aplicar
-            </Button>
+            <Button className="span5b1">Aplicar</Button>
           </div>
-          <div
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-              width: "80%",
-              height: "2px",
-            }}
-          ></div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "90%",
-            }}
-          >
+          <div className="span5d4"></div>
+          <div className="span5d5">
             <p style={{ color: "#9BABBF" }}>Subtotal</p>
             <p style={{ color: "#444444" }}>$27.990</p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "90%",
-            }}
-          >
+          <div className="span5d5">
             <p style={{ color: "#9BABBF" }}>Envío</p>
             <p style={{ color: "#444444" }}>$4.990</p>
           </div>
-          <div
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-              width: "80%",
-              height: "2px",
-            }}
-          ></div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "90%",
-            }}
-          >
+          <div className="span5d4"></div>
+          <div className="span5d5">
             <p style={{ color: "#9BABBF" }}>Total</p>
-            <p
-              style={{
-                color: "#444444",
-                fontWeight: "600",
-
-                lineHeight: "22px",
-              }}
-            >
-              $32.980
-            </p>
+            <p className="span5p2">$32.980</p>
           </div>
         </div>
         <div className="span-6">
-          <div
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-              width: "95%",
-              height: "2px",
-              marginBottom: "15px",
-            }}
-          ></div>
+          <div className="span6d1"></div>
 
           <Button
             onClick={handleOpen3}
             variant="contained"
             className="buttonViolet"
-            style={{
-              backgroundColor: "#D96581",
-              width: "800px",
-              height: "60px",
-              textTransform: "none",
-              borderRadius: "10px",
-              fontFamily: "Poppins",
-
-              fontWeight: "400",
-              fontSize: "22px",
-              lineHeight: "33px",
-            }}
           >
             Finalizar Compra - $32.980
           </Button>

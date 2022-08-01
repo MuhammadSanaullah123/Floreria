@@ -34,26 +34,10 @@ const ThankYou = () => {
             Podrás ver el seguimiento de tu pedido en la sección “Mi Cuenta”
             arriba a la derecha
           </p>
-          <div
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-              width: "80%",
-              height: "1px",
-            }}
-          ></div>
+          <div className="sabkapapad1"></div>
         </div>
         <div className="two">
-          <p
-            style={{
-              fontFamily: "Cormorant Upright",
-              color: "#000000",
-              fontWeight: "700",
-              fontSize: "50px",
-            }}
-          >
-            Pedido Realizado
-          </p>
+          <p className="sabkapapap1">Pedido Realizado</p>
           <p>Hemos aceptado tu pedido y lo estamos preparando.</p>
           <p>
             Se ha enviado un correo electrónico de confirmación a
@@ -65,169 +49,58 @@ const ThankYou = () => {
           </p>
         </div>
         <img style={{ width: "60%" }} src={map} />
-        <p
-          style={{
-            fontFamily: "Cormorant Upright",
-            fontWeight: "700",
-            fontSize: "50px",
-            color: "#444444",
-            marginTop: "100px",
-          }}
-        >
-          Pedido #11685
-        </p>
+        <p className="sabkapapap2">Pedido #11685</p>
         <div className="parent">
           <div className="child1">
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "90%",
-              }}
-            >
+            <div className="sabkapapad2">
               <img style={{ width: "70px", borderRadius: "10px" }} src={f2} />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginLeft: "-170px",
-                }}
-              >
+              <div className="sabkapapad3">
                 <p>Vino Rosa</p>
                 <p style={{ color: "#9BABBF" }}>Ramo del día</p>
               </div>
               <p>$90.00</p>
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "90%",
-              }}
-            >
+            <div className="sabkapapad2">
               <img style={{ width: "70px", borderRadius: "10px" }} src={f4} />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginLeft: "-170px",
-                }}
-              >
+              <div className="sabkapapad3">
                 <p>Vino Rosa</p>
                 <p style={{ color: "#9BABBF" }}>Ramo del día</p>
               </div>
               <p>$90.00</p>
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "90%",
-              }}
-            >
+            <div className="sabkapapad2">
               <img style={{ width: "70px", borderRadius: "10px" }} src={f1} />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginLeft: "-170px",
-                }}
-              >
+              <div className="sabkapapad3">
                 <p>Vino Rosa</p>
                 <p style={{ color: "#9BABBF" }}>Ramo del día</p>
               </div>
               <p>$90.00</p>
             </div>
-            <div
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-                width: "80%",
-                height: "2px",
-              }}
-            ></div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                width: "90%",
-              }}
-            >
+            <div className="sabkapapad1"></div>
+            <div className="sabkapapad4">
               <p style={{ color: "#9BABBF" }}>Subtotal</p>
               <p style={{ color: "#444444" }}>$270.00</p>
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                width: "90%",
-              }}
-            >
+            <div className="sabkapapad4">
               <p style={{ color: "#9BABBF" }}>Envío</p>
               <p style={{ color: "#444444" }}>$0.00</p>
             </div>
-            <div
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-                width: "80%",
-                height: "2px",
-              }}
-            ></div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                width: "90%",
-              }}
-            >
+            <div className="sabkapapad1"></div>
+            <div className="sabkapapad4">
               <p style={{ color: "#9BABBF" }}>Total</p>
               <p style={{ color: "#444444" }}>$270.00</p>
             </div>
-            <div
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-                width: "80%",
-                height: "2px",
-              }}
-            ></div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                width: "90%",
-              }}
-            >
+            <div className="sabkapapad1"></div>
+            <div className="sabkapapad4">
               <p style={{ color: "#9BABBF" }}>N° de Pedido</p>
               <p style={{ color: "#444444" }}>#11685</p>
             </div>
           </div>
           <div className="child2">
-            <p
-              style={{
-                fontSize: "22px",
-                fontWeight: "700",
-                fontFamily: "Nunito",
-                color: "#444444",
-                width: "90%",
-              }}
-            >
-              Información del pedido
-            </p>
+            <p className="sabkapapap3">Información del pedido</p>
             <div style={{ width: "90%" }}>
               <div style={{ display: "flex" }}>
-                <div
-                  style={{
-                    background: "#D96581",
-                    borderRadius: "30px",
-                    width: "4px",
-                    height: "24px",
-                  }}
-                ></div>
+                <div className="sabkapapad5"></div>
                 <p style={{ color: "#444444" }}>Dirección de envío</p>
               </div>
 
@@ -237,14 +110,7 @@ const ThankYou = () => {
             </div>
             <div style={{ width: "90%" }}>
               <div style={{ display: "flex" }}>
-                <div
-                  style={{
-                    background: "#D96581",
-                    borderRadius: "30px",
-                    width: "4px",
-                    height: "24px",
-                  }}
-                ></div>
+                <div className="sabkapapad5"></div>
                 <p style={{ color: "#444444" }}>Rango horario</p>
               </div>
 
@@ -252,14 +118,7 @@ const ThankYou = () => {
             </div>
             <div style={{ width: "90%" }}>
               <div style={{ display: "flex" }}>
-                <div
-                  style={{
-                    background: "#D96581",
-                    borderRadius: "30px",
-                    width: "4px",
-                    height: "24px",
-                  }}
-                ></div>
+                <div className="sabkapapad5"></div>
                 <p style={{ color: "#444444" }}>Mensaje en tarjeta</p>
               </div>
 
@@ -267,14 +126,7 @@ const ThankYou = () => {
             </div>
             <div style={{ width: "90%" }}>
               <div style={{ display: "flex" }}>
-                <div
-                  style={{
-                    background: "#D96581",
-                    borderRadius: "30px",
-                    width: "4px",
-                    height: "24px",
-                  }}
-                ></div>
+                <div className="sabkapapad5"></div>
                 <p style={{ color: "#444444" }}>Tus datos</p>
               </div>
 
@@ -287,39 +139,15 @@ const ThankYou = () => {
             </div>
           </div>
         </div>
-        <p
-          className="Ref"
-          style={{
-            fontFamily: "Cormorant Upright",
-            fontSize: "60px",
-            color: "#444444",
-            fontWeight: "600",
-            marginTop: "50px",
-          }}
-        >
-          Refiere a alguien
-        </p>
-        <p
-          style={{
-            color: "#9BABBF",
-            textAlign: "center",
-            lineHeight: "40px",
-          }}
-        >
+        <p className="Ref">Refiere a alguien</p>
+        <p className="sabkapapap4">
           Si conoces a alguien que también podría enviarle flores o un regalo a
           esta persona, o si le gustan las flores en general, ¡házselo saber!{" "}
           <br />
           Recomienda y obtén un 10% de reembolso. Recibes recompensas cuando tus
           amigos hacen una compra.{" "}
         </p>
-        <div
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-            width: "80%",
-            height: "2px",
-          }}
-        ></div>
+        <div className="sabkapapad1"></div>
         <div>
           <div style={{ marginTop: "20px", marginBottom: "20px" }}>
             <form className="form_aba" style={{ display: "flex" }}>
@@ -353,115 +181,44 @@ const ThankYou = () => {
                 <button className="btn">
                   Recomendar
                   <ArrowForwardIcon
-                    sx={{ color: "#ffffff", marginLeft: "10px" }}
+                    className="sabkapapapic1"
+                    sx={{ marginLeft: "10px" }}
                   />
                 </button>
               </div>
             </form>
           </div>
         </div>
-        <div
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-            width: "80%",
-            height: "2px",
-          }}
-        ></div>
-        <div
-          style={{
-            display: "flex",
-            width: "500px",
-            justifyContent: "space-evenly",
-            marginTop: "50px",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+        <div className="sabkapapad1"></div>
+        <div className="sabkapapad6">
+          <div className="sabkapapad7">
             <img style={{ width: "50px" }} src={copy} />
             <p>Copiar</p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <div
-              style={{
-                background: "#D96581",
-                width: "50px",
-                height: "50px",
-                borderRadius: "10px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+          <div className="sabkapapad7">
+            <div className="sabkapapad8">
               <WhatsAppIcon sx={{ color: "#ffffff", fontSize: "30px" }} />
             </div>
 
             <p>Whatsapp</p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+          <div className="sabkapapad7">
             <img style={{ width: "50px" }} src={thankmessenger} />
             <p>Message</p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <div
-              style={{
-                background: "#D96581",
-                width: "50px",
-                height: "50px",
-                borderRadius: "10px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+          <div className="sabkapapad7">
+            <div className="sabkapapad8">
               <FacebookIcon sx={{ color: "#ffffff", fontSize: "30px" }} />
             </div>
 
             <p>Facebook</p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+          <div className="sabkapapad7">
             <img style={{ width: "50px" }} src={thanksms} />
             <p>SMS</p>
           </div>
         </div>
-        <div
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-            width: "80%",
-            height: "2px",
-            marginTop: "50px",
-          }}
-        ></div>
+        <div style={{ marginTop: "50px" }} className="sabkapapad1"></div>
       </div>
     </>
   );

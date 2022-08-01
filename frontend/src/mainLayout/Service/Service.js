@@ -1,11 +1,6 @@
 import React from "react";
 import { pink } from "@mui/material/colors";
 import Carousel from "react-multi-carousel";
-import {
-  createFromIconfontCN,
-  LeftOutlined,
-  RightOutlined,
-} from "@ant-design/icons";
 import "react-multi-carousel/lib/styles.css";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -60,15 +55,7 @@ const Service = () => {
   return (
     <div className="Service">
       <h1 style={{ paddingTop: "50px" }}>¿Por qué elegirnos?</h1>
-      <p
-        style={{
-          color: "#9BABBF",
-          textAlign: "center",
-          paddingBottom: "100px",
-        }}
-      >
-        No solo entregamos flores. Nos preocupamos
-      </p>
+      <p className="servicep1">No solo entregamos flores. Nos preocupamos</p>
       <Carousel
         arrows={false}
         renderButtonGroupOutside={true}
@@ -78,207 +65,52 @@ const Service = () => {
         containerClass="home-carousel h-full"
         temClass="py-4"
       >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              border: "1px solid #444444",
-              borderRadius: "50%",
-              width: "160px",
-              height: "160px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img style={{ width: "50px" }} src={clock} />
+        <div className="serviced1">
+          <div className="serviced2">
+            <img style={{ width: "80px", height: "63px" }} src={clock} />
           </div>
           <p className="bottomp">Entrega Inmediata</p>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              border: "1px solid #444444",
-              borderRadius: "50%",
-              width: "160px",
-              height: "160px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <p
-              style={{
-                color: "#D96581",
-                fontSize: "15px",
-                fontWeight: "700",
-                marginBottom: "0",
-              }}
-            >
-              {"<"}2
-            </p>
-            <p
-              style={{
-                color: "#D96581",
-                fontSize: "15px",
-                fontWeight: "700",
-              }}
-            >
-              {" "}
-              horas
-            </p>
+        <div className="serviced1">
+          <div style={{ flexDirection: "column" }} className="serviced2">
+            <p className="servicep2">{"<"}2</p>
+            <p className="servicep3"> horas</p>
           </div>
           <p className="bottomp">Entrega en menos de 2 horas</p>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              border: "1px solid #444444",
-              borderRadius: "50%",
-              width: "160px",
-              height: "160px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img style={{ width: "50px" }} src={alarm} />
+        <div className="serviced1">
+          <div className="serviced2">
+            <img style={{ width: "80px", height: "80px" }} src={alarm} />
           </div>
           <p className="bottomp">Atención 24/7</p>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              border: "1px solid #444444",
-              borderRadius: "50%",
-              width: "160px",
-              height: "160px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img style={{ width: "50px" }} src={search} />
+        <div className="serviced1">
+          <div className="serviced2">
+            <img style={{ width: "80px", height: "80px" }} src={search} />
           </div>
           <p className="bottomp">Seguimiento en Tiempo Real</p>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              border: "1px solid #444444",
-              borderRadius: "50%",
-              width: "160px",
-              height: "160px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img style={{ width: "50px" }} src={bell} />
+        <div className="serviced1">
+          <div className="serviced2">
+            <img style={{ width: "73px", height: "80px" }} src={bell} />
           </div>
           <p className="bottomp">Notificación de Entrega</p>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              border: "1px solid #444444",
-              borderRadius: "50%",
-              width: "160px",
-              height: "160px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img style={{ width: "50px" }} src={gift} />
+        <div className="serviced1">
+          <div className="serviced2">
+            <img style={{ width: "80px", height: "80px" }} src={gift} />
           </div>
           <p className="bottomp">Puntos por tus compras</p>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              border: "1px solid #444444",
-              borderRadius: "50%",
-              width: "160px",
-              height: "160px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img style={{ width: "50px" }} src={calender} />
+        <div className="serviced1">
+          <div className="serviced2">
+            <img style={{ width: "80px", height: "80px" }} src={calender} />
           </div>
           <p className="bottomp">Recordatorios de fechas importantes</p>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              border: "1px solid #444444",
-              borderRadius: "50%",
-              width: "160px",
-              height: "160px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img style={{ width: "50px" }} src={timer} />
+        <div className="serviced1">
+          <div className="serviced2">
+            <img style={{ width: "67px", height: "80px" }} src={timer} />
           </div>
           <p className="bottomp">
             Entrega en horario acotado (ej. entrega de 4 a 5 pm)

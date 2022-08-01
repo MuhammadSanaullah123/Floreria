@@ -37,63 +37,13 @@ const Referrals = () => {
           marginLeft: "20px",
         }}
       >
-        <List
-          style={{
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-around",
-          }}
-          classname="list"
-        >
+        <List classname="list">
           <div className="accountPic">
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "43px",
-                background: "#D96581",
-                display: "flex",
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "30px",
-                alignItems: "center",
-                justifyContent: "center",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-                marginTop: "10px",
-              }}
-            >
-              M
-            </div>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "20px",
-                textAlign: "center",
-                textTransform: "capitalize",
-                color: "#444444",
-                margin: "0",
-                marginTop: "15px",
-              }}
-            >
-              Milovan
-            </p>
+            <div className="myaccountbox1d1">M</div>
+            <p className="myaccountbox1p1">Milovan</p>
           </div>
 
-          <Link
-            to="home"
-            style={{
-              display: "flex",
-              color: "#FFFFFF",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              color: "#9BABBF",
-              alignItems: "center",
-            }}
-          >
+          <Link to="home" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navhome1}
@@ -101,17 +51,7 @@ const Referrals = () => {
             Inicio
           </Link>
 
-          <Link
-            to="reminders"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="reminders" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbell1}
@@ -119,17 +59,7 @@ const Referrals = () => {
             Recordatorios
           </Link>
 
-          <Link
-            to="deliveryaddress"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="deliveryaddress" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navmap1}
@@ -137,17 +67,7 @@ const Referrals = () => {
             Direcciones
           </Link>
 
-          <Link
-            to="myorders"
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link to="myorders" className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navbag1}
@@ -155,16 +75,7 @@ const Referrals = () => {
             Pedidos
           </Link>
 
-          <Link
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              color: "#9BABBF",
-            }}
-          >
+          <Link className="myaccountbox1l2">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navgift1}
@@ -172,17 +83,7 @@ const Referrals = () => {
             VIP
           </Link>
 
-          <Link
-            style={{
-              display: "flex",
-              width: "200px",
-              height: "50px",
-              borderRadius: "10px",
-              alignItems: "center",
-              background: "#D96581",
-              color: "#ffffff",
-            }}
-          >
+          <Link className="myaccountbox1l1">
             <img
               style={{ marginRight: "14px", marginLeft: "10px" }}
               src={navshare2}
@@ -199,109 +100,29 @@ const Referrals = () => {
       <div className="superdiv">
         <div style={{ height: "537px", width: "300px" }} className="leftdiv">
           <div className="name">
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "43px",
-                background: "#D96581",
-                display: "flex",
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "30px",
-                alignItems: "center",
-                justifyContent: "center",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-                marginTop: "10px",
-              }}
-            >
-              M
-            </div>
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "20px",
-                textAlign: "center",
-                textTransform: "capitalize",
-                color: "#444444",
-                margin: "0",
-                marginTop: "15px",
-              }}
-            >
-              Milovan
-            </p>
+            <div className="superdivd1">M</div>
+            <p className="superdivp1">Milovan</p>
           </div>
-          <Link
-            to="home"
-            style={{
-              display: "flex",
-
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="home" className="superdivl2">
             <img style={{ marginRight: "10px" }} src={navhome1} />
             Inicio
           </Link>
-          <Link
-            to="reminders"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="reminders" className="superdivl2">
             <img style={{ marginRight: "10px" }} src={navbell1} /> Recordatorios
           </Link>
-          <Link
-            to="deliveryaddress"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="deliveryaddress" className="superdivl2">
             <img style={{ marginRight: "10px" }} src={navmap1} />
             Direcciones
           </Link>
-          <Link
-            to="myorders"
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link to="myorders" className="superdivl2">
             <img style={{ marginRight: "10px" }} src={navbag1} />
             Pedidos
           </Link>
-          <Link
-            style={{
-              display: "flex",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="superdivl2">
             <img style={{ marginRight: "10px" }} src={navgift1} />
             VIP
           </Link>
-          <Link
-            style={{
-              display: "flex",
-              background: "#D96581",
-              color: "#FFFFFF",
-              width: "260px",
-              height: "60px",
-              alignItems: "center",
-            }}
-          >
+          <Link className="superdivl1">
             <img style={{ marginRight: "10px" }} src={navshare2} />
             Referidos
           </Link>
@@ -320,16 +141,7 @@ const Referrals = () => {
           </div>
         </div>
         <div className="rightdiv">
-          <h6
-            style={{
-              fontFamily: "Nunito",
-              fontWeight: "700",
-              fontSize: "30px",
-              color: "#444444",
-            }}
-          >
-            Refiere A Alguien
-          </h6>
+          <h6 className="rightdivh1">Refiere A Alguien</h6>
           <p style={{ color: "#9BABBF" }}>
             Si conoces a alguien que también podría enviarle flores o un regalo
             a esta persona, o si le gustan las flores en general, ¡házselo
@@ -339,61 +151,17 @@ const Referrals = () => {
             Recomienda y obtenga un 10% de reembolso. Recibes recompensas cuando
             tus amigos hacen una compra.
           </p>
-          <div
-            style={{
-              width: "90%",
-              height: "2px",
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-              marginTop: "100px",
-            }}
-          ></div>
-          <div
-            className="email"
-            style={{
-              display: "flex",
-              alignItems: "baseline",
-              justifyContent: "space-between",
-              marginTop: "20px",
-              width: "90%",
-            }}
-          >
-            <p
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "400",
-                fontSize: "16px",
-                color: "#9BABBF",
-              }}
-            >
+          <div style={{ marginTop: "100px" }} className="rightdivd1"></div>
+          <div className="email">
+            <p className="rightdivp1">
               Ej. luisa@gmail.com, marcos@gmail.com, francisca@hotmail.com
             </p>
-            <Button
-              style={{
-                fontFamily: "Nunito",
-                fontWeight: "700",
-                fontSize: "16px",
-                textTransform: "capitalize",
-                color: "#FFFFFF",
-                background: "#D96581",
-                borderRadius: "10px",
-                width: "200px",
-                height: "50px",
-              }}
-            >
+            <Button className="rightdivb1">
               Recomendar
               <ArrowForwardIcon sx={{ display: "block", marginLeft: "10px" }} />
             </Button>
           </div>
-          <div
-            style={{
-              width: "90%",
-              height: "2px",
-              background:
-                "linear-gradient(90deg, rgba(155, 171, 191, 0) 1.04%, #9BABBF 51.56%, rgba(155, 171, 191, 0) 100%)",
-              marginTop: "20px",
-            }}
-          ></div>
+          <div className="rightdivd1"></div>
           <div
             style={{
               display: "flex",
@@ -406,138 +174,45 @@ const Referrals = () => {
               style={{
                 display: "flex",
                 width: "500px",
-
                 width: "70%",
               }}
             >
-              <div
-                className="ref_s1"
-                style={{
-                  display: "flex",
-                  width: "33%",
-                  justifyContent: "space-around",
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      background: "#D96581",
-                      width: "50px",
-                      height: "50px",
-                      borderRadius: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
+              <div className="ref_s1">
+                <div className="rightdivd2">
+                  <div className="rightdivd3">
                     <img
                       style={{ width: "20px", height: "16px" }}
                       src={navshare2}
                     />
                   </div>
-
                   <p>Compartir</p>
                 </div>
-
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      background: "#D96581",
-                      width: "50px",
-                      height: "50px",
-                      borderRadius: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
+                <div className="rightdivd2">
+                  <div className="rightdivd3">
                     <WhatsAppIcon sx={{ color: "#ffffff", fontSize: "30px" }} />
                   </div>
-
                   <p>Whatsapp</p>
                 </div>
               </div>
-              <div
-                className="ref_s2"
-                style={{
-                  display: "flex",
-                  width: "33%",
-                  justifyContent: "space-around",
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
+              <div className="ref_s2">
+                <div className="rightdivd2">
                   <img style={{ width: "50px" }} src={thankmessenger} />
                   <p>Message</p>
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      background: "#D96581",
-                      width: "50px",
-                      height: "50px",
-                      borderRadius: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
+                <div className="rightdivd2">
+                  <div className="rightdivd3">
                     <img style={{ width: "50px" }} src={copy} />
                   </div>
-
                   <p>Copiar</p>
                 </div>
               </div>
-
-              <div
-                className="ref_s3"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  width: "23%",
-                }}
-              >
-                <div
-                  style={{
-                    background: "#D96581",
-                    width: "50px",
-                    height: "50px",
-                    borderRadius: "10px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
+              <div className="ref_s3">
+                <div className="rightdivd3">
                   <img
                     style={{ width: "24px", height: "24px" }}
                     src={referralsinsta}
                   />
                 </div>
-
                 <p>Instagram</p>
               </div>
             </div>

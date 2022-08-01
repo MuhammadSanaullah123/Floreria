@@ -170,38 +170,16 @@ const Category = () => {
       </div> */}
       <div className="PageLayout">
         <div className="span-1">
-          <h1
-            style={{
-              fontFamily: "Nunito",
-              fontWeight: "600",
-              fontSize: "40px",
-            }}
-          >
-            CUMPLEAÑOS
-          </h1>
+          <h1 className="span1h1">CUMPLEAÑOS</h1>
           <div className="vertialL"></div>
         </div>
 
         <div className="span-2">
-          <h6
-            style={{
-              fontFamily: "Nunito",
-              fontWeight: "400",
-              fontSize: "18px",
-              color: "#000000",
-            }}
-          >
+          <h6 className="span2h1">
             Encuentra arreglos florales y regalos para celebrar cualquier
             ocasion especial con envios a domicilio.
           </h6>
-          <p
-            style={{
-              fontFamily: "Nunito",
-              color: "#818181",
-              fontWeight: "400",
-              fontSize: "16px",
-            }}
-          >
+          <p className="span2p1">
             Hermosos affreglos y regalos perfectos para celebrar ese dia
             especial. Nuestros arreglos esten culdadosamente elaborados por
             expertos floistas. eligiendo siempre Ias flores mas frescas y de la
@@ -212,14 +190,7 @@ const Category = () => {
 
         <div className="span-4" style={{ display: "flex" }}>
           <p style={{ color: "#818181" }}>Ordenar por</p>
-          <FormControl
-            style={{
-              width: "220px",
-              height: "44px",
-              border: "1px solid #9BABBF",
-              borderRadius: "10px",
-            }}
-          >
+          <FormControl className="span4f1">
             {/* <InputLabel id="demo-simple-select-label">Price</InputLabel> */}
             <Select
               labelId="demo-simple-select-label"
@@ -237,39 +208,16 @@ const Category = () => {
             </Select>
           </FormControl>
           {/* <KeyboardArrowDownIcon sx={{ color: pink[500] }} /> */}
-          <button
-            className="recommendbtn"
-            variant="contained"
-            style={{
-              width: "250px",
-              color: "#D96581",
-
-              borderRadius: "10px",
-            }}
-          >
+          <button className="recommendbtn" variant="contained">
             $ Menor a mayor
           </button>
         </div>
         <div className="span-5">
-          <div
-            style={{
-              display: "block",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
+          <div className="span5d1">
             <h5 style={{ fontSize: "20px" }}>Filters</h5>
 
             <div className="span-3">
-              <Search
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  background: "#F8F8F8",
-                  borderRadius: "10px",
-                }}
-              >
+              <Search className="span3S">
                 <StyledInputBase
                   color="primary"
                   placeholder="Buscar..."
@@ -290,15 +238,7 @@ const Category = () => {
               open={state}
               onClose={toggleDrawer(false)}
             >
-              <div
-                style={{
-                  width: "80%",
-                  alignSelf: "center",
-                  marginTop: "40px",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
+              <div className="span5d2">
                 <div onClick={toggleDrawer(false)} className="uparrowDiv">
                   <KeyboardArrowUpIcon
                     sx={{ color: pink[300], fontSize: 40 }}
@@ -318,25 +258,9 @@ const Category = () => {
                     max={5000}
                   />
                 </Box>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                ></div>
+                <div className="span5l1"></div>
                 <div className="hline"></div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignCenter: "center",
-                    marginTop: "20px",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
+                <div className="span5d3">
                   <h6>Rango de precio</h6>
                   <RemoveIcon
                     sx={{ color: pink[400], fontSize: 40 }}
@@ -396,15 +320,7 @@ const Category = () => {
                   </List>
                 </Collapse>
                 <div className="hline"></div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    paddingTop: "20px",
-                  }}
-                >
+                <div className="span5d4">
                   <h6>Coleooion</h6>
                   <AddSharpIcon
                     sx={{ color: pink[400], fontSize: 40 }}
@@ -417,20 +333,9 @@ const Category = () => {
                 <Collapse
                   in={openCollection}
                   timeout="auto"
-                  unmountOnExit
+                  unmountOnExit 
                 ></Collapse>
-                <Button
-                  style={{
-                    color: "#FFF",
-                    backgroundColor: "#D96581",
-                    borderRadius: "10px",
-                    width: "290px",
-                    height: "44px",
-                    marginTop: "20px",
-                  }}
-                >
-                  Limpiar Filtros (0)
-                </Button>
+                <Button className="span5b1">Limpiar Filtros (0)</Button>
               </div>
             </Drawer>
           </div>
@@ -449,25 +354,9 @@ const Category = () => {
                 max={5000}
               />
             </Box>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            ></div>
+            <div className="span5d5"></div>
             <div className="hline"></div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignCenter: "center",
-                marginTop: "20px",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
+            <div className="span5d6">
               <h6>Rango de precio</h6>
               <RemoveIcon
                 sx={{ color: pink[400], fontSize: 40 }}
@@ -527,15 +416,7 @@ const Category = () => {
               </List>
             </Collapse>
             <div className="hline"></div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                alignItems: "center",
-                paddingTop: "20px",
-              }}
-            >
+            <div className="span5d7">
               <h6>Coleooion</h6>
               <AddSharpIcon
                 sx={{ color: pink[400], fontSize: 40 }}
@@ -550,18 +431,7 @@ const Category = () => {
               timeout="auto"
               unmountOnExit
             ></Collapse>
-            <Button
-              style={{
-                color: "#FFF",
-                backgroundColor: "#D96581",
-                borderRadius: "10px",
-                width: "290px",
-                height: "44px",
-                marginTop: "20px",
-              }}
-            >
-              Limpiar Filtros (0)
-            </Button>
+            <Button className="span5b2">Limpiar Filtros (0)</Button>
           </div>
         </div>
         <div className="span-6">
